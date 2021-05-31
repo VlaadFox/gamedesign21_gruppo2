@@ -9,6 +9,8 @@ public class InventoryShowUI : MonoBehaviour
 
     public GameObject inventoryMenuUI;
     public GameObject playerController;
+    public GameObject canvasMenuPausa;
+    public GameObject canvasMiniMap;
 
     void Start()
     {
@@ -28,6 +30,8 @@ public class InventoryShowUI : MonoBehaviour
                 Pause();
             }
         }
+        /*if (GameIsPaused && Input.GetKeyDown(KeyCode.Escape))
+            Resume();*/
     }
 
     //
@@ -35,6 +39,8 @@ public class InventoryShowUI : MonoBehaviour
     public void Resume()
     {
         inventoryMenuUI.SetActive(false);
+        canvasMenuPausa.SetActive(true);
+        canvasMiniMap.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
         //AudioListener.pause = false; utile se mettiamo musica/audio
@@ -45,6 +51,8 @@ public class InventoryShowUI : MonoBehaviour
     void Pause()
     {
         inventoryMenuUI.SetActive(true);
+        canvasMenuPausa.SetActive(false);
+        canvasMiniMap.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
         //AudioListener.pause = true; utile se mettiamo musica/audio
