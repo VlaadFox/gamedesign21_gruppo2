@@ -45,7 +45,7 @@ public class InventoryShowUI : MonoBehaviour
         GameIsPaused = false;
         //AudioListener.pause = false; utile se mettiamo musica/audio
         Cursor.visible = false;
-        playerController.GetComponent<FirstPersonController>().enabled = true;
+        playerController.GetComponent<CharacterController>().enabled = true;
     }
 
     void Pause()
@@ -58,6 +58,6 @@ public class InventoryShowUI : MonoBehaviour
         //AudioListener.pause = true; utile se mettiamo musica/audio
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        playerController.GetComponent<FirstPersonController>().enabled = false;
+        playerController.GetComponent<CharacterController>().enabled = false;
     }
 }
