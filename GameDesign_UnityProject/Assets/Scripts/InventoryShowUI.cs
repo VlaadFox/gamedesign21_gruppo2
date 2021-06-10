@@ -11,6 +11,7 @@ public class InventoryShowUI : MonoBehaviour
     public GameObject playerController;
     public GameObject canvasMenuPausa;
     public GameObject canvasMiniMap;
+    public GameObject emptyTexts;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class InventoryShowUI : MonoBehaviour
     public void Resume()
     {
         inventoryMenuUI.SetActive(false);
+        emptyTexts.SetActive(false);
         canvasMenuPausa.SetActive(true);
         canvasMiniMap.SetActive(true);
         Time.timeScale = 1f;

@@ -27,8 +27,7 @@ public class Inventory_PickUp : MonoBehaviour
                     {
                         // L'item può essere raccolto
                         inventory.isFull[i] = true;
-                        Instantiate(imgUIInventario
-                        , inventory.slots[i].transform, false);
+                        Instantiate(imgUIInventario, inventory.slots[i].transform, false);
                         Destroy(gameObject);
                         txtPickUp.SetActive(false);
                         break;

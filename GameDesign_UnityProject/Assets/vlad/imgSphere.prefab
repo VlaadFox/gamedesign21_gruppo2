@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7701938977858764130}
   - component: {fileID: 5611577630033438069}
   - component: {fileID: 9182860468300958416}
-  - component: {fileID: -1002259236648173203}
+  - component: {fileID: -3347854275857815326}
   m_Layer: 5
-  m_Name: imgCartello
+  m_Name: imgSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d214599536700224e9495df6c4b3756b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc0ff1c9bd67a4d40b2566e48a20ce7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-1002259236648173203
+--- !u!114 &-3347854275857815326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,6 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1def84a8a0fa404aba7fd8dbfe04bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3440698149595717597, guid: 8d98f6e8cb14445c985b878336fc8230, type: 3}
+  item: {fileID: 1636114296865046043, guid: 88b527671c059fc40a6fa50eb4c12926, type: 3}
   txtInfoSfera: {fileID: 0}
   txtInfoCartello: {fileID: 0}
