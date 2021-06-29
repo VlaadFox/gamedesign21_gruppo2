@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class ZZCharacterController : MonoBehaviour
 {
     private Animator animator;
     private bool isMoving, isRunning, isJumping;
