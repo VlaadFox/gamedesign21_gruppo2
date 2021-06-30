@@ -5860,10 +5860,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 603491935}
+    m_SelectOnDown: {fileID: 2064318297}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -8016,7 +8016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &486336301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9280,10 +9280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2064318297}
+    m_SelectOnDown: {fileID: 351236114}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -11201,7 +11201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2064318295}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &750707932
@@ -13881,7 +13881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &913462917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13895,7 +13895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2044780823}
-  playerController: {fileID: 0}
+  playerController: {fileID: 8616007837305493623}
   canvasInventoryUI: {fileID: 1344338229}
 --- !u!114 &913462918
 MonoBehaviour:
@@ -19702,7 +19702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2307c84b75739184f8d8ebfc8b66832d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 8996474441796092621}
 --- !u!20 &1289874740
 Camera:
   m_ObjectHideFlags: 0
@@ -20505,7 +20505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1344338230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20601,7 +20601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenuUI: {fileID: 2071575157}
-  playerController: {fileID: 0}
+  playerController: {fileID: 8616007837305493623}
   canvasMenuPausa: {fileID: 913462916}
   canvasMiniMap: {fileID: 486336300}
   emptyTexts: {fileID: 285010506}
@@ -30204,10 +30204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 351236114}
+    m_SelectOnDown: {fileID: 603491935}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -35497,6 +35497,7 @@ GameObject:
   - component: {fileID: 1977742292591096455}
   - component: {fileID: 5421324972113363979}
   - component: {fileID: 8616007837305493627}
+  - component: {fileID: 8616007837305493624}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -35504,6 +35505,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8616007837305493624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616007837305493623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e56719040fd0946b500f0518a8c44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 0000000000000000
+  slots:
+  - {fileID: 1955174301}
+  - {fileID: 888158260}
+  - {fileID: 1268829341}
+  - {fileID: 790886570}
+  - {fileID: 2050612200}
+  - {fileID: 233426074}
+  - {fileID: 128212399}
+  - {fileID: 140232040}
 --- !u!114 &8616007837305493627
 MonoBehaviour:
   m_ObjectHideFlags: 0
