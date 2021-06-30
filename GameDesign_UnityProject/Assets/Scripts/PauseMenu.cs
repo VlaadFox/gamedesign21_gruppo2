@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject playerController;
     public GameObject canvasInventoryUI;
+
+    public GameObject pauseFirstButton;
+
+    //public GameObject optionsFirstButton, optionsClosedButton; // servono se canvas "opzioni" è implementato
 
     void Start()
     {
@@ -55,6 +60,11 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         //playerController.GetComponent<FirstPersonController>().enabled = false;
         playerController.GetComponent<CharacterController>().enabled = false;
+
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
     }
 
     public void QuitGame()
