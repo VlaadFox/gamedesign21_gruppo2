@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialog_trigger : MonoBehaviour
+public class InfoOBJ_trigger : MonoBehaviour
 {
     public Dialogo_padre dialogue;
-
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -13,12 +12,12 @@ public class Dialog_trigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<Dialog_manager>().StartDialogue(dialogue);
+        FindObjectOfType<Info_OBJ>().StartDialogue(dialogue);
     }
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "Player") 
+        if (collider.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -27,9 +26,6 @@ public class Dialog_trigger : MonoBehaviour
                 TriggerDialogue();
             }
         }
-           
-    }
-       
-    
 
+    }
 }
