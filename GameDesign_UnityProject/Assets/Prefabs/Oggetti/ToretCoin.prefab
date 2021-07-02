@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2753935022977503801}
   - component: {fileID: 1267810414068751772}
   - component: {fileID: 3926256600050510166}
+  - component: {fileID: 7888408000661480755}
   m_Layer: 0
   m_Name: ToretCoin
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7888408000661480755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277531889298344067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f9f48848eedb449a433dcb6a956085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgUIInventario: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
+  txtPickUp: {fileID: 1636114296865046043, guid: 88b527671c059fc40a6fa50eb4c12926, type: 3}

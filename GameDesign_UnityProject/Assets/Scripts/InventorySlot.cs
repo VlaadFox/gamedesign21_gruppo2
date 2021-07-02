@@ -10,6 +10,7 @@ public class InventorySlot : MonoBehaviour
     public GameObject emptyTexts;
     public GameObject txtInfoSfera;
     public GameObject txtInfoCartello;
+    public GameObject txtInfoMoneta;
 
     private void Start()
     {
@@ -52,6 +53,13 @@ public class InventorySlot : MonoBehaviour
                     emptyTexts.SetActive(true);
                     txtInfoSfera.SetActive(false);
                     txtInfoCartello.SetActive(true);
+                    break;
+                case "ToretCoin":
+                    Debug.Log("Questo è una moneta");
+                    emptyTexts.SetActive(true);
+                    txtInfoSfera.SetActive(false);
+                    txtInfoCartello.SetActive(false);
+                    txtInfoMoneta.SetActive(true);
                     break;
                 default:
                     Debug.Log("Seleziona un oggetto");

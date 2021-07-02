@@ -7,4 +7,6 @@ public class Inventory : MonoBehaviour
     public bool[] isFull;
 
     public GameObject[] slots;
+
+    public List<string> listInventoryItems = new List<string>(); 
 }
