@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
+using System.Collections;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -91,6 +92,10 @@ namespace StarterAssets
 
 		private bool _hasAnimator;
 
+		public GameObject me;
+		public bool canScale = false;
+		public bool canJump = true;
+
 		private void Awake()
 		{
 			// get a reference to our main camera
@@ -116,10 +121,11 @@ namespace StarterAssets
 		private void Update()
 		{
 			_hasAnimator = TryGetComponent(out _animator);
-			
+
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Scale();
 		}
 
 		private void LateUpdate()
@@ -248,7 +254,7 @@ namespace StarterAssets
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f && canJump)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -310,9 +316,31 @@ namespace StarterAssets
 
 			if (Grounded) Gizmos.color = transparentGreen;
 			else Gizmos.color = transparentRed;
-			
+
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+		private void Scale()
+		{
+			if (canScale)
+			{
+				if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("Scale"))
+				{
+					me.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+					StartCoroutine(resetScale());
+
+					//		me.SetActive(true);
+				}
+			}
+		}
+		public IEnumerator resetScale()
+		{
+			yield return new WaitForSeconds(15f);
+
+			me.transform.localScale = new Vector3(1f, 1f, 1f);
+		}
+
 	}
 }
