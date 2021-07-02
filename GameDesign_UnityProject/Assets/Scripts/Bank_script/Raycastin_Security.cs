@@ -12,6 +12,8 @@ public class Raycastin_Security : MonoBehaviour
 
     public GameObject playeref;
 
+    private Vector3 pos;
+
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
@@ -20,6 +22,7 @@ public class Raycastin_Security : MonoBehaviour
     private void Start()
     {
         playeref = GameObject.FindGameObjectWithTag("Player");
+        pos= playeref.transform.position;
         StartCoroutine(FOVRoutine());
     }
     private IEnumerator FOVRoutine()
@@ -46,7 +49,14 @@ public class Raycastin_Security : MonoBehaviour
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                {
                     canSeePlayer = true;
+                    Debug.Log("hit");
+                    playeref.transform.position = pos;
+
+                }
+                    
+
                 else
                     canSeePlayer = false;
             }
