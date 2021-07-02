@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Raycastin_Security : MonoBehaviour
 {
     public float rotationSpeed;
     public float radius;
+    public Image Fade;
 
     [Range(0,360)]
     public float angle;
@@ -24,6 +26,8 @@ public class Raycastin_Security : MonoBehaviour
         playeref = GameObject.FindGameObjectWithTag("Player");
         pos= playeref.transform.position;
         StartCoroutine(FOVRoutine());
+        Fade.canvasRenderer.SetAlpha(0f);
+        
     }
     private IEnumerator FOVRoutine()
     {
@@ -35,6 +39,12 @@ public class Raycastin_Security : MonoBehaviour
             FieldOfViewCheck();
         }
     }
+
+    private IEnumerator pausa(float tempo)
+    { 
+        yield return new WaitForSeconds(tempo);
+    }
+
     private void FieldOfViewCheck()
     {
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
@@ -52,13 +62,21 @@ public class Raycastin_Security : MonoBehaviour
                 {
                     canSeePlayer = true;
                     Debug.Log("hit");
+                    fadeIn();
+                    //StartCoroutine(pausa(2f));
+                    
                     playeref.transform.position = pos;
+                   
 
+                }
+
+
+                else
+                {
+                    canSeePlayer = false;
                 }
                     
 
-                else
-                    canSeePlayer = false;
             }
             else
             {
@@ -66,12 +84,29 @@ public class Raycastin_Security : MonoBehaviour
             }
         }
         else if (canSeePlayer)
+        {
             canSeePlayer = false;
+            
+            fadeOut();
+        }
+            
+    }
+
+    void fadeIn()
+    {
+        Fade.CrossFadeAlpha(1, 0.1f, false);
+        StartCoroutine(pausa(2f));
+       // Fade.CrossFadeAlpha(0, 1, false);
+    }
+    void fadeOut()
+    {
+        Fade.CrossFadeAlpha(0, 2.0f, false);
     }
 
 
     private void Update()
     {
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        //fadeOut();
     }
 }
