@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 225882166}
   - component: {fileID: 225882165}
   - component: {fileID: 225882164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 35
-  distance: 50
+  radius: 7
+  angle: 29
+  playeref: {fileID: 225882163}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 512
+  canSeePlayer: 0
 --- !u!1001 &6660603200585630471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2715397087046669803, guid: 88681682a2f8c48e3895e3ef744aec70, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4821338709120847420, guid: 88681682a2f8c48e3895e3ef744aec70, type: 3}
       propertyPath: m_RootOrder
       value: 2
