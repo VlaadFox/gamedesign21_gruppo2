@@ -6,7 +6,37 @@ ModelImporter:
   - first:
       74: 3134792389861030700
     second: Cyberpunk Robot|Cyberpunk RobotAction.002
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar1
+    second: {fileID: 2100000, guid: 0e7b0e925b4ca874aa4ff76b96f1d9bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_2
+    second: {fileID: 2100000, guid: e3f771d5cbb6a2648a268eebaf83450b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DIFFUSE.001
+    second: {fileID: 2100000, guid: ec9561bfad43cb74f9a9fd8b43eca2dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign
+    second: {fileID: 2100000, guid: aae0de5856921984e82a0235ae458d46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5SG
+    second: {fileID: 2100000, guid: 697ad429ac1de6f46b13fdb747d7d8d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: text
+    second: {fileID: 2100000, guid: a2785b4d648c83c40bedf674770316fe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
