@@ -2,41 +2,38 @@ fileFormatVersion: 2
 guid: 596f9cf8b36d0214fb3a9c21f62de703
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 3134792389861030700
-    second: Cyberpunk Robot|Cyberpunk RobotAction.002
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bar1
-    second: {fileID: 2100000, guid: 0e7b0e925b4ca874aa4ff76b96f1d9bf, type: 2}
+    second: {fileID: 2100000, guid: 37419d8e5cee8e041a8897bd62c02b9a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bar_2
-    second: {fileID: 2100000, guid: e3f771d5cbb6a2648a268eebaf83450b, type: 2}
+    second: {fileID: 2100000, guid: 5247bb6e780511e489c7223d8354b4a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DIFFUSE.001
-    second: {fileID: 2100000, guid: ec9561bfad43cb74f9a9fd8b43eca2dd, type: 2}
+    second: {fileID: 2100000, guid: 0264b23dcdc87c24ba7bf568a60e99a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Sign
-    second: {fileID: 2100000, guid: aae0de5856921984e82a0235ae458d46, type: 2}
+      name: Esterno
+    second: {fileID: 2100000, guid: fb9462c211a10cc4bb64c4c510328d75, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert5SG
-    second: {fileID: 2100000, guid: 697ad429ac1de6f46b13fdb747d7d8d7, type: 2}
+    second: {fileID: 2100000, guid: 51f186dd3f7200c45886ba89ed2eb5aa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: text
-    second: {fileID: 2100000, guid: a2785b4d648c83c40bedf674770316fe, type: 2}
+    second: {fileID: 2100000, guid: 1f1ecbdacb1e8c74b95ced801eaa53a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
