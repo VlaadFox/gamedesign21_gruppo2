@@ -36,10 +36,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
                 for (int i = 0; i < inventory.listInventoryItems.Count; i++)
                 {
-                    if(inventory.listInventoryItems[i] == "ToretCoin")
-                    {
-                        hasCoin = true;
-                    }
+                    Debug.Log(inventory.listInventoryItems[i]);
                 }
 
                 if(hasCoin)
