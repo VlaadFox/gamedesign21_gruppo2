@@ -6,9 +6,12 @@ using System;
 
 public class Energy : MonoBehaviour
 {
-    [SerializeField] Text energyText;
-    [SerializeField] Text timerText;
-    [SerializeField] Slider energybar;
+    [SerializeField] 
+    Text energyText;
+    [SerializeField] 
+    Text timerText;
+    [SerializeField] 
+    Slider energybar;
 
     private int maxEnergy = 25;
     private int currentEnergy;
@@ -30,6 +33,13 @@ public class Energy : MonoBehaviour
         {
             Load();
             StartCoroutine(RestoreEnergy());
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UseEnrgy();
         }
     }
 
