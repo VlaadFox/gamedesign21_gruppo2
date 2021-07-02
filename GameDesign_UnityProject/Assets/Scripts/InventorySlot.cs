@@ -47,12 +47,14 @@ public class InventorySlot : MonoBehaviour
                     emptyTexts.SetActive(true);
                     txtInfoSfera.SetActive(true);
                     txtInfoCartello.SetActive(false);
+                    txtInfoMoneta.SetActive(false);
                     break;
                 case "CartelloV1.2":
                     Debug.Log("Questo è un cartello");
                     emptyTexts.SetActive(true);
                     txtInfoSfera.SetActive(false);
                     txtInfoCartello.SetActive(true);
+                    txtInfoMoneta.SetActive(false);
                     break;
                 case "ToretCoin":
                     Debug.Log("Questo è una moneta");
