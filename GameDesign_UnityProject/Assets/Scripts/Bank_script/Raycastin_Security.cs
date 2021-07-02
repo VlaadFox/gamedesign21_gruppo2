@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Raycastin_Security : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float rotationSpeed;
+    public float distance;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+
+        RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.right , distance);
+        if (hitinfo.collider != null)
+        {
+            Debug.DrawLine(transform.position, hitinfo.point, Color.red);
+        }
+        else
+        {
+            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+        }
     }
 }
