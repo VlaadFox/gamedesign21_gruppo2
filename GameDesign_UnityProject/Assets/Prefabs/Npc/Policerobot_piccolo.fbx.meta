@@ -3,7 +3,27 @@ guid: cf296914dca958a4b881a5437e733814
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_RidingRobot_Arms
+    second: {fileID: 2100000, guid: 38f70778a14549f41a67256c16f636bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_RidingRobot_Head
+    second: {fileID: 2100000, guid: 50d5e652f8da29d44afc36d50dcd0dbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_RidingRobot_Hubs
+    second: {fileID: 2100000, guid: 53e41ec28d52b0e47ab3f1b419305366, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_RidingRobot_Wheel
+    second: {fileID: 2100000, guid: 9230b8d00da0dce4ead4e41a80bcd625, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
