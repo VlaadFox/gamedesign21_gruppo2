@@ -2506,7 +2506,6 @@ GameObject:
   - component: {fileID: 188555311153147885}
   - component: {fileID: 6050436187698893180}
   - component: {fileID: 6050436187698893181}
-  - component: {fileID: 6050436187698893179}
   - component: {fileID: 6050436187698893152}
   m_Layer: 0
   m_Name: Character
@@ -2605,34 +2604,6 @@ CapsuleCollider:
   m_Height: 0.18
   m_Direction: 1
   m_Center: {x: 0, y: 0.09, z: 0}
---- !u!114 &6050436187698893179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860704576279310125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c6f853e7921ca46a58992770d69f02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  analogMovement: 1
-  capVelocity: 1
-  animationSpeedModulation: 1
-  walkSpeedMultiplier: 1.7
-  runSpeedMultiplier: 2.6
-  movementDeadZone: 0.15
-  xBoundLeft: -10
-  xBoundRight: 10
-  zBoundDown: -10
-  zBoundUp: 10
-  isGrounded: 0
-  groundCheckDistance: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gravity: 0
 --- !u!114 &6050436187698893152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,6 +2626,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  listInventoryItems: []
 --- !u!1 &7000301310626542315
 GameObject:
   m_ObjectHideFlags: 0
