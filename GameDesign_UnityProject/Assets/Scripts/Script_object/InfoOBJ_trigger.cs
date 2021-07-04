@@ -34,19 +34,18 @@ public class InfoOBJ_trigger : MonoBehaviour
                 canvas.SetActive(true);
                 TriggerDialogue();
 
-                for (int i = 0; i < inventory.listInventoryItems.Count; i++)
-                {
-                    // Debug.Log(inventory.listInventoryItems[i]);
-                    if (inventory.listInventoryItems[i] == "ToretCoin")
-                        hasCoin = true;
-                }
 
-                //hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
+
+                hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
 
                 if(hasCoin)
-                    Debug.Log("Hai la moneta");
+                {
+                    // quì hai la moneta, da mettere messaggio che dice che la cabina è rotta e di cercarne un'altra funzionante.
+                }
                 else
-                    Debug.Log("NON hai la moneta");
+                {
+                    // quì NON hai la moneta, da mettere messaggio che dice "per utilizzare la cabina inserisci una moneta."
+                }
             }
         }
 
