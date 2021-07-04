@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chinese Old Signs
+* source:	https://sketchfab.com/3d-models/chinese-old-signs-eb2b80a33f964a4c8b7808f149724820
+* author:	daftvid (https://sketchfab.com/daftvid)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chinese Old Signs" (https://sketchfab.com/3d-models/chinese-old-signs-eb2b80a33f964a4c8b7808f149724820) by daftvid (https://sketchfab.com/daftvid) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
