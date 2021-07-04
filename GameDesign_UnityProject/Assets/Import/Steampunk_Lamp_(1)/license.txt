@@ -1,0 +1,11 @@
+Model Information:
+* title:	Steampunk Lamp (1)
+* source:	https://sketchfab.com/3d-models/steampunk-lamp-1-9f23970992d242978371f6089cb718eb
+* author:	cyberdan (https://sketchfab.com/cyberdan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Steampunk Lamp (1)" (https://sketchfab.com/3d-models/steampunk-lamp-1-9f23970992d242978371f6089cb718eb) by cyberdan (https://sketchfab.com/cyberdan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
