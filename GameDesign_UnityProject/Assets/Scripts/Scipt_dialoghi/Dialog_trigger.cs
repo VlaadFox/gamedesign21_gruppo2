@@ -23,7 +23,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject slot1Inventario;
 
-    public GameObject imgUIInventarioLattinaOlio;
+    
 
     public GameObject canvasBottoni;
 
@@ -144,40 +144,7 @@ public class Dialog_trigger : MonoBehaviour
                         // quì ci va poi il codice col "for" per aggiungere il collezionabile che scegliamo all'inventario ma una volta che lo decidiamo lo implemento io
                     }
                 }
-                else if (gameObject.name == "OilVending") // stai interagendo con la macchinetta dell'olio
-                {
-                    if(!hasCan && !hasCoin)
-                    {
-                        // da mettere messaggio "Lattina d'olio: 1 moneta."
-                        Debug.Log("Lattina d'olio: 1 moneta.");
-                    }   
-                    else if(!hasCan && hasCoin) // quì hai preso già la moneta dal robot delle costruzioni
-                    {
-                        // da mettere messaggio "Vuoi acquistare una lattina d'olio?"
-                        Debug.Log("Vuoi acquistare una lattina d'olio?");
-                        Debug.Log("Sì");
-
-                        // "SI"
-                        {
-                            DropItem(); // qua mi cancella la moneta dall'inventario
-                            inventory.listInventoryItems.Remove(item: "ToretCoin");
-                            for (int i = 0 ; i < inventory.slots.Length; i++)
-                                {
-                                    if (inventory.isFull[i] == false)
-                                    {
-                                        inventory.isFull[i] = true;
-                                        Instantiate(imgUIInventarioLattinaOlio, inventory.slots[i].transform, false);
-                                        inventory.listInventoryItems.Add("LattinaOlio");
-                                        Debug.Log("Ho ricevuto la lattina d'olio");
-                                        break;
-                                    }
-                                }
-                        }
-
-                        // "NO"
-                        // chiudi il dialogo
-                    }
-                }
+                
                 
             
         }
