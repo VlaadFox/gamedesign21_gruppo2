@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7201786083682067308}
   - component: {fileID: 6079360164391529673}
   - component: {fileID: 8339204803639334915}
+  - component: {fileID: 3354198618722343026}
   m_Layer: 0
   m_Name: RoadBlock
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3354198618722343026
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546400088106006998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1754806605765641723, guid: aa021ae188de94dc4b7664e3f6b910fd, type: 3}
