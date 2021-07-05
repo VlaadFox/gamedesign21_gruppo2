@@ -176,11 +176,39 @@ public class Dialog_trigger : MonoBehaviour
                        
                     }
                 }
+
+               
                 
             
         }
            
     }
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            if (gameObject.name == "Policerobot_piccolo")
+            {
+
+                TriggerDialogue();
+                canvas.SetActive(true);
+            }
+        }
+    }
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            if (gameObject.name == "Policerobot_piccolo")
+            {
+
+               
+                canvas.SetActive(false);
+            }
+        }
+    }
+
+
 
     public void DropItem()
     {
