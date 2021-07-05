@@ -29,7 +29,6 @@ public class InventorySlot : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }
     }*/
@@ -37,9 +36,7 @@ public class InventorySlot : MonoBehaviour
     public void InfoItem()
     {
         foreach (Transform child in transform)
-        {
-            //child.GetComponent<Spawn>().GetInfoItem();
-            
+        {   
             switch (child.GetComponent<Spawn>().item.name)
             {
                 case "spPickUpDrop":
@@ -57,7 +54,7 @@ public class InventorySlot : MonoBehaviour
                     txtInfoMoneta.SetActive(false);
                     break;
                 case "ToretCoin":
-                    Debug.Log("Questo è una moneta");
+                    Debug.Log("Questa è una moneta");
                     emptyTexts.SetActive(true);
                     txtInfoSfera.SetActive(false);
                     txtInfoCartello.SetActive(false);

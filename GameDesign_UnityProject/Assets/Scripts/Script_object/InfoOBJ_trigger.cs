@@ -37,7 +37,6 @@ public class InfoOBJ_trigger : MonoBehaviour
 
 
                 hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
-
                 if(hasCoin)
                 {
                     // quì hai la moneta, da mettere messaggio che dice che la cabina è rotta e di cercarne un'altra funzionante.

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Inventory_PickUp : MonoBehaviour
 {
     private Inventory inventory;
-    public GameObject imgUIInventario
-    ;
+    public GameObject imgUIInventario;
     public GameObject txtPickUp;
 
     private bool pickAllowed = false;
