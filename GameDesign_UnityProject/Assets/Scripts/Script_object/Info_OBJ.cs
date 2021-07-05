@@ -55,11 +55,5 @@ public class Info_OBJ : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C)|| Input.GetButtonDown("Continua"))
-        {
-            DisplayNextSentence();
-        }
-    }
+   
 }

@@ -42,10 +42,16 @@ public class Dialog_trigger : MonoBehaviour
         }
     }*/
 
+    public void Nextdisplay()
+    {
+        FindObjectOfType<Dialog_manager>().DisplayNextSentence();
+    }
+
     public void TriggerDialogue()
     {
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue);
     }
+
 
 
     public void TriggerDialogue2()
@@ -144,7 +150,32 @@ public class Dialog_trigger : MonoBehaviour
                         // quì ci va poi il codice col "for" per aggiungere il collezionabile che scegliamo all'inventario ma una volta che lo decidiamo lo implemento io
                     }
                 }
-                
+                if(gameObject.name == "RobotLucee")
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                        {
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                            
+                        }
+
+                }
+                if (gameObject.name == "Robottone")
+                 {
+                    if (Input.GetKeyDown(KeyCode.R))
+                        {
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                            
+                }
+                   if (Input.GetKeyDown(KeyCode.C))
+                    {
+                       Nextdisplay();
+                       
+                    }
+                }
                 
             
         }

@@ -15,6 +15,9 @@ public class Active_dialog : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             canvas.SetActive(true);
+            
+
+
         }
     }
     private void OnTriggerExit(Collider collider)
@@ -26,4 +29,7 @@ public class Active_dialog : MonoBehaviour
             bottoni.SetActive(false);
         }
     }
+
+    
+
 }

@@ -59,11 +59,11 @@ public class Dialog_manager : MonoBehaviour
     }
 
 
-    void EndDialogue()
-    {
+   void EndDialogue()
+   {
         Debug.Log("End conversation");
-        canvas.SetActive(false);
-        cliccaCanvas.SetActive(true);
+       canvas.SetActive(false);
+       cliccaCanvas.SetActive(true);
 
     }
 

@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject playerController;
     public GameObject canvasInventoryUI;
+    public GameObject canvas_clicca;
 
     public GameObject pauseFirstButton;
 
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         //playerController.GetComponent<FirstPersonController>().enabled = true;
         playerController.GetComponent<CharacterController>().enabled = true;
+        canvas_clicca.SetActive(false);
     }
 
     void Pause()
