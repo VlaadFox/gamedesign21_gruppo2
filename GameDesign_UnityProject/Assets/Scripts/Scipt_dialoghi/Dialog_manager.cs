@@ -34,6 +34,8 @@ public class Dialog_manager : MonoBehaviour
         DisplayNextSentence();
     }
 
+
+
     public void DisplayNextSentence()
     {
         if(sentences.Count== 0 )
@@ -65,11 +67,5 @@ public class Dialog_manager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            DisplayNextSentence();
-        }
-    }
+    
 }

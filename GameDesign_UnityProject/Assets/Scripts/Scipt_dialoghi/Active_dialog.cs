@@ -7,6 +7,7 @@ public class Active_dialog : MonoBehaviour
 
     public GameObject canvas;
     public GameObject dialogCanvas;
+    public GameObject bottoni;
 
     
     private void OnTriggerEnter(Collider collider)
@@ -22,6 +23,7 @@ public class Active_dialog : MonoBehaviour
         {
             canvas.SetActive(false);
             dialogCanvas.SetActive(false);
+            bottoni.SetActive(false);
         }
     }
 }

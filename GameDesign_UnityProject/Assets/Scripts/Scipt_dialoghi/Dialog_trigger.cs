@@ -5,7 +5,8 @@ using UnityEngine;
 public class Dialog_trigger : MonoBehaviour
 {
     public Dialogo_padre dialogue;
-
+    public Dialogo_padre dialogue2;
+    public Dialogo_padre dialogue3;
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -23,6 +24,8 @@ public class Dialog_trigger : MonoBehaviour
     public GameObject slot1Inventario;
 
     public GameObject imgUIInventarioLattinaOlio;
+
+    public GameObject canvasBottoni;
 
     public int i;
 
@@ -44,15 +47,24 @@ public class Dialog_trigger : MonoBehaviour
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue);
     }
 
+
+    public void TriggerDialogue2()
+    {
+        FindObjectOfType<Dialog_manager>().StartDialogue(dialogue2);
+    }
+    public void TriggerDialogue3()
+    {
+        FindObjectOfType<Dialog_manager>().StartDialogue(dialogue3);
+    }
+
+
+
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player") 
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                canvasDel.SetActive(false);
-                canvas.SetActive(true);
-                TriggerDialogue();
+            
+
 
 
 
@@ -69,29 +81,46 @@ public class Dialog_trigger : MonoBehaviour
                             // quì ti ha già dato la moneta, da mettere messaggio che dice "Fai presto perfavore!"
                             Debug.Log("Hai già la moneta");
                             Debug.Log("Fai presto perfavore!");
+                            if (Input.GetKeyDown(KeyCode.R))
+                            {
+                                canvasDel.SetActive(false);
+                                canvas.SetActive(true);
+                                TriggerDialogue2();
+                            }
                         }
                         else
                         {
+
+
                             // quì ancora NON hai la moneta, ti chiede "Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?"
                             // quindi da gestire domanda con possibilità di rispondere sì o no
-                            Debug.Log("Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?");
-                            Debug.Log("Sì");
+                            //Debug.Log("Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?");
+                            //Debug.Log("Sì");
+                            if (Input.GetKeyDown(KeyCode.R))
+                            {
+                                canvasDel.SetActive(false);
+                                canvas.SetActive(true);
+                                TriggerDialogue();
+                                Cursor.lockState = CursorLockMode.None;
+                                canvasBottoni.SetActive(true);
+                            }
 
                             // "SI"
                             // messaggio ""Ti ringrazio! Eccoti una moneta, cerca una macchinetta dove vendono lattine d'olio." + codice sotto tra graffe
-                            {
-                                for (int i = 0 ; i < inventory.slots.Length; i++)
-                                {
-                                    if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
-                                    {
-                                        inventory.isFull[i] = true;
-                                        Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
-                                        inventory.listInventoryItems.Add("ToretCoin");
-                                        Debug.Log("Ho ricevuto la moneta");
-                                        break;
-                                    }
-                                }
-                            }
+                            /* public void Getcoin()
+                             {
+                                 for (int i = 0 ; i < inventory.slots.Length; i++)
+                                 {
+                                     if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+                                     {
+                                         inventory.isFull[i] = true;
+                                         Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
+                                         inventory.listInventoryItems.Add("ToretCoin");
+                                         Debug.Log("Ho ricevuto la moneta");
+                                         break;
+                                     }
+                                 }
+                             }*/
 
                             // "NO"
                             // chiudiamo semplicemente il dialogo col robot o gli dice qualcosa?
@@ -99,11 +128,19 @@ public class Dialog_trigger : MonoBehaviour
                     }
                     else // quì hai già comprato la lattina d'olio
                     {
-                        // da mettere messaggio "Ce l'hai fatta! Grazie mille, eccoti una ricompensa."
-                        Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue3();
                         DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                         inventory.listInventoryItems.Remove(item: "LattinaOlio");
                         inventory.listInventoryItems.Add("CollezionabileOlio");
+                        Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
+                    }
+                    // da mettere messaggio "Ce l'hai fatta! Grazie mille, eccoti una ricompensa."
+                    
+                       
                         // quì ci va poi il codice col "for" per aggiungere il collezionabile che scegliamo all'inventario ma una volta che lo decidiamo lo implemento io
                     }
                 }
@@ -142,7 +179,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                 }
                 
-            }
+            
         }
            
     }
@@ -153,6 +190,21 @@ public class Dialog_trigger : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
             inventory.isFull[0] = false;
+        }
+    }
+
+    public void Getcoin()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+            {
+                inventory.isFull[i] = true;
+                Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
+                inventory.listInventoryItems.Add("ToretCoin");
+                Debug.Log("Ho ricevuto la moneta");
+                break;
+            }
         }
     }
 }
