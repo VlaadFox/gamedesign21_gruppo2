@@ -1007,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014537379327077330, guid: 9a714c218f8de4a16b326b6fe6d547fc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5682671372095271272, guid: 9a714c218f8de4a16b326b6fe6d547fc, type: 3}
       propertyPath: m_RootOrder
@@ -1173,7 +1173,7 @@ Light:
   m_InnerSpotAngle: 26.878159
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1853,7 +1853,7 @@ Light:
   m_InnerSpotAngle: 26.878159
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
