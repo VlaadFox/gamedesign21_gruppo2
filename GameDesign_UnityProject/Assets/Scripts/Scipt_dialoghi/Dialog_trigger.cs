@@ -11,6 +11,7 @@ public class Dialog_trigger : MonoBehaviour
     public GameObject canvas;
     public GameObject canvasDel;
 
+    public Animator anim;
 
     private Inventory inventory;
 
@@ -32,6 +33,9 @@ public class Dialog_trigger : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        anim = GetComponent<Animator>();
+
+        anim.SetBool("robotLavBase", true);
     }
 
     /*private void Update()
@@ -76,9 +80,11 @@ public class Dialog_trigger : MonoBehaviour
 
                 hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
-                //hasCan = true;
-                
-                if(gameObject.name == "RobotLavori") // stai parlando col robot
+            //hasCan = true;
+
+            
+
+            if (gameObject.name == "robotLavori") // stai parlando col robot
                 {
                     if(!hasCan) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                     {
@@ -89,7 +95,10 @@ public class Dialog_trigger : MonoBehaviour
                             Debug.Log("Fai presto perfavore!");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
-                                canvasDel.SetActive(false);
+                            anim.SetBool("robotLavTalk", true);
+
+                            anim.SetBool("robotLavBase", false);
+                            canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue2();
                             }
@@ -104,7 +113,10 @@ public class Dialog_trigger : MonoBehaviour
                             //Debug.Log("Sì");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
-                                canvasDel.SetActive(false);
+                            anim.SetBool("robotLavTalk", true);
+
+                            anim.SetBool("robotLavBase", false);
+                            canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue();
                                 Cursor.lockState = CursorLockMode.None;
@@ -136,6 +148,9 @@ public class Dialog_trigger : MonoBehaviour
                     {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
+                        anim.SetBool("robotLavTalk", true);
+
+                        anim.SetBool("robotLavBase", false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue3();
@@ -181,8 +196,11 @@ public class Dialog_trigger : MonoBehaviour
                 
             
         }
-           
+
+
     }
+   
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")

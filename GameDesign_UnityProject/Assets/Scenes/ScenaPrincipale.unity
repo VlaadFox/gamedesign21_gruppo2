@@ -3604,6 +3604,7 @@ MonoBehaviour:
     sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
@@ -13758,6 +13759,7 @@ MonoBehaviour:
     sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 241213710}
@@ -24992,6 +24994,7 @@ MonoBehaviour:
     sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 0}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
@@ -34151,6 +34154,7 @@ MonoBehaviour:
     sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 196492523}
@@ -38091,8 +38095,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.640896, y: 1.8663774, z: 1.2705986}
-  m_Center: {x: -0.039168734, y: 0.1636379, z: 0.06728573}
+  m_Size: {x: 2.5742888, y: 2.4491112, z: 2.066572}
+  m_Center: {x: -0.047867734, y: 0.4550041, z: 0.46527126}
 --- !u!114 &1141537189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38122,6 +38126,7 @@ MonoBehaviour:
     - Thanks, I really needed it, keep this as a thank you
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
@@ -45956,7 +45961,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d19e3fe29581c44d993908c09b4a1fc6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9b96a25d7e1a31043b7e24c3928595f8, type: 3}
       propertyPath: m_Name
-      value: robotLavoriIdle
+      value: robotLavori
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: 9b96a25d7e1a31043b7e24c3928595f8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -58852,6 +58857,7 @@ MonoBehaviour:
     - Thanks, I really needed it, keep this as a thank you
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
+  anim: {fileID: 0}
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
@@ -61403,7 +61409,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3ebee18100c717f47aad12c2f5bd9479, type: 2}
     - target: {fileID: 919132149155446097, guid: 3141e8e288cc9f2479d84969f61914ab, type: 3}
       propertyPath: m_Name
-      value: robotLadroBored__conSkin
+      value: robotLadro
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 3141e8e288cc9f2479d84969f61914ab, type: 3}
       propertyPath: m_Controller
@@ -78896,8 +78902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 50
-  SprintSpeed: 50
+  MoveSpeed: 5
+  SprintSpeed: 10
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
   JumpHeight: 1.2
