@@ -35,7 +35,6 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         anim = GetComponent<Animator>();
 
-        anim.SetBool("robotLavBase", true);
     }
 
     /*private void Update()
@@ -95,6 +94,8 @@ public class Dialog_trigger : MonoBehaviour
                             Debug.Log("Fai presto perfavore!");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
+
+
                             anim.SetBool("robotLavTalk", true);
 
                             anim.SetBool("robotLavBase", false);
@@ -113,6 +114,8 @@ public class Dialog_trigger : MonoBehaviour
                             //Debug.Log("Sì");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
+
+
                             anim.SetBool("robotLavTalk", true);
 
                             anim.SetBool("robotLavBase", false);
@@ -148,9 +151,11 @@ public class Dialog_trigger : MonoBehaviour
                     {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
+
                         anim.SetBool("robotLavTalk", true);
 
                         anim.SetBool("robotLavBase", false);
+
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue3();

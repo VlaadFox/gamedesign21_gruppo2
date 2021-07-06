@@ -3637,6 +3637,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1001 &104021556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13779,6 +13780,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 241213710}
+  anim: {fileID: 0}
 --- !u!65 &390120077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34174,6 +34176,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 196492523}
+  anim: {fileID: 0}
 --- !u!1 &1014417029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3626127067252004600, guid: d1b45b944258041e19465d8bdbba1b51, type: 3}
@@ -38084,6 +38087,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 859245271}
+  anim: {fileID: 1141537188}
 --- !u!65 &1141537187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38097,6 +38101,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5742888, y: 2.4491112, z: 2.066572}
   m_Center: {x: -0.047867734, y: 0.4550041, z: 0.46527126}
+--- !u!95 &1141537188 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 9b96a25d7e1a31043b7e24c3928595f8, type: 3}
+  m_PrefabInstance: {fileID: 1304576643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1141537189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53443,6 +53452,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1695133559}
   bottoni: {fileID: 1073891931}
+  anim: {fileID: 0}
 --- !u!64 &1509063984
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58877,6 +58887,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 859245271}
+  anim: {fileID: 0}
 --- !u!65 &1669716409
 BoxCollider:
   m_ObjectHideFlags: 0
