@@ -20837,7 +20837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4527717393455380141, guid: bb10854599bc947cfb710c1664adcd13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -271.18
+      value: -129.77
       objectReference: {fileID: 0}
     - target: {fileID: 4527717393455380141, guid: bb10854599bc947cfb710c1664adcd13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20845,7 +20845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4527717393455380141, guid: bb10854599bc947cfb710c1664adcd13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.91
+      value: 44.67
       objectReference: {fileID: 0}
     - target: {fileID: 4527717393455380141, guid: bb10854599bc947cfb710c1664adcd13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66476,7 +66476,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1669716405}
+      - m_Target: {fileID: 1141537189}
         m_TargetAssemblyTypeName: Dialog_trigger, Assembly-CSharp
         m_MethodName: Getcoin
         m_Mode: 1
