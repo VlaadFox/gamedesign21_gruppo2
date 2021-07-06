@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ScenaPrincipale.unity
+    guid: 1addf0cf631ad49ac9d52b854747ee4f
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 07d41929608843b459a113c8ad3dd3f0
+  - enabled: 1
+    path: Assets/Scenes/Banca.unity
+    guid: 374bc5d945c934417961446e84928357
+  - enabled: 1
+    path: Assets/Scenes/Sotterraneo.unity
+    guid: e746e7f574845403c82b6ee96011eec5
   m_configObjects: {}
