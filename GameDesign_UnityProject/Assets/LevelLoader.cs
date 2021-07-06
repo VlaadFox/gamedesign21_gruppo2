@@ -13,7 +13,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        transistion.SetTrigger("Start");
+        transistion.SetTrigger("start");
         yield return new WaitForSeconds(1);
 
         SceneManager.LoadScene(levelIndex);
