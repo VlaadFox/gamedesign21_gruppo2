@@ -10,7 +10,10 @@ public class LevelLoader : MonoBehaviour
     {
        StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
-
+    public void LoadNextLevel1()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
     IEnumerator LoadLevel(int levelIndex)
     {
         transistion.SetTrigger("start");
