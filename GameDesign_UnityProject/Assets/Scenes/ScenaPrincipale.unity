@@ -13810,7 +13810,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 241213710}
-  anim: {fileID: 0}
+  anim: {fileID: 1141537188}
 --- !u!65 &390120077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35494,7 +35494,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 196492523}
-  anim: {fileID: 0}
+  anim: {fileID: 1141537188}
 --- !u!1 &1014417029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3626127067252004600, guid: d1b45b944258041e19465d8bdbba1b51, type: 3}
@@ -80410,6 +80410,10 @@ PrefabInstance:
     - target: {fileID: 1455326757502735056, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455326757502735056, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8892728598921140054, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
       propertyPath: m_RootOrder
