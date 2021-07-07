@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 225882166}
   - component: {fileID: 225882165}
   - component: {fileID: 225882164}
+  - component: {fileID: 225882168}
   m_Layer: 8
   m_Name: Capsule
   m_TagString: Player
@@ -834,12 +835,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225882163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: -1.25, z: 12.4}
+  m_LocalPosition: {x: 0.45, y: -0.325, z: 5.903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225882168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225882163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52a2b2e672549d4fa0f6484a41e595c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastExitName: Turin_Banca
 --- !u!1001 &321593167
 PrefabInstance:
   m_ObjectHideFlags: 0

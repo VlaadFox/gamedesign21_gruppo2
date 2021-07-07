@@ -9,7 +9,7 @@ public class GoToRoom : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        FindObjectOfType<LevelLoader>().LoadNextLevel();
+        FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
     }
 
 

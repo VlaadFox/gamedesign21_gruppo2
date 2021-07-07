@@ -6,13 +6,21 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transistion;
 
-   public void LoadNextLevel()
+   public void LoadNextLevelRoom()
     {
-       StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+       StartCoroutine( LoadLevel(2));
     }
-    public void LoadNextLevel1()
+    public void LoadNextLevelTurin()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        StartCoroutine(LoadLevel(1));
+    }
+    public void LoadNextLevelBank()
+    {
+        StartCoroutine(LoadLevel(3));
+    }
+    public void LoadNextLevelSott()
+    {
+        StartCoroutine(LoadLevel(4));
     }
     IEnumerator LoadLevel(int levelIndex)
     {
