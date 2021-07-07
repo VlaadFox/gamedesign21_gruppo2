@@ -67,8 +67,8 @@ public class Raycastin_Security : MonoBehaviour
                     Debug.Log("hit");
                     // fadeIn();
                     //StartCoroutine(pausa(2f));
-                    transistion.SetTrigger("dead");
-                    transistion.SetTrigger("restabilize");
+                    //transistion.SetTrigger("dead");
+                   // transistion.SetTrigger("restabilize");
 
                     playeref.transform.position = pos;
                    

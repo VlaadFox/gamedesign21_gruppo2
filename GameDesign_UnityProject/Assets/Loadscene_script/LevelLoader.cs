@@ -8,26 +8,26 @@ public class LevelLoader : MonoBehaviour
 
    public void LoadNextLevelRoom()
     {
-       StartCoroutine( LoadLevel(2));
+       StartCoroutine( LoadLevel("Room"));
     }
     public void LoadNextLevelTurin()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel("ScenaPrincipale"));
     }
     public void LoadNextLevelBank()
     {
-        StartCoroutine(LoadLevel(3));
+        StartCoroutine(LoadLevel("Banca"));
     }
     public void LoadNextLevelSott()
     {
-        StartCoroutine(LoadLevel(4));
+        StartCoroutine(LoadLevel("Sottoraneo"));
     }
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel(string name)
     {
         transistion.SetTrigger("start");
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(name);
     }
 }
 
