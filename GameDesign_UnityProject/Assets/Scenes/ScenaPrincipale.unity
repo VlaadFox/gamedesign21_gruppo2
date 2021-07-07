@@ -30369,7 +30369,7 @@ GameObject:
   - component: {fileID: 853057202}
   m_Layer: 0
   m_Name: Protagonist
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39453,7 +39453,7 @@ MonoBehaviour:
     - Thanks, I really needed it, keep this as a thank you
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
-  anim: {fileID: 0}
+  anim: {fileID: 1141537188}
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
@@ -39472,6 +39472,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -290456552396482462, guid: ea629ad70468b467eb8bc76c5d4c0bec, type: 3}
+--- !u!114 &1141537191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141537184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1143845000
 PrefabInstance:
   m_ObjectHideFlags: 0
