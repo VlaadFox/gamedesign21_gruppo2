@@ -15,7 +15,7 @@ public class Energy : MonoBehaviour
 
     private int maxEnergy = 25;
     private int currentEnergy;
-    private int restoreDuration = 5;
+    private int restoreDuration = 1;
     private DateTime nextEnergyTime;
     private DateTime lastEnergyTime;
     private bool isRestoring = false;
@@ -37,10 +37,7 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            UseEnrgy();
-        }
+       
     }
 
     public void UseEnrgy()
@@ -113,7 +110,7 @@ public class Energy : MonoBehaviour
     
     private DateTime addDuration(DateTime datetime, int duration)
     {
-        return datetime.AddSeconds(duration);
+        return datetime.AddMinutes(duration);
     }
 
     private void UpdateEnergy()

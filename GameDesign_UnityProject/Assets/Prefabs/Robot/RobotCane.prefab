@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2219285511358259283}
   - component: {fileID: 2982412093143199734}
   - component: {fileID: 1046894183747541820}
+  - component: {fileID: 8559589082919204328}
   m_Layer: 0
   m_Name: RobotCane
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8559589082919204328
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551398565557730025}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7159649368717899888, guid: 6b5a5cfb3421a46cd9484dee0e8cc14e, type: 3}

@@ -196,7 +196,22 @@ public class Dialog_trigger : MonoBehaviour
                        
                     }
                 }
+                if (gameObject.name == "robotLadro")
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(true);
+                    TriggerDialogue();
+                }
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    Nextdisplay();
+                    Cursor.lockState = CursorLockMode.None;
+                    canvasBottoni.SetActive(true);
 
+                }
+            }
                
                 
             
