@@ -9,10 +9,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: robotLavBase
+    m_ConditionEvent: pauseBool
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: robotLavTalk
+    m_ConditionEvent: talkBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4377397094082294398}
@@ -92,10 +92,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: robotLavBase
+    m_ConditionEvent: pauseBool
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: robotLavTalk
+    m_ConditionEvent: talkBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3153538551622008532}
@@ -120,10 +120,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: robotLavBase
+    m_ConditionEvent: pauseBool
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: robotLavTalk
+    m_ConditionEvent: talkBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3153538551622008532}
@@ -148,10 +148,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: robotLavBase
+    m_ConditionEvent: pauseBool
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: robotLavTalk
+    m_ConditionEvent: talkBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5958394611578359930}
@@ -176,18 +176,18 @@ AnimatorController:
   m_Name: robot Lavori
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: robotLavBase
+  - m_Name: pauseBool
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: robotLavTalk
+    m_Controller: {fileID: 0}
+  - m_Name: talkBool
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -210,10 +210,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: robotLavBase
+    m_ConditionEvent: pauseBool
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: robotLavTalk
+    m_ConditionEvent: talkBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4377397094082294398}

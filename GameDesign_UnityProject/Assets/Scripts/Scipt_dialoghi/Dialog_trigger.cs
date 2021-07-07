@@ -96,9 +96,9 @@ public class Dialog_trigger : MonoBehaviour
                             {
 
 
-                            anim.SetBool("robotLavTalk", true);
+                            anim.SetBool("talkBool", true);
 
-                            anim.SetBool("robotLavBase", false);
+                            anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue2();
@@ -115,10 +115,9 @@ public class Dialog_trigger : MonoBehaviour
                             if (Input.GetKeyDown(KeyCode.R))
                             {
 
+                            anim.SetBool("talkBool", true);
 
-                            anim.SetBool("robotLavTalk", true);
-
-                            anim.SetBool("robotLavBase", false);
+                            anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue();
@@ -152,9 +151,9 @@ public class Dialog_trigger : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.R))
                     {
 
-                        anim.SetBool("robotLavTalk", true);
+                        anim.SetBool("talkBool", true);
 
-                        anim.SetBool("robotLavBase", false);
+                        anim.SetBool("pauseBool", false);
 
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
@@ -200,6 +199,10 @@ public class Dialog_trigger : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+
+                    anim.SetBool("talkBool", true);
+
+                    anim.SetBool("pauseBool", false);
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
                     TriggerDialogue();

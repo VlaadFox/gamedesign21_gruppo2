@@ -13,7 +13,7 @@ public class Active_dialog : MonoBehaviour
     private void Start()
     {
 
-        anim.SetBool("robotLavBase", true);
+        anim.SetBool("pauseBool", true);
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -32,9 +32,9 @@ public class Active_dialog : MonoBehaviour
             dialogCanvas.SetActive(false);
             bottoni.SetActive(false);
 
-            anim.SetBool("robotLavTalk", false);
+            anim.SetBool("talkBool", false);
 
-            anim.SetBool("robotLavBase", true);
+            anim.SetBool("pauseBool", true);
         }
     }
 
