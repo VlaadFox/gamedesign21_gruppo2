@@ -27,6 +27,9 @@ public class StartMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         // ora posso selezionare in oggetto
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);   
+
+        canvasStart.SetActive(true);
+        canvasOptions.SetActive(false);
     }
 
     // Update is called once per frame
@@ -69,5 +72,10 @@ public class StartMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volumeMaster", volume);
+    }
+
+    public void setQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 }
