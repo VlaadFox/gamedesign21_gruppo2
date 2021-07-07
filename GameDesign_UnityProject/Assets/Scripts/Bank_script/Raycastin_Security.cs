@@ -7,12 +7,15 @@ public class Raycastin_Security : MonoBehaviour
 {
     public float rotationSpeed;
     public float radius;
-    public Image Fade;
+    //public Image Fade;
+    public Animator transistion;
 
     [Range(0,360)]
     public float angle;
 
     public GameObject playeref;
+    public GameObject playerpos;
+
 
     private Vector3 pos;
 
@@ -24,9 +27,9 @@ public class Raycastin_Security : MonoBehaviour
     private void Start()
     {
         playeref = GameObject.FindGameObjectWithTag("Player");
-        pos= playeref.transform.position;
+        pos= playerpos.transform.position;
         StartCoroutine(FOVRoutine());
-        Fade.canvasRenderer.SetAlpha(0f);
+        //Fade.canvasRenderer.SetAlpha(0f);
         
     }
     private IEnumerator FOVRoutine()
@@ -62,9 +65,11 @@ public class Raycastin_Security : MonoBehaviour
                 {
                     canSeePlayer = true;
                     Debug.Log("hit");
-                    fadeIn();
+                    // fadeIn();
                     //StartCoroutine(pausa(2f));
-                    
+                    transistion.SetTrigger("dead");
+                    transistion.SetTrigger("restabilize");
+
                     playeref.transform.position = pos;
                    
 
@@ -87,21 +92,12 @@ public class Raycastin_Security : MonoBehaviour
         {
             canSeePlayer = false;
             
-            fadeOut();
+           // fadeOut();
         }
             
     }
 
-    void fadeIn()
-    {
-        Fade.CrossFadeAlpha(1, 0.1f, false);
-        StartCoroutine(pausa(2f));
-       // Fade.CrossFadeAlpha(0, 1, false);
-    }
-    void fadeOut()
-    {
-        Fade.CrossFadeAlpha(0, 2.0f, false);
-    }
+   
 
 
     private void Update()
