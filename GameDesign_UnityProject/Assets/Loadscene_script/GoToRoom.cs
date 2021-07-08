@@ -17,7 +17,7 @@ public class GoToRoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            FindObjectOfType<Dialog_trigger>().Addj();
+            //FindObjectOfType<Dialog_trigger>().Addj();
             DOG.SetActive(true);
             FindObjectOfType<Energy>().UseEnrgy();
             FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
@@ -33,7 +33,8 @@ public class GoToRoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            FindObjectOfType<Dialog_trigger>().Addj();
+            //  FindObjectOfType<Dialog_trigger>().Addj();
+            FindObjectOfType<Dialog_trigger>().Getenter();
         }
     }
 }

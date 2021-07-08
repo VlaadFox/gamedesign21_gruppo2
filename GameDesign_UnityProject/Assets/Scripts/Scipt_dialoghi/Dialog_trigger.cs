@@ -22,6 +22,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasCoin = false; // per controllare moneta
     private bool hasCan = false; // per controllare lattina
     private bool hasUSB = false;
+    private bool hasenter = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -79,6 +80,8 @@ public class Dialog_trigger : MonoBehaviour
                 hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
                 hasUSB = inventory.listInventoryItems.Contains("USB");
+                hasenter = inventory.listInventoryItems.Contains("entrato");
+
 
 
 
@@ -283,7 +286,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                 }
                 
-                if(j==2)
+                if(hasenter)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
@@ -357,12 +360,12 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
    
-    public void Addj()
-    {
-        j=2;
-        Debug.Log("j");
+   // public void Addj()
+  //  {
+   //     j=2;
+  //      Debug.Log("j");
 
-    }
+  //  }
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -410,6 +413,20 @@ public class Dialog_trigger : MonoBehaviour
                 Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
                 inventory.listInventoryItems.Add("ToretCoin");
                 Debug.Log("Ho ricevuto la moneta");
+                break;
+            }
+        }
+    }
+    public void Getenter()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+            {
+                inventory.isFull[i] = true;
+                
+                inventory.listInventoryItems.Add("entrato");
+                Debug.Log("sonoentrato");
                 break;
             }
         }
