@@ -18,7 +18,7 @@ public class GoToRoom : MonoBehaviour
         {
             FindObjectOfType<Energy>().UseEnrgy();
             FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
-            FindObjectOfType<Dialog_trigger>().j=2;
+            FindObjectOfType<Dialog_trigger>().AddJ();
             DOG.SetActive(true);
         }
     }

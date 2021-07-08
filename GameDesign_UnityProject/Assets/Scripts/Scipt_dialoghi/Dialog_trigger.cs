@@ -7,6 +7,7 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue;
     public Dialogo_padre dialogue2;
     public Dialogo_padre dialogue3;
+    public Dialogo_padre dialogue4;
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -30,7 +31,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject canvasBottoni;
 
-    public int j;
+    public int j ;
 
     private void Start()
     {
@@ -64,6 +65,10 @@ public class Dialog_trigger : MonoBehaviour
     public void TriggerDialogue3()
     {
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue3);
+    }
+    public void TriggerDialogue4()
+    {
+        FindObjectOfType<Dialog_manager>().StartDialogue(dialogue4);
     }
 
 
@@ -259,10 +264,11 @@ public class Dialog_trigger : MonoBehaviour
                     {
                         Nextdisplay();
                         continue_button.SetActive(false); Debug.Log("2");
+                        j++;
                     }
 
                 }
-                if(j==1)
+                if (j == 1)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
@@ -272,6 +278,20 @@ public class Dialog_trigger : MonoBehaviour
                         canvas.SetActive(true);
                         TriggerDialogue2();
                         continue_button.SetActive(true);
+                        j++;
+                    }
+                }
+                
+                if(j==2)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue3();
+                        continue_button.SetActive(true);
                     }
                     if (Input.GetMouseButtonDown(0))
                     {
@@ -280,14 +300,16 @@ public class Dialog_trigger : MonoBehaviour
                         j++;
                     }
                 }
-                if (j == 2)
+                else
                 {
-                    anim.SetBool("talkBool", true);
-                    anim.SetBool("pauseBool", false);
-                    canvasDel.SetActive(false);
-                    canvas.SetActive(true);
-                    TriggerDialogue3();
-                    continue_button.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue4();
+                    }   
                 }
             }
                 
@@ -300,7 +322,10 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject imgUIInventarioUSB;
     
-
+    public void AddJ()
+    {
+        j=4;
+    }
     public void GetUSB()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
