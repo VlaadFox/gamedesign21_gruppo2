@@ -8,6 +8,7 @@ public class Active_dialog : MonoBehaviour
     public GameObject canvas;
     public GameObject dialogCanvas;
     public GameObject bottoni;
+    public GameObject continue_button;
     public Animator anim;
 
     private void Start()
@@ -31,6 +32,7 @@ public class Active_dialog : MonoBehaviour
             canvas.SetActive(false);
             dialogCanvas.SetActive(false);
             bottoni.SetActive(false);
+            continue_button.SetActive(false);
 
             anim.SetBool("talkBool", false);
 

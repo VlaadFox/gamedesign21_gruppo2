@@ -10,6 +10,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject canvas;
     public GameObject canvasDel;
+    public GameObject continue_button;
 
     public Animator anim;
 
@@ -19,6 +20,7 @@ public class Dialog_trigger : MonoBehaviour
 
     private bool hasCoin = false; // per controllare moneta
     private bool hasCan = false; // per controllare lattina
+    private bool hasUSB = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -73,6 +75,7 @@ public class Dialog_trigger : MonoBehaviour
         {
                 hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
+                hasUSB = inventory.listInventoryItems.Contains("USB");
 
 
 
@@ -189,20 +192,22 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
+                            continue_button.SetActive(true);
                 }
                    if (Input.GetKeyDown(KeyCode.C))
                     {
                        Nextdisplay();
-                    }
+                       continue_button.SetActive(false);
+                }
                 }
 
 
 
-
+            if (gameObject.name == "robotLadro")
+            {
                 if (!hasUSB)
                 {
-                    if (gameObject.name == "robotLadro")
-                    {
+                   
                         if (Input.GetKeyDown(KeyCode.R))
                         {
                             anim.SetBool("talkBool", true);
@@ -210,15 +215,48 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
-                        }
+                            continue_button.SetActive(true);
+                    }
                         if (Input.GetKeyDown(KeyCode.C))
                         {
                             Nextdisplay();
                             Cursor.lockState = CursorLockMode.None;
                             canvasBottoni.SetActive(true);
-                        }
-                    }    
+                            continue_button.SetActive(false);
+                    }
                 }
+                if (hasUSB)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                    }
+                }
+            }
+
+            if (gameObject.name == "robotRotto")
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    anim.SetBool("talkBool", true);
+                    anim.SetBool("pauseBool", false);
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(true);
+                    TriggerDialogue2();
+                    continue_button.SetActive(true);
+                }
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    Nextdisplay();
+                    Cursor.lockState = CursorLockMode.None;
+                    canvasBottoni.SetActive(true);
+                    continue_button.SetActive(false);
+                }
+            }
                 
 
 
@@ -228,9 +266,9 @@ public class Dialog_trigger : MonoBehaviour
 
 
     public GameObject imgUIInventarioUSB;
-    private bool hasUSB = false;
+    
 
-    private void GetUSB()
+    public void GetUSB()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
