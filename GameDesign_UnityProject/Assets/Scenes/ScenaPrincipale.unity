@@ -4452,6 +4452,9 @@ MonoBehaviour:
   dialogue3:
     name: 
     sentences: []
+  dialogue4:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -6021,7 +6024,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '25/25
+  m_Text: '5/5
 
 '
 --- !u!222 &147203381
@@ -15785,6 +15788,9 @@ MonoBehaviour:
     name: 
     sentences: []
   dialogue3:
+    name: 
+    sentences: []
+  dialogue4:
     name: 
     sentences: []
   canvas: {fileID: 1840627075}
@@ -27287,9 +27293,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30160,6 +30166,9 @@ MonoBehaviour:
     name: 
     sentences: []
   dialogue3:
+    name: 
+    sentences: []
+  dialogue4:
     name: 
     sentences: []
   canvas: {fileID: 1840627075}
@@ -40872,6 +40881,9 @@ MonoBehaviour:
   dialogue3:
     name: 
     sentences: []
+  dialogue4:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -45403,6 +45415,9 @@ MonoBehaviour:
     name: 
     sentences:
     - Thanks, I really needed it, keep this as a thank you
+  dialogue4:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -47637,11 +47652,15 @@ MonoBehaviour:
   dialogue2:
     name: 
     sentences:
+    - Please, if you find it, bring it back to me, I will pay off abundantly.
+  dialogue3:
+    name: 
+    sentences:
     - 'Oh my dog, thank you very much,I was scared seeing that a dangerous criminal
       is around '
     - here is something that can be useful for you, point it at some objects and
       it will allow you to move them
-  dialogue3:
+  dialogue4:
     name: 
     sentences:
     - thanks again for my dog, to use the beam click "RT" and it will allow you to
@@ -47653,7 +47672,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
-  j: 0
+  j: 2
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1183396147
@@ -51169,6 +51188,9 @@ MonoBehaviour:
     - thank you, I will reward you properly, now go to the door further up the bank
       is there
   dialogue3:
+    name: 
+    sentences: []
+  dialogue4:
     name: 
     sentences: []
   canvas: {fileID: 1840627075}
@@ -70454,6 +70476,9 @@ MonoBehaviour:
     name: 
     sentences:
     - Thanks, I really needed it, keep this as a thank you
+  dialogue4:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
