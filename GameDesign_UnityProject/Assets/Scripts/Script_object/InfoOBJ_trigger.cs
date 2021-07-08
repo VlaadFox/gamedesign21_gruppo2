@@ -74,6 +74,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                         TriggerDialogue2();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
+                        
                         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                         EventSystem.current.SetSelectedGameObject(null);
                         // ora posso selezionare in oggetto
