@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4705914300389857750}
   - component: {fileID: 2117474639543261756}
   - component: {fileID: 6714071907255633011}
+  - component: {fileID: 5690138631308639587}
   m_Layer: 0
   m_Name: Stanza
   m_TagString: Untagged
@@ -82,6 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5690138631308639587
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208489629232703008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2467548726846955287, guid: 1030b360bf59a4a75811b003a7885810, type: 3}
 --- !u!1 &3427715268285621879
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +142,7 @@ GameObject:
   - component: {fileID: 1212461641358952034}
   - component: {fileID: 9098947475519758576}
   - component: {fileID: 8603346590395084827}
+  - component: {fileID: 2713319739569191108}
   m_Layer: 0
   m_Name: RobotDevil
   m_TagString: Untagged
@@ -197,6 +213,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2713319739569191108
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774429984558757351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6785724109344774630, guid: 1030b360bf59a4a75811b003a7885810, type: 3}
 --- !u!1 &7536170541011420703
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +238,7 @@ GameObject:
   - component: {fileID: 7316237660291152412}
   - component: {fileID: 7673750373414832616}
   - component: {fileID: 4478153436690734532}
+  - component: {fileID: 6535270831699626581}
   m_Layer: 0
   m_Name: ElevatorA
   m_TagString: Untagged
@@ -280,6 +311,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6535270831699626581
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7536170541011420703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3290113757494209370, guid: 1030b360bf59a4a75811b003a7885810, type: 3}
 --- !u!1 &7902875485653896651
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +336,7 @@ GameObject:
   - component: {fileID: 3682606751954805579}
   - component: {fileID: 9064165084014147953}
   - component: {fileID: 4188560182558533634}
+  - component: {fileID: 8683926172423653162}
   m_Layer: 0
   m_Name: QuadroElettrico
   m_TagString: Untagged
@@ -361,3 +407,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8683926172423653162
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902875485653896651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7035886778812671757, guid: 1030b360bf59a4a75811b003a7885810, type: 3}
