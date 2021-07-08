@@ -57,8 +57,6 @@ public class Dialog_trigger : MonoBehaviour
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue);
     }
 
-
-
     public void TriggerDialogue2()
     {
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue2);
@@ -152,10 +150,16 @@ public class Dialog_trigger : MonoBehaviour
                             DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                             GetCollezionabile();
                             inventory.listInventoryItems.Remove(item: "LattinaOlio");
+                            continue_button.SetActive(true);
 
-                            Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
+                        Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                         }
-
+                    if (Input.GetKeyDown(KeyCode.C))
+                    {
+                        Nextdisplay();
+                        continue_button.SetActive(false);
+                        GetCollezionabile();
+                    }
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
@@ -169,7 +173,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-                if(gameObject.name == "RobotLucee")
+            if(gameObject.name == "RobotLucee")
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                         {
@@ -185,7 +189,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-                if (gameObject.name == "Robottone")
+            if (gameObject.name == "Robottone")
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                         {
@@ -246,14 +250,12 @@ public class Dialog_trigger : MonoBehaviour
                     anim.SetBool("pauseBool", false);
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
-                    TriggerDialogue2();
+                    TriggerDialogue();
                     continue_button.SetActive(true);
                 }
                 if (Input.GetKeyDown(KeyCode.C))
                 {
                     Nextdisplay();
-                    Cursor.lockState = CursorLockMode.None;
-                    canvasBottoni.SetActive(true);
                     continue_button.SetActive(false);
                 }
             }
