@@ -325,8 +325,8 @@ namespace StarterAssets
 		{
 			if (canScale)
 			{
-				if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("Scale"))
-				{
+				//if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("Scale"))
+				//{
 					me.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
 					_controller.radius = 0.15f;
@@ -335,7 +335,7 @@ namespace StarterAssets
 					StartCoroutine(resetScale());
 
 					//		me.SetActive(true);
-				}
+				//}
 			}
 		}
 		public IEnumerator resetScale()
@@ -347,6 +347,11 @@ namespace StarterAssets
 			_controller.height = 1.44f;
 			_controller.center = new Vector3(0f, 0.69f, 0f);
 		}
+
+		public void SetScaleActive()
+        {
+			canScale = true;
+        }
 
 	}
 }

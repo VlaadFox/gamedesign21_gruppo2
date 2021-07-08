@@ -17,6 +17,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
 
     public GameObject imgUIInventarioLattinaOlio;
+    public GameObject imgUIInventarioLattinaOlio_RED;
     public GameObject slot1Inventario;
 
     public GameObject canvasBottoni;
@@ -41,6 +42,8 @@ public class InfoOBJ_trigger : MonoBehaviour
         {
             hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
             hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
+
+
             if (gameObject.name == "OilVending") // stai interagendo con la macchinetta dell'olio
             {
                 if (!hasCan && !hasCoin)
@@ -79,10 +82,54 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
             }
 
-            
-        }
 
+            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
+            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
+            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
+            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
+            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
+            // usare dropitemRED
+            if (gameObject.name == "OilVending_seconda") // stai interagendo con la macchinetta nella seconda piazza (can rossa)
+            {
+                if (!hasCan && !hasCoin)
+                {
+                    // da mettere messaggio "Lattina d'olio: 1 moneta."
+                    Debug.Log("Lattina d'olio: 1 moneta.");
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();     
+                    }
+                }
+                else if (!hasCan && hasCoin) // quì hai preso già la moneta dal robot delle costruzioni
+                {
+                    // da mettere messaggio "Vuoi acquistare una lattina d'olio?"
+                    Debug.Log("Vuoi acquistare una lattina d'olio?");
+                    Debug.Log("Sì");
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                        Cursor.lockState = CursorLockMode.None;
+                        canvasBottoni.SetActive(true);
+                    }
+
+                    // "SI"
+                    
+                    // qua mi cancella la moneta dall'inventario
+                        
+                    
+
+                    // "NO"
+                    // chiudi il dialogo
+                }
+            }   
+        }
     }
+
+
     public void DropItem()
     {
         foreach (Transform child in slot1Inventario.transform)
@@ -99,6 +146,27 @@ public class InfoOBJ_trigger : MonoBehaviour
                 Instantiate(imgUIInventarioLattinaOlio, inventory.slots[i].transform, false);
                 inventory.listInventoryItems.Add("LattinaOlio");
                 Debug.Log("Ho ricevuto la lattina d'olio");
+                break;
+            }
+        }
+    }
+
+    public void DropItemRED()
+    {
+        foreach (Transform child in slot1Inventario.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+            inventory.isFull[0] = false;
+        }
+        inventory.listInventoryItems.Remove(item: "ToretCoin");
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false)
+            {
+                inventory.isFull[i] = true;
+                Instantiate(imgUIInventarioLattinaOlio_RED, inventory.slots[i].transform, false);
+                inventory.listInventoryItems.Add("LattinaOlioRED");
+                Debug.Log("Ho ricevuto la lattina d'olio rossa");
                 break;
             }
         }
