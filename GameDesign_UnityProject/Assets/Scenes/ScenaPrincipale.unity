@@ -4460,6 +4460,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 0}
   i: 0
   imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &102699274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15716,6 +15717,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 241213710}
   i: 0
   imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &390120076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30010,6 +30012,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 0}
   i: 0
   imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &745426899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40719,6 +40722,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 196492523}
   i: 0
   imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1011542488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45245,7 +45249,8 @@ MonoBehaviour:
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
   i: 0
-  imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
+  imgUIInventarioWrench: {fileID: 2218409374771733995, guid: 13f4a407f72dfd241922e0ff8a4bf1ee, type: 3}
 --- !u!64 &1141537190
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50798,6 +50803,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 857946822}
   i: 0
   imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1240099627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70000,6 +70006,7 @@ MonoBehaviour:
   canvasBottoni: {fileID: 859245271}
   i: 0
   imgUIInventarioUSB: {fileID: 0}
+  imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1669716406
 MonoBehaviour:
   m_ObjectHideFlags: 0

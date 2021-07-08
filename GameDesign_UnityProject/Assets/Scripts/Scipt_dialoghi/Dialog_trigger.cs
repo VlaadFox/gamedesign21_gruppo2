@@ -139,23 +139,26 @@ public class Dialog_trigger : MonoBehaviour
                     }
                     else // quì hai già comprato la lattina d'olio
                     {
-                    if (Input.GetKeyDown(KeyCode.R))
-                    {
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue3();
-                        DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
-                        inventory.listInventoryItems.Remove(item: "LattinaOlio");
-                        inventory.listInventoryItems.Add("CollezionabileOlio");
+                        if (Input.GetKeyDown(KeyCode.R))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue3();
+                            DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
+                            GetCollezionabile();
+                            inventory.listInventoryItems.Remove(item: "LattinaOlio");
 
-                        Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
-                    }
-                    // da mettere messaggio "Ce l'hai fatta! Grazie mille, eccoti una ricompensa."
-                    
-                       
-                        // quì ci va poi il codice col "for" per aggiungere il collezionabile che scegliamo all'inventario ma una volta che lo decidiamo lo implemento io
+                            Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
+                        }
+
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                     }
                 }
 
@@ -231,12 +234,29 @@ public class Dialog_trigger : MonoBehaviour
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
+            if (inventory.isFull[6] == false) // controllo di avere spazio nell'inventario
+            {
+                inventory.isFull[6] = true;
+                Instantiate(imgUIInventarioUSB, inventory.slots[6].transform, false);
+                inventory.listInventoryItems.Add("USB");
+                Debug.Log("Ho ricevuto la USB");
+                break;
+            }
+        }
+    }
+
+
+    public GameObject imgUIInventarioWrench;
+    private void GetCollezionabile()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
             if (inventory.isFull[7] == false) // controllo di avere spazio nell'inventario
             {
                 inventory.isFull[7] = true;
-                Instantiate(imgUIInventarioUSB, inventory.slots[7].transform, false);
-                inventory.listInventoryItems.Add("USB");
-                Debug.Log("Ho ricevuto la USB");
+                Instantiate(imgUIInventarioWrench, inventory.slots[7].transform, false);
+                inventory.listInventoryItems.Add("Wrench");
+                Debug.Log("Ho ricevuto la chiave inglese");
                 break;
             }
         }
