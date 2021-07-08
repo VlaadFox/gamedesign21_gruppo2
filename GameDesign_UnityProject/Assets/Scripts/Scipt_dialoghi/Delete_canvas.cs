@@ -12,5 +12,6 @@ public class Delete_canvas : MonoBehaviour
     {
         canvas.SetActive(false);
         playerController.GetComponent<CharacterController>().enabled = true;
+        Time.timeScale = 1f;
     }
 }

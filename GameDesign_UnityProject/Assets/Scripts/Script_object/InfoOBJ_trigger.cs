@@ -69,12 +69,13 @@ public class InfoOBJ_trigger : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.R))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
+                        Time.timeScale = 0f;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
-                        
+
                         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                         EventSystem.current.SetSelectedGameObject(null);
                         // ora posso selezionare in oggetto
@@ -120,6 +121,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.R))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
+                        Time.timeScale = 0f;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();

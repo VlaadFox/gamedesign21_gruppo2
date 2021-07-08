@@ -130,6 +130,7 @@ public class Dialog_trigger : MonoBehaviour
                             if (Input.GetKeyDown(KeyCode.R))
                             {
                                 playerController.GetComponent<CharacterController>().enabled = false;
+                                Time.timeScale = 0f;
 
                                 anim.SetBool("talkBool", true);
                                 anim.SetBool("pauseBool", false);
@@ -247,6 +248,7 @@ public class Dialog_trigger : MonoBehaviour
                         if (Input.GetKeyDown(KeyCode.R))
                         {
                             playerController.GetComponent<CharacterController>().enabled = false;
+                            Time.timeScale = 0f;
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
