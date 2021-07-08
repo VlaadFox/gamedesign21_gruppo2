@@ -263,11 +263,12 @@ public class Dialog_trigger : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         Nextdisplay();
-                        continue_button.SetActive(false); Debug.Log("2");
+                        continue_button.SetActive(false); Debug.Log("1.2");
                         j++;
                     }
 
                 }
+
                 if (j == 1)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
@@ -277,8 +278,8 @@ public class Dialog_trigger : MonoBehaviour
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
-                        continue_button.SetActive(true);
-                        j++;
+                        continue_button.SetActive(true); Debug.Log("2");
+                        
                     }
                 }
                 
@@ -291,16 +292,17 @@ public class Dialog_trigger : MonoBehaviour
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue3();
-                        continue_button.SetActive(true);
+                        continue_button.SetActive(true); Debug.Log("3");
                     }
                     if (Input.GetMouseButtonDown(0))
                     {
                         Nextdisplay();
-                        continue_button.SetActive(false);
+                        continue_button.SetActive(false); Debug.Log("4");
                         j++;
                     }
                 }
-                else
+
+                if (j == 3)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
@@ -308,7 +310,7 @@ public class Dialog_trigger : MonoBehaviour
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue4();
+                        TriggerDialogue4(); Debug.Log("4");
                     }   
                 }
             }
@@ -322,10 +324,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject imgUIInventarioUSB;
     
-    public void AddJ()
-    {
-        j=4;
-    }
+    
     public void GetUSB()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
@@ -358,6 +357,10 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
    
+    public void Addj()
+    {
+        j = 2;
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
