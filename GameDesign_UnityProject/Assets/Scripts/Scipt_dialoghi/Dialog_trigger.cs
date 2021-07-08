@@ -305,7 +305,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                 }
 
-                if (j == 3)
+                if (j == 2)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
@@ -360,12 +360,7 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
    
-   // public void Addj()
-  //  {
-   //     j=2;
-  //      Debug.Log("j");
-
-  //  }
+ 
 
     private void OnTriggerEnter(Collider collider)
     {
