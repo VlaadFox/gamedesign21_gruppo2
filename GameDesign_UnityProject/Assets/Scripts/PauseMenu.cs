@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenuUI.SetActive(false);
+        canvasPausa.SetActive(true);
+        canvasOptions.SetActive(false);
     }
 
     void Update()
@@ -73,44 +76,45 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    public GameObject canvasPausa;
+    public GameObject canvasOptions;
+    public GameObject optionsFirstButton;
+    public AudioMixer audioMixer;
+
+
+
+
+
+    public void fromStartToOptions()
+    {
+        canvasPausa.SetActive(false);
+        canvasOptions.SetActive(true);
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton); 
+    }
+
+    public void fromOptionsToStart()
+    {
+        canvasPausa.SetActive(true);
+        canvasOptions.SetActive(false);
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton); 
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volumeMaster", volume);
+    }
+
+    public void setQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }
 
-/*public GameObject pauseMenu;
-    public KeyCode pauseKey;
-    public bool isPaused;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        pauseMenu.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-    }
-
-    public void PauseGame()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-    }
-
-    public void ResumeGame()
-    {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }*/
