@@ -31,7 +31,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject canvasBottoni;
 
-    public int j ;
+    private int j ;
 
     private void Start()
     {
@@ -359,7 +359,9 @@ public class Dialog_trigger : MonoBehaviour
    
     public void Addj()
     {
-        j = 2;
+        j=2;
+        Debug.Log("j");
+
     }
 
     private void OnTriggerEnter(Collider collider)

@@ -13,7 +13,7 @@ public class SceneEntrance_dog : MonoBehaviour
         if (PlayerPrefs.GetString("LastExitName") == lastExitName)
         {
             dog.SetActive(true);
-            FindObjectOfType<Dialog_trigger>().j = 2;
+            
         }
     }
 

@@ -116,8 +116,8 @@ public class Energy : MonoBehaviour
     
     private DateTime addDuration(DateTime datetime, int duration)
     {
-        // return datetime.AddMinutes(duration);
-        return datetime.AddSeconds(duration);
+        return datetime.AddMinutes(duration);
+        //return datetime.AddSeconds(duration);
     }
 
     private void UpdateEnergy()

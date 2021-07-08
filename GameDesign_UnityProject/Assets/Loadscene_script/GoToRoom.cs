@@ -6,6 +6,7 @@ public class GoToRoom : MonoBehaviour
 {
     public GameObject DOG;
     public GameObject canvas_a;
+
     private void OnTriggerEnter(Collider other)
     {
         canvas_a.SetActive(true);
@@ -16,16 +17,24 @@ public class GoToRoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            FindObjectOfType<Energy>().UseEnrgy();
-            FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
             FindObjectOfType<Dialog_trigger>().Addj();
             DOG.SetActive(true);
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
+           
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         canvas_a.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            FindObjectOfType<Dialog_trigger>().Addj();
+        }
     }
 }
 
