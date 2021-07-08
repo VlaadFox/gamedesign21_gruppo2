@@ -15783,14 +15783,11 @@ MonoBehaviour:
 
       for
       you today special discount for only 2  watts I shrink you, do you accept?'
-    - 'There are certain unreachable places without adequate dimensions.
-
-      for
-      you today special discount for only 2  watts I shrink you, do you accept?'
-    - 'There are certain unreachable places without adequate dimensions.
-
-      for
-      you today special discount for only 2  watts I shrink you, do you accept?'
+    - oh what a pity, it seems you don't have enough energy wait a while and come
+      back to me
+    - here you are, now you can get to all those places you didn't get to before
+    - oh what a pity, if you change your mind I'm always here but hurry that the
+      discounts end
   dialogue2:
     name: 
     sentences: []
@@ -53623,6 +53620,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107135359}
+        m_TargetAssemblyTypeName: Dialog_manager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1286124759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66126,33 +66135,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1344569821}
-        m_TargetAssemblyTypeName: Energy, Assembly-CSharp
-        m_MethodName: UseEnrgy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1107135359}
-        m_TargetAssemblyTypeName: Dialog_manager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1344569821}
-        m_TargetAssemblyTypeName: Energy, Assembly-CSharp
-        m_MethodName: UseEnrgy
+      - m_Target: {fileID: 390120075}
+        m_TargetAssemblyTypeName: Dialog_trigger, Assembly-CSharp
+        m_MethodName: checkenough
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

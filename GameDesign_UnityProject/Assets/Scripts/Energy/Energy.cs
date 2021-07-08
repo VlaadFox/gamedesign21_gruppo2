@@ -12,8 +12,10 @@ public class Energy : MonoBehaviour
     Text timerText;
     [SerializeField] 
     Slider energybar;
+
     
-    
+    private Inventory inventory;
+
     private int maxEnergy = 5;
     private int currentEnergy;
     private int restoreDuration = 1;
@@ -162,5 +164,39 @@ public class Energy : MonoBehaviour
         PlayerPrefs.SetInt("currentEnergy", currentEnergy);
         PlayerPrefs.SetString("nextEnergyTime", nextEnergyTime.ToString());
         PlayerPrefs.SetString("lastEnerguTime", lastEnergyTime.ToString());
+    }
+
+    public void check()
+    {
+        if (currentEnergy < 2)
+        {
+
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+                {
+                    inventory.isFull[i] = true;
+
+                    inventory.listInventoryItems.Remove("energiaok");
+                    Debug.Log("energiaok");
+                    break;
+                }
+            }
+
+        }
+        else
+        {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+                {
+                    inventory.isFull[i] = true;
+
+                    inventory.listInventoryItems.Add("energiaok");
+                    Debug.Log("energianook");
+                    break;
+                }
+            }
+        }
     }
 }

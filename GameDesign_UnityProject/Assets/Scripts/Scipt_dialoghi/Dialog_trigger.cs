@@ -9,6 +9,8 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue3;
     public Dialogo_padre dialogue4;
 
+    
+
     public GameObject canvas;
     public GameObject canvasDel;
     public GameObject continue_button;
@@ -23,6 +25,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasCan = false; // per controllare lattina
     private bool hasUSB = false;
     private bool hasenter = false;
+    private bool hasenough = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -81,6 +84,8 @@ public class Dialog_trigger : MonoBehaviour
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
                 hasUSB = inventory.listInventoryItems.Contains("USB");
                 hasenter = inventory.listInventoryItems.Contains("entrato");
+                hasenough = inventory.listInventoryItems.Contains("energiaok");
+
 
 
 
@@ -199,6 +204,7 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "Robottone")
                 {
+                
                     if (Input.GetKeyDown(KeyCode.R))
                         {
                             canvasDel.SetActive(false);
@@ -209,8 +215,11 @@ public class Dialog_trigger : MonoBehaviour
                    if (Input.GetKeyDown(KeyCode.C))
                     {
                        Nextdisplay();
+                    canvasBottoni.SetActive(true);
                        continue_button.SetActive(false);
+                    
                 }
+                   
                 }
 
 
@@ -324,6 +333,21 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
 
+    public void checkenough()
+    {
+        FindObjectOfType<Energy>().check();
+        if (hasenough)
+        {
+            Nextdisplay(); Nextdisplay();
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+        }
+        if (!hasenough)
+        {
+            Nextdisplay(); 
+        }
+    }
+   
 
     public GameObject imgUIInventarioUSB;
     
