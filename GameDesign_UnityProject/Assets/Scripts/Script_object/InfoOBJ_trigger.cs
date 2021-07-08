@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InfoOBJ_trigger : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class InfoOBJ_trigger : MonoBehaviour
     public GameObject slot1Inventario;
 
     public GameObject canvasBottoni;
+
+    public GameObject yesFirstButton;
+    public GameObject playerController;
 
     private void Start()
     {
@@ -64,11 +68,16 @@ public class InfoOBJ_trigger : MonoBehaviour
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R))
                     {
+                        playerController.GetComponent<CharacterController>().enabled = false;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
 
                     // "SI"
@@ -109,11 +118,15 @@ public class InfoOBJ_trigger : MonoBehaviour
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R))
                     {
+                        playerController.GetComponent<CharacterController>().enabled = false;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
 
                     // "SI"

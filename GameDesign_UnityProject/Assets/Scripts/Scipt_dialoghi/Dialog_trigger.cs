@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Dialog_trigger : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class Dialog_trigger : MonoBehaviour
     
 
     public GameObject canvasBottoni;
+
+
+    public GameObject yesFirstButton;
+
+    public GameObject playerController;
+
+
 
     private int j ;
 
@@ -121,6 +129,8 @@ public class Dialog_trigger : MonoBehaviour
                             //Debug.Log("Sì");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
+                                playerController.GetComponent<CharacterController>().enabled = false;
+
                                 anim.SetBool("talkBool", true);
                                 anim.SetBool("pauseBool", false);
                                 canvasDel.SetActive(false);
@@ -128,6 +138,11 @@ public class Dialog_trigger : MonoBehaviour
                                 TriggerDialogue();
                                 Cursor.lockState = CursorLockMode.None;
                                 canvasBottoni.SetActive(true);
+
+                                // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                                EventSystem.current.SetSelectedGameObject(null);
+                                // ora posso selezionare in oggetto
+                                EventSystem.current.SetSelectedGameObject(yesFirstButton);
                             }
 
                             // "SI"
@@ -231,19 +246,28 @@ public class Dialog_trigger : MonoBehaviour
                    
                         if (Input.GetKeyDown(KeyCode.R))
                         {
+                            playerController.GetComponent<CharacterController>().enabled = false;
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
                             continue_button.SetActive(true);
-                    }
+                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                            EventSystem.current.SetSelectedGameObject(null);
+                            // ora posso selezionare in oggetto
+                            EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                        }
                         if (Input.GetKeyDown(KeyCode.C))
                         {
                             Nextdisplay();
                             Cursor.lockState = CursorLockMode.None;
                             canvasBottoni.SetActive(true);
                             continue_button.SetActive(false);
+                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                            EventSystem.current.SetSelectedGameObject(null);
+                            // ora posso selezionare in oggetto
+                            EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
                 }
                 if (hasUSB)

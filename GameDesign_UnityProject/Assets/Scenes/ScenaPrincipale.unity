@@ -4555,6 +4555,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &102699274
@@ -7761,10 +7763,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1422405981}
+    m_SelectOnDown: {fileID: 1422405981}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -7916,6 +7918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 196492523}
+  playerController: {fileID: 0}
 --- !u!1 &199382983
 GameObject:
   m_ObjectHideFlags: 0
@@ -9775,6 +9778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 241213710}
+  playerController: {fileID: 0}
 --- !u!1 &243929540
 GameObject:
   m_ObjectHideFlags: 0
@@ -16169,6 +16173,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 241213710}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &390120076
@@ -24102,6 +24108,8 @@ MonoBehaviour:
   imgUIInventarioLattinaOlio_RED: {fileID: 2218409374771733995, guid: 1cc10eacb78462c4ca9a639b08888050, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 1073891931}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!65 &603331242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30558,6 +30566,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &745426899
@@ -35585,6 +35595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 857946822}
+  playerController: {fileID: 0}
 --- !u!1 &859245271
 GameObject:
   m_ObjectHideFlags: 0
@@ -35635,6 +35646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 859245271}
+  playerController: {fileID: 8616007837305493623}
 --- !u!1001 &861593986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41283,6 +41295,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 196492523}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1011542488
@@ -43365,6 +43379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1073891931}
+  playerController: {fileID: 0}
 --- !u!1 &1075767922
 GameObject:
   m_ObjectHideFlags: 0
@@ -45834,6 +45849,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
+  yesFirstButton: {fileID: 1946490236}
+  playerController: {fileID: 8616007837305493623}
   imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
   imgUIInventarioWrench: {fileID: 2218409374771733995, guid: 13f4a407f72dfd241922e0ff8a4bf1ee, type: 3}
 --- !u!64 &1141537190
@@ -48079,6 +48096,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1183396147
@@ -51618,6 +51637,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 857946822}
+  yesFirstButton: {fileID: 1758434668}
+  playerController: {fileID: 8616007837305493623}
   imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1240099627
@@ -56225,6 +56246,8 @@ MonoBehaviour:
   imgUIInventarioLattinaOlio_RED: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1001 &1324274501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59719,10 +59742,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1946490238}
+    m_SelectOnDown: {fileID: 1946490238}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -59730,7 +59753,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.11764706, g: 0.53333336, b: 0.85490197, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -60897,10 +60920,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 187135706}
+    m_SelectOnDown: {fileID: 187135706}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -64897,6 +64920,8 @@ MonoBehaviour:
   imgUIInventarioLattinaOlio_RED: {fileID: 0}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 1073891931}
+  yesFirstButton: {fileID: 187135704}
+  playerController: {fileID: 0}
 --- !u!114 &1509063983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70903,6 +70928,8 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
+  yesFirstButton: {fileID: 0}
+  playerController: {fileID: 0}
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1669716406
@@ -82098,10 +82125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1400191853}
+    m_SelectOnDown: {fileID: 1400191853}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -82109,7 +82136,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.11764707, g: 0.53333336, b: 0.854902, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
