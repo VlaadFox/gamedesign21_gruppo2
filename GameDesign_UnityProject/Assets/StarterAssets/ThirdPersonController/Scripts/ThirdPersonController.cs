@@ -329,6 +329,9 @@ namespace StarterAssets
 				{
 					me.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
+					_controller.radius = 0.15f;
+					_controller.height = 0.56f;
+					_controller.center = new Vector3(0f, 0.21f, 0f);
 					StartCoroutine(resetScale());
 
 					//		me.SetActive(true);
@@ -340,6 +343,9 @@ namespace StarterAssets
 			yield return new WaitForSeconds(15f);
 
 			me.transform.localScale = new Vector3(1f, 1f, 1f);
+			_controller.radius = 0.28f;
+			_controller.height = 1.44f;
+			_controller.center = new Vector3(0f, 0.69f, 0f);
 		}
 
 	}
