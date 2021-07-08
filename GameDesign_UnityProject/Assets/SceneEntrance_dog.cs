@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneEntrance : MonoBehaviour
+public class SceneEntrance_dog : MonoBehaviour
 {
-
     public string lastExitName;
+    public GameObject dog;
+   
     // Start is called before the first frame update
     void Start()
     {
         if (PlayerPrefs.GetString("LastExitName") == lastExitName)
         {
-            PLayerScript.instance.transform.position = transform.position;
-            PLayerScript.instance.transform.eulerAngles = transform.eulerAngles;
-
+            dog.SetActive(true);
+            FindObjectOfType<Dialog_trigger>().j = 2;
         }
-        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

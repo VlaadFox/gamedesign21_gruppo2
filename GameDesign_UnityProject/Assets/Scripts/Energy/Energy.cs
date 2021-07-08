@@ -13,7 +13,7 @@ public class Energy : MonoBehaviour
     [SerializeField] 
     Slider energybar;
 
-    private int maxEnergy = 25;
+    private int maxEnergy = 5;
     private int currentEnergy;
     private int restoreDuration = 1;
     private DateTime nextEnergyTime;
@@ -25,7 +25,7 @@ public class Energy : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("currentEnergy"))
         {
-            PlayerPrefs.SetInt("currentEnergy", 25);
+            PlayerPrefs.SetInt("currentEnergy", 5);
             Load();
             StartCoroutine(RestoreEnergy());
         }
@@ -37,7 +37,11 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
-       
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UseEnrgy();
+            FindObjectOfType<Dialog_trigger>().j++;
+        }
     }
 
     public void UseEnrgy()

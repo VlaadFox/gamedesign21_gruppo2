@@ -30,7 +30,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject canvasBottoni;
 
-    public int i;
+    public int j;
 
     private void Start()
     {
@@ -244,19 +244,50 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotRotto")
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                if (j == 0)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                        continue_button.SetActive(true); Debug.Log("1");
+                    }
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Nextdisplay();
+                        continue_button.SetActive(false); Debug.Log("2");
+                    }
+
+                }
+                if(j==1)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                        continue_button.SetActive(true);
+                    }
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Nextdisplay();
+                        continue_button.SetActive(false);
+                        j++;
+                    }
+                }
+                if (j == 2)
                 {
                     anim.SetBool("talkBool", true);
                     anim.SetBool("pauseBool", false);
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
-                    TriggerDialogue();
+                    TriggerDialogue3();
                     continue_button.SetActive(true);
-                }
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    Nextdisplay();
-                    continue_button.SetActive(false);
                 }
             }
                 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoToRoom : MonoBehaviour
 {
-
+    public GameObject DOG;
     public GameObject canvas_a;
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +18,8 @@ public class GoToRoom : MonoBehaviour
         {
             FindObjectOfType<Energy>().UseEnrgy();
             FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
+            FindObjectOfType<Dialog_trigger>().j=2;
+            DOG.SetActive(true);
         }
     }
 

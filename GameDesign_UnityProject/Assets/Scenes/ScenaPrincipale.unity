@@ -4459,7 +4459,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &102699274
@@ -13930,6 +13930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43849ba07f344ca42b34cb87ceaaeabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DOG: {fileID: 1961044920}
   canvas_a: {fileID: 326687236}
 --- !u!65 &342927794
 BoxCollider:
@@ -15793,7 +15794,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 241213710}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &390120076
@@ -30168,7 +30169,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!65 &745426899
@@ -40878,7 +40879,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 196492523}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1011542488
@@ -45409,7 +45410,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
   imgUIInventarioWrench: {fileID: 2218409374771733995, guid: 13f4a407f72dfd241922e0ff8a4bf1ee, type: 3}
 --- !u!64 &1141537190
@@ -47491,27 +47492,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.307096
+      value: 0.19327395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.307096
+      value: 0.19327395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.307096
+      value: 0.19327395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.01634
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.73
+      value: 19.536
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.83
+      value: -20.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47635,10 +47636,16 @@ MonoBehaviour:
     - Please, if you find it, bring it back to me, I will pay off abundantly.
   dialogue2:
     name: 
-    sentences: []
+    sentences:
+    - 'Oh my dog, thank you very much,I was scared seeing that a dangerous criminal
+      is around '
+    - here is something that can be useful for you, point it at some objects and
+      it will allow you to move them
   dialogue3:
     name: 
-    sentences: []
+    sentences:
+    - thanks again for my dog, to use the beam click "RT" and it will allow you to
+      move many objects to create new roads
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -47646,7 +47653,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1183396147
@@ -51171,7 +51178,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 857946822}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1240099627
@@ -65053,9 +65060,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 416.44043
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000041053422, y: 92.069565, z: -0.00000008310815}
 --- !u!23 &1517370556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70454,7 +70461,7 @@ MonoBehaviour:
   imgUIInventarioMoneta: {fileID: 2218409374771733995, guid: 181c20a6d134f3746b0c0a8a09b56621, type: 3}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
-  i: 0
+  j: 0
   imgUIInventarioUSB: {fileID: 0}
   imgUIInventarioWrench: {fileID: 0}
 --- !u!114 &1669716406
@@ -82802,6 +82809,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8568786114023165773, guid: f4601de71e9abd844a32e2424786ef66, type: 3}
   m_PrefabInstance: {fileID: 620113990}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1961044920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1551398565557730025, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
+  m_PrefabInstance: {fileID: 2030870480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1961433858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85163,31 +85175,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.385586
+      value: 37.310326
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11638075
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.414114
+      value: -20.640768
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8967473
+      value: 0.94590265
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 3.6634814e-15
+      value: 3.8642956e-15
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.442543
+      value: -0.32445082
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.8079196e-15
+      value: 1.3254781e-15
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -85195,7 +85207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -52.532
+      value: -37.865
       objectReference: {fileID: 0}
     - target: {fileID: 2219285511358259283, guid: 73ab651262ff14148855beaf5d0944b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -92810,27 +92822,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5778221
+      value: 0.71597767
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.40758026
+      value: 0.023753725
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5778221
+      value: 0.69733536
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.40758026
+      value: -0.023135208
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -70.396
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 88.489
       objectReference: {fileID: 0}
     - target: {fileID: 6982857671912427600, guid: 7f6eb4c1e87734801931a607db38088c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
