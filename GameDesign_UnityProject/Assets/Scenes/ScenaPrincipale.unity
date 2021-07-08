@@ -4459,6 +4459,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!65 &102699274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15714,6 +15715,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 241213710}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!114 &390120076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23501,6 +23503,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02126797f5572475fb5d85744b18dac3, type: 3}
+--- !u!1 &603331238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4609817143286318567, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+  m_PrefabInstance: {fileID: 2028530998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &603331239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+  m_PrefabInstance: {fileID: 2028530998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &603331240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603331238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53299a46da730344ea0a4031231a0a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 851944356}
+  dialogCanvas: {fileID: 1695133559}
+  bottoni: {fileID: 1073891931}
+  anim: {fileID: 0}
+--- !u!114 &603331241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603331238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4e7e203cdd08c4daddccac051fb508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - 'can of oil: 1 coin'
+  dialogue2:
+    name: 
+    sentences:
+    - Do you want to buy a can of oil?
+    - here's to you
+  canvas: {fileID: 1695133559}
+  canvasDel: {fileID: 851944356}
+  imgUIInventarioLattinaOlio: {fileID: 2218409374771733995, guid: 0c2d69c3be812bc428aa955df7e9f764, type: 3}
+  imgUIInventarioLattinaOlio_RED: {fileID: 2218409374771733995, guid: 1cc10eacb78462c4ca9a639b08888050, type: 3}
+  slot1Inventario: {fileID: 1955174301}
+  canvasBottoni: {fileID: 1073891931}
+--- !u!65 &603331242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603331238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 373.03513, y: 365.17685, z: 284.81186}
+  m_Center: {x: -42.162502, y: 1.6517403, z: -139.18463}
+--- !u!64 &603331243
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603331238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -943334643979624576, guid: 4bba1b6a269ef42908d5296b2f998d2f, type: 3}
 --- !u!1 &603491933
 GameObject:
   m_ObjectHideFlags: 0
@@ -26997,7 +27079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 665.71, y: -436.64}
+  m_AnchoredPosition: {x: 759, y: 259}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661665648
@@ -29927,6 +30009,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!65 &745426899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40635,6 +40718,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 196492523}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!114 &1011542488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45161,6 +45245,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!64 &1141537190
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50693,12 +50778,12 @@ MonoBehaviour:
     sentences:
     - 'Hey, you, I need a favor, further on there is a vault, unfortunately I have
       a few days left to live and there is something in there that could save me, '
-    - There are only a couple of cameras that with your agility I surpassed in a
-      moment, would you give me a hand?
-    - Oh thank you very much, then here is a usb to enter the bank, once you get
-      to the safe reinsert it to open it
+    - There are only a couple of cameras that with your agility can be surpassed
+      with no effort, could you help me?
+    - Oh thank you very much, then here is a USB to enter the bank, once you get
+      to the safe reinsert it to open it.
     - You were my last hope, if you change your mind I'll be here for a few more
-      days until I finally shut down
+      days until I will shut down.
   dialogue2:
     name: 
     sentences: []
@@ -50712,6 +50797,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 857946822}
   i: 0
+  imgUIInventarioUSB: {fileID: 2218409374771733995, guid: 4a0f7e0b87022e94d9fee1f9f6904468, type: 3}
 --- !u!114 &1240099627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55301,6 +55387,7 @@ MonoBehaviour:
   canvas: {fileID: 1695133559}
   canvasDel: {fileID: 851944356}
   imgUIInventarioLattinaOlio: {fileID: 0}
+  imgUIInventarioLattinaOlio_RED: {fileID: 0}
   slot1Inventario: {fileID: 0}
   canvasBottoni: {fileID: 0}
 --- !u!1001 &1324274501
@@ -63972,6 +64059,7 @@ MonoBehaviour:
   canvas: {fileID: 1695133559}
   canvasDel: {fileID: 851944356}
   imgUIInventarioLattinaOlio: {fileID: 2218409374771733995, guid: 0c2d69c3be812bc428aa955df7e9f764, type: 3}
+  imgUIInventarioLattinaOlio_RED: {fileID: 0}
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 1073891931}
 --- !u!114 &1509063983
@@ -64553,6 +64641,7 @@ Transform:
   - {fileID: 1666849315}
   - {fileID: 1372962992}
   - {fileID: 611353822}
+  - {fileID: 603331239}
   m_Father: {fileID: 0}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69910,6 +69999,7 @@ MonoBehaviour:
   slot1Inventario: {fileID: 1955174301}
   canvasBottoni: {fileID: 859245271}
   i: 0
+  imgUIInventarioUSB: {fileID: 0}
 --- !u!114 &1669716406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84148,6 +84238,75 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &2028530998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1517302650}
+    m_Modifications:
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.009999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.009999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -183.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000001013279
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000001013279
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797252363948269405, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609817143286318567, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
+      propertyPath: m_Name
+      value: OilVending_seconda
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0a4e34dad5a04c74a41ec0c415db0ae, type: 3}
 --- !u!1001 &2030502073
 PrefabInstance:
   m_ObjectHideFlags: 0

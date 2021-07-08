@@ -67,21 +67,17 @@ public class Dialog_trigger : MonoBehaviour
     }
 
 
-
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player") 
         {
-            
-
-
-
-
                 hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
-            //hasCan = true;
 
-            
+
+
+
+
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
                 {
@@ -94,12 +90,9 @@ public class Dialog_trigger : MonoBehaviour
                             Debug.Log("Fai presto perfavore!");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
-
-
-                            anim.SetBool("talkBool", true);
-
-                            anim.SetBool("pauseBool", false);
-                            canvasDel.SetActive(false);
+                                anim.SetBool("talkBool", true);
+                                anim.SetBool("pauseBool", false);
+                                canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue2();
                             }
@@ -114,11 +107,9 @@ public class Dialog_trigger : MonoBehaviour
                             //Debug.Log("Sì");
                             if (Input.GetKeyDown(KeyCode.R))
                             {
-
-                            anim.SetBool("talkBool", true);
-
-                            anim.SetBool("pauseBool", false);
-                            canvasDel.SetActive(false);
+                                anim.SetBool("talkBool", true);
+                                anim.SetBool("pauseBool", false);
+                                canvasDel.SetActive(false);
                                 canvas.SetActive(true);
                                 TriggerDialogue();
                                 Cursor.lockState = CursorLockMode.None;
@@ -150,17 +141,15 @@ public class Dialog_trigger : MonoBehaviour
                     {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
-
                         anim.SetBool("talkBool", true);
-
                         anim.SetBool("pauseBool", false);
-
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue3();
                         DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                         inventory.listInventoryItems.Remove(item: "LattinaOlio");
                         inventory.listInventoryItems.Add("CollezionabileOlio");
+
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                     }
                     // da mettere messaggio "Ce l'hai fatta! Grazie mille, eccoti una ricompensa."
@@ -169,6 +158,11 @@ public class Dialog_trigger : MonoBehaviour
                         // quì ci va poi il codice col "for" per aggiungere il collezionabile che scegliamo all'inventario ma una volta che lo decidiamo lo implemento io
                     }
                 }
+
+
+
+
+
                 if(gameObject.name == "RobotLucee")
                 {
                     if (Input.GetKeyDown(KeyCode.R))
@@ -176,51 +170,76 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
-                            
                         }
 
                 }
+
+
+
+
+
+
                 if (gameObject.name == "Robottone")
-                 {
+                {
                     if (Input.GetKeyDown(KeyCode.R))
                         {
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
-                            
                 }
                    if (Input.GetKeyDown(KeyCode.C))
                     {
                        Nextdisplay();
-                       
                     }
                 }
-                if (gameObject.name == "robotLadro")
-            {
-                if (Input.GetKeyDown(KeyCode.R))
+
+
+
+
+                if (!hasUSB)
                 {
-
-                    anim.SetBool("talkBool", true);
-
-                    anim.SetBool("pauseBool", false);
-                    canvasDel.SetActive(false);
-                    canvas.SetActive(true);
-                    TriggerDialogue();
+                    if (gameObject.name == "robotLadro")
+                    {
+                        if (Input.GetKeyDown(KeyCode.R))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                        }
+                        if (Input.GetKeyDown(KeyCode.C))
+                        {
+                            Nextdisplay();
+                            Cursor.lockState = CursorLockMode.None;
+                            canvasBottoni.SetActive(true);
+                        }
+                    }    
                 }
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    Nextdisplay();
-                    Cursor.lockState = CursorLockMode.None;
-                    canvasBottoni.SetActive(true);
-
-                }
-            }
-               
                 
-            
+
+
+
         }
+    }
 
 
+    public GameObject imgUIInventarioUSB;
+    private bool hasUSB = false;
+
+    private void GetUSB()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[7] == false) // controllo di avere spazio nell'inventario
+            {
+                inventory.isFull[7] = true;
+                Instantiate(imgUIInventarioUSB, inventory.slots[7].transform, false);
+                inventory.listInventoryItems.Add("USB");
+                Debug.Log("Ho ricevuto la USB");
+                break;
+            }
+        }
     }
    
 
