@@ -8,10 +8,6 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
 
-    //[SerializeField] private Image _target;
-    //private GameObject _target = null;
-
-    //public bool ImmagineASchermo;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -20,12 +16,14 @@ public class FPSInteractionManager : MonoBehaviour
     private Vector3 _rayOrigin;
 
     private Grabbable _grabbedObject = null;
-
+    public Animator animator;
+    public GameObject canva;
 
     void Start()
     {
         _fpsController = GetComponent<CharacterController>();
-        //_target = GameObject.FindGameObjectWithTag("Hand");
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,7 +39,6 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject != null && Input.GetMouseButtonDown(1))
             Throw();
 
-        //UpdateUITarget();
 
         if (_debugRay)
             DebugRaycast();
@@ -54,22 +51,19 @@ public class FPSInteractionManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _interactionDistance))
         {
+            
             //Check if is interactable
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
-            if (_pointingInteractable)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    _pointingInteractable.Interact(gameObject);
-                }
-            }
-
+          
             //Check if is grabbable
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
             if (_grabbedObject == null && _pointingGrabbable)
             {
-                if (Input.GetMouseButtonDown(0))
+                canva.SetActive(true);
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Grab"))
                 {
+                    canva.SetActive(false);
+                    animator.SetBool("magicOn", true);
                     _pointingGrabbable.Grab(gameObject);
                     Grab(_pointingGrabbable);
                 }
@@ -79,36 +73,19 @@ public class FPSInteractionManager : MonoBehaviour
         //If NOTHING is detected set all to null
         else
         {
-            _pointingInteractable = null;
+            canva.SetActive(false);
             _pointingGrabbable = null;
         }
     }
 
-   /* private void UpdateUITarget()
-    {
-        if (_pointingGrabbable || _pointingInteractable)
-            _target.color = Color.green;
-        else
-        {
-            _target.color = new Color(_target.color.r, _target.color.g, _target.color.b, 0f);
-            //_target.SetActive(false);
-
-
-        }
-
-
-
-    }
-   */
     private void Drop()
     {
         if (_grabbedObject == null)
             return;
-
+        animator.SetBool("magicOn", false);
         _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
         _grabbedObject.Drop();
 
-       // _target.enabled = true;
         _grabbedObject = null;
     }
 
@@ -117,7 +94,6 @@ public class FPSInteractionManager : MonoBehaviour
         _grabbedObject = grabbable;
         grabbable.transform.SetParent(_fpsCameraT);
 
-       // _target.enabled = false;
     }
 
     private void Throw()
@@ -128,7 +104,6 @@ public class FPSInteractionManager : MonoBehaviour
         _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
         _grabbedObject.Throw(gameObject);
 
-       // _target.enabled = true;
         _grabbedObject = null;
     }
 
