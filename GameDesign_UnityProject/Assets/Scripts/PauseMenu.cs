@@ -15,6 +15,16 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseFirstButton;
 
+    public AudioSource soundButtonClick;
+
+    private GameObject mainCamera;
+
+
+    private void playAudioClick()
+    {
+        soundButtonClick.Play();
+    }
+
     //public GameObject optionsFirstButton, optionsClosedButton; // servono se canvas "opzioni" è implementato
 
     void Start()
@@ -22,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         canvasPausa.SetActive(true);
         canvasOptions.SetActive(false);
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update()
@@ -43,6 +54,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        playAudioClick();
+        mainCamera.GetComponent<AudioSource>().Play();
         pauseMenuUI.SetActive(false);
         canvasInventoryUI.SetActive(true);
         Time.timeScale = 1f;
@@ -56,6 +69,8 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        playAudioClick();
+        mainCamera.GetComponent<AudioSource>().Pause();
         pauseMenuUI.SetActive(true);
         canvasInventoryUI.SetActive(false);
         Time.timeScale = 0f;
@@ -89,6 +104,7 @@ public class PauseMenu : MonoBehaviour
 
     public void fromStartToOptions()
     {
+        playAudioClick();
         canvasPausa.SetActive(false);
         canvasOptions.SetActive(true);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
@@ -99,6 +115,7 @@ public class PauseMenu : MonoBehaviour
 
     public void fromOptionsToStart()
     {
+        playAudioClick();
         canvasPausa.SetActive(true);
         canvasOptions.SetActive(false);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
