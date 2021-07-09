@@ -24288,7 +24288,7 @@ MonoBehaviour:
   dialogCanvas: {fileID: 0}
   bottoni: {fileID: 1073891931}
   continue_button: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1240099625}
 --- !u!114 &603331241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62473,7 +62473,7 @@ MonoBehaviour:
   dialogCanvas: {fileID: 532047463}
   bottoni: {fileID: 873833785}
   continue_button: {fileID: 1835281035}
-  anim: {fileID: 0}
+  anim: {fileID: 1240099625}
 --- !u!64 &1421248077
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66575,7 +66575,7 @@ MonoBehaviour:
   dialogCanvas: {fileID: 532047463}
   bottoni: {fileID: 1073891931}
   continue_button: {fileID: 1835281035}
-  anim: {fileID: 0}
+  anim: {fileID: 1240099625}
 --- !u!64 &1509063984
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73917,7 +73917,7 @@ MonoBehaviour:
   dialogCanvas: {fileID: 0}
   bottoni: {fileID: 1073891931}
   continue_button: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1240099625}
 --- !u!1 &1704155996
 GameObject:
   m_ObjectHideFlags: 0
