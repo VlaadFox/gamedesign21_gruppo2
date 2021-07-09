@@ -13,6 +13,8 @@ public class Energy : MonoBehaviour
     [SerializeField] 
     Slider energybar;
 
+    
+
 
     // private Inventory inventory;
     public List<string> checklist = new List<string>();
@@ -206,6 +208,7 @@ public class Energy : MonoBehaviour
             
             UseEnrgy();
             UseEnrgy();
+            
             Debug.Log("HaiEnergia");
 
         }

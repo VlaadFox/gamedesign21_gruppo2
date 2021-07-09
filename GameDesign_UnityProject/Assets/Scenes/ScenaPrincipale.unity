@@ -4459,6 +4459,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -15808,6 +15809,7 @@ MonoBehaviour:
 
       for
       you today special discount for only 2  watts I shrink you, do you accept?'
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -30142,6 +30144,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 0}
   continue_button: {fileID: 0}
@@ -40949,6 +40952,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -45507,6 +45511,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -47757,6 +47762,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -51315,6 +51321,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 1358507168}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -51341,7 +51348,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 857946822}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1835281035}
   anim: {fileID: 1240099625}
 --- !u!65 &1240099628
 BoxCollider:
@@ -57788,6 +57795,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7973623626350295939, guid: 140f4365161704c1481aefc2c9994b72, type: 3}
   m_PrefabInstance: {fileID: 1355475289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1358507168 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2890413563008816871, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
+  m_PrefabInstance: {fileID: 6021335366005613140}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1358545509
 PrefabInstance:
@@ -70750,6 +70762,7 @@ MonoBehaviour:
   dialogue5:
     name: 
     sentences: []
+  transistion: {fileID: 0}
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}

@@ -29,7 +29,13 @@ public class active_robot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
-            this.gameObject.SetActive(false);
+            StartCoroutine(despawn());
         }
+    }
+    public IEnumerator despawn()
+    {
+        yield return new WaitForSeconds(1f);
+        this.gameObject.SetActive(false);
+
     }
 }

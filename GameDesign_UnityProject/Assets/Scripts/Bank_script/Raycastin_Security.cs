@@ -73,7 +73,7 @@ public class Raycastin_Security : MonoBehaviour
                     transistion.SetTrigger("end");
 
 
-                    playeref.transform.position = pos;
+                    StartCoroutine(despawn());
                    
 
                 }
@@ -108,5 +108,13 @@ public class Raycastin_Security : MonoBehaviour
     {
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         //fadeOut();
+    }
+
+
+    public IEnumerator despawn()
+    {
+        yield return new WaitForSeconds(1f);
+        playeref.transform.position = pos;
+
     }
 }

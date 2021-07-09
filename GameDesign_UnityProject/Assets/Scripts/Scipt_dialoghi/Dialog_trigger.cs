@@ -13,7 +13,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public Animator transistion;
 
-    public GameObject ladro;
+   // public GameObject ladro;
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -319,9 +319,8 @@ public class Dialog_trigger : MonoBehaviour
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue3();
-                        transistion.SetTrigger("start");
-                        this.gameObject.SetActive(false);
-                        transistion.SetTrigger("end");
+                        StartCoroutine(finishdialogue());
+                        StartCoroutine(DestroyLadro());
 
                     }
                 }
@@ -523,6 +522,19 @@ public class Dialog_trigger : MonoBehaviour
     public void NoRobottone()
     {
         TriggerDialogue4();
+    }
+
+    public IEnumerator DestroyLadro()
+    {
+        yield return new WaitForSeconds(6f);
+        this.gameObject.SetActive(false);
+    }
+    public IEnumerator finishdialogue()
+    {
+        yield return new WaitForSeconds(5f);
+        transistion.SetTrigger("start");
+        transistion.SetTrigger("end");
+        canvas.SetActive(false);
     }
 }
 
