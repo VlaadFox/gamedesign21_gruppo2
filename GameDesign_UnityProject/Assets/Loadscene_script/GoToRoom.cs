@@ -15,7 +15,7 @@ public class GoToRoom : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
         {
             
             DOG.SetActive(true);

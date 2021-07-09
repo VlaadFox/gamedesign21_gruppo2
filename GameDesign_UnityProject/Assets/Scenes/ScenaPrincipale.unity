@@ -8628,6 +8628,7 @@ GameObject:
   - component: {fileID: 217109742}
   - component: {fileID: 217109744}
   - component: {fileID: 217109743}
+  - component: {fileID: 217109745}
   m_Layer: 5
   m_Name: Clicca L
   m_TagString: Untagged
@@ -8694,6 +8695,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217109741}
   m_CullTransparentMesh: 1
+--- !u!114 &217109745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217109741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &217194544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26458,9 +26471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 851944356}
-  dialogCanvas: {fileID: 0}
+  dialogCanvas: {fileID: 532047463}
   bottoni: {fileID: 1073891931}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1835281035}
   anim: {fileID: 1240099625}
 --- !u!114 &603331241
 MonoBehaviour:
@@ -77841,10 +77854,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 851944356}
-  dialogCanvas: {fileID: 0}
+  dialogCanvas: {fileID: 532047463}
   bottoni: {fileID: 1073891931}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1835281035}
   anim: {fileID: 1240099625}
+--- !u!64 &1703786795
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703786792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -943334643979624576, guid: 4bba1b6a269ef42908d5296b2f998d2f, type: 3}
 --- !u!1 &1704155996
 GameObject:
   m_ObjectHideFlags: 0
@@ -100181,7 +100208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6094238387077141662, guid: cbce1f847f9e94c96b556252ee376bc8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.2181964
+      value: 12.021639
       objectReference: {fileID: 0}
     - target: {fileID: 6094238387077141662, guid: cbce1f847f9e94c96b556252ee376bc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102886,11 +102913,11 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  luce: {fileID: 0}
+  luce: {fileID: 1475212998}
   me: {fileID: 9195288171167079503}
   canScale: 1
   canJump: 1
-  light: 0
+  light: 1
 --- !u!143 &8616007837305493629
 CharacterController:
   m_ObjectHideFlags: 0

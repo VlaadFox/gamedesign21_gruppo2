@@ -33,7 +33,7 @@ public class GotoTurin_cavueat : MonoBehaviour
             hasmoney = inventory.listInventoryItems.Contains("money");
             if (hasmoney) 
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
                     FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
                 }

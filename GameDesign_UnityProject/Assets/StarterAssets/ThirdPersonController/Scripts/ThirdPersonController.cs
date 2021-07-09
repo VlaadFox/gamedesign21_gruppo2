@@ -97,7 +97,7 @@ namespace StarterAssets
 		public GameObject me;
 		public bool canScale = true;
 		public bool canJump = true;
-		public bool light = false;
+		public bool light = true;
 
 		private void Awake()
 		{
@@ -344,16 +344,16 @@ namespace StarterAssets
 				//}
 			}
 		}
-
+		
 		public void Light()
         {
             if (light)
             {
-				if (Input.GetButtonDown(""))
+				if (Input.GetButtonDown("Light"))
 				{
 					luce.SetActive(true);
 				}
-				if (Input.GetButtonUp(""))
+				if (Input.GetButtonUp("Light"))
 				{
 					luce.SetActive(false);
 				}
