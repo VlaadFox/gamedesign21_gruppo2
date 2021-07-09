@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    public GameObject timer1, timer2, thiss;
+    public GameObject timer1, timer2, timer3, timer4, thiss;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,8 @@ public class Cube : MonoBehaviour
         {
             timer1.SetActive(false);
             timer2.SetActive(false);
+            timer3.SetActive(false);
+            timer4.SetActive(false);
             thiss.SetActive(true);
         }
     }
