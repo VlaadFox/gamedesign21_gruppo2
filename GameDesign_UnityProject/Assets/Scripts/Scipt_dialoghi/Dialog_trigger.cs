@@ -123,7 +123,7 @@ public class Dialog_trigger : MonoBehaviour
                             // quì ti ha già dato la moneta, da mettere messaggio che dice "Fai presto perfavore!"
                             Debug.Log("Hai già la moneta");
                             Debug.Log("Fai presto perfavore!");
-                            if (Input.GetKeyDown(KeyCode.R))
+                            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                             {
                                 anim.SetBool("talkBool", true);
                                 anim.SetBool("pauseBool", false);
@@ -140,7 +140,7 @@ public class Dialog_trigger : MonoBehaviour
                             // quindi da gestire domanda con possibilità di rispondere sì o no
                             //Debug.Log("Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?");
                             //Debug.Log("Sì");
-                            if (Input.GetKeyDown(KeyCode.R))
+                            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                             {
                                 playerController.GetComponent<CharacterController>().enabled = false;
                                 Time.timeScale = 0f;
@@ -182,7 +182,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                     else // quì hai già comprato la lattina d'olio
                     {
-                        if (Input.GetKeyDown(KeyCode.R))
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
@@ -199,7 +199,7 @@ public class Dialog_trigger : MonoBehaviour
                     if (hasWrench)
                     {
 
-                        if (Input.GetKeyDown(KeyCode.R))
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
@@ -227,7 +227,7 @@ public class Dialog_trigger : MonoBehaviour
             {
                 if (!haslight)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
@@ -248,7 +248,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                 }else if (haslight)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         
                         canvasDel.SetActive(false);
@@ -266,7 +266,7 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "Robottone")
                 {
                
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                     
                             canvasDel.SetActive(false);
@@ -304,7 +304,7 @@ public class Dialog_trigger : MonoBehaviour
                 if (!hasUSB)
                 {
                    
-                        if (Input.GetKeyDown(KeyCode.R))
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             //playerController.GetComponent<CharacterController>().enabled = false;
                             //Time.timeScale = 0f;
@@ -335,7 +335,7 @@ public class Dialog_trigger : MonoBehaviour
                 }
                 if (hasUSB)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
@@ -346,7 +346,7 @@ public class Dialog_trigger : MonoBehaviour
                 }
                 if (hasmoney)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
@@ -364,7 +364,7 @@ public class Dialog_trigger : MonoBehaviour
             {
                 if (j == 0)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
@@ -384,7 +384,7 @@ public class Dialog_trigger : MonoBehaviour
 
                 if (j == 1)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
@@ -398,7 +398,7 @@ public class Dialog_trigger : MonoBehaviour
                 
                 if(hasenter)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
@@ -417,7 +417,7 @@ public class Dialog_trigger : MonoBehaviour
 
                 if (j == 2)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
