@@ -45607,7 +45607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380221ca0beb3e54781e34bbead15f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitName: sotteraneo
+  exitName: Sotteraneo
 --- !u!1001 &1124687983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48183,7 +48183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52a2b2e672549d4fa0f6484a41e595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastExitName: turin_sotteraneo
+  lastExitName: Turin_sotteraneo
 --- !u!4 &1173444438
 Transform:
   m_ObjectHideFlags: 0
