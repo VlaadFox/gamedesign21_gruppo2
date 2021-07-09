@@ -277,7 +277,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
                 }
-                   if (Input.GetMouseButtonDown(0))
+                   if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
@@ -373,7 +373,7 @@ public class Dialog_trigger : MonoBehaviour
                         TriggerDialogue();
                         continue_button.SetActive(true); Debug.Log("1");
                     }
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
                     {
                         Nextdisplay();
                         continue_button.SetActive(false); Debug.Log("1.2");
@@ -407,7 +407,7 @@ public class Dialog_trigger : MonoBehaviour
                         TriggerDialogue3();
                         continue_button.SetActive(true); Debug.Log("3");
                     }
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
                     {
                         Nextdisplay();
                         continue_button.SetActive(false); Debug.Log("4");
