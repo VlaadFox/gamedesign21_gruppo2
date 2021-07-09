@@ -95,12 +95,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                         // ora posso selezionare in oggetto
                         EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
-                    else 
-                    {
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue();
-                    }
+                    
                     // "SI"
                     
                     // qua mi cancella la moneta dall'inventario
@@ -109,6 +104,15 @@ public class InfoOBJ_trigger : MonoBehaviour
 
                     // "NO"
                     // chiudi il dialogo
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                    }
                 }
             }
 
@@ -124,18 +128,19 @@ public class InfoOBJ_trigger : MonoBehaviour
                 if (!hasCan && !hasCoin)
                 {
                     // da mettere messaggio "Lattina d'olio: 1 moneta."
-                    Debug.Log("Lattina d'olio: 1 moneta.");
+
                     if (Input.GetKeyDown(KeyCode.R))
                     {
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue();     
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                        Debug.Log("Lattina di energia: 1 moneta.");
                     }
                 }
                 else if (!hasCan && hasCoin) // quì hai preso già la moneta dal robot delle costruzioni
                 {
                     // da mettere messaggio "Vuoi acquistare una lattina d'olio?"
-                    Debug.Log("Vuoi acquistare una lattina d'olio?");
+                    Debug.Log("Vuoi acquistare una lattina di energai?");
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R))
                     {
@@ -146,19 +151,30 @@ public class InfoOBJ_trigger : MonoBehaviour
                         TriggerDialogue2();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
+
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                         EventSystem.current.SetSelectedGameObject(null);
                         // ora posso selezionare in oggetto
                         EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
 
                     // "SI"
-                    
+
                     // qua mi cancella la moneta dall'inventario
-                        
-                    
+
+
 
                     // "NO"
                     // chiudi il dialogo
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                    }
                 }
             }   
 

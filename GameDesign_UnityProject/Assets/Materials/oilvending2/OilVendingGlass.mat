@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OilVending
+  m_Name: OilVendingGlass
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
   m_LightmapFlags: 2
@@ -21,11 +21,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a5c1b6d7665674aa381418bae8b683d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c41741952b934c02b77ba80d18ca2f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 75c0e8f997aa946a7a12b4eeceabe1ff, type: 3}
+        m_Texture: {fileID: 2800000, guid: d05b766725d1b493486476d2b57c8111, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -41,23 +41,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 27e86a6c32d7f4c42a4611ddddccd8ed, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1ac83fa4cfe354bb19dd172cb7d5b83a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a5c1b6d7665674aa381418bae8b683d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c41741952b934c02b77ba80d18ca2f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: ef58ec5f521454507a35f90611ae06ea, type: 3}
+        m_Texture: {fileID: 2800000, guid: a4efd5ab35cd6494f9342fa5a012510f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 1352f994a777241d59c88e4d6b6549e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: eae4712e89b004114af047f3af180583, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 936cb14be9da947e39062dee4282dc28, type: 3}
+        m_Texture: {fileID: 2800000, guid: a4efd5ab35cd6494f9342fa5a012510f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -88,12 +88,13 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
+    - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -101,15 +102,16 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3865144226918220400
+--- !u!114 &3730390549851508708
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

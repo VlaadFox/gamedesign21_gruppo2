@@ -3,7 +3,17 @@ guid: 4bba1b6a269ef42908d5296b2f998d2f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OilVendingGlass
+    second: {fileID: 2100000, guid: 4ad08aa9f7daeaa4dbc7de771993781d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OilVending_base
+    second: {fileID: 2100000, guid: 8db391598f2e3a64f8920f4e0e3bc7e5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
