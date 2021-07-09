@@ -4549,6 +4549,9 @@ MonoBehaviour:
   dialogue4:
     name: 
     sentences: []
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -16149,24 +16152,27 @@ MonoBehaviour:
     sentences:
     - hei, you, my builder created me with a particular feature in exchange for a
       little energy I can shrink you for ten seconds.
+  dialogue2:
+    name: 
+    sentences:
+    - oh what a pity, it seems you don't have enough energy wait a while and come
+      back to me
+  dialogue3:
+    name: 
+    sentences:
+    - here you are, now you can get to all those places you didn't get to before
+  dialogue4:
+    name: 
+    sentences:
+    - oh what a pity, if you change your mind I'm always here but hurry that the
+      discounts end
+  dialogue5:
+    name: 
+    sentences:
     - 'There are certain unreachable places without adequate dimensions.
 
       for
       you today special discount for only 2  watts I shrink you, do you accept?'
-    - oh what a pity, it seems you don't have enough energy wait a while and come
-      back to me
-    - here you are, now you can get to all those places you didn't get to before
-    - oh what a pity, if you change your mind I'm always here but hurry that the
-      discounts end
-  dialogue2:
-    name: 
-    sentences: []
-  dialogue3:
-    name: 
-    sentences: []
-  dialogue4:
-    name: 
-    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -30587,6 +30593,9 @@ MonoBehaviour:
   dialogue4:
     name: 
     sentences: []
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 0}
   continue_button: {fileID: 0}
@@ -41391,6 +41400,9 @@ MonoBehaviour:
   dialogue4:
     name: 
     sentences: []
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 0}
@@ -45946,6 +45958,9 @@ MonoBehaviour:
   dialogue4:
     name: 
     sentences: []
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -48193,6 +48208,9 @@ MonoBehaviour:
     sentences:
     - thanks again for my dog, to use the beam click "RT" and it will allow you to
       move many objects to create new roads
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -51734,6 +51752,9 @@ MonoBehaviour:
   dialogue4:
     name: 
     sentences: []
+  dialogue5:
+    name: 
+    sentences: []
   canvas: {fileID: 1840627075}
   canvasDel: {fileID: 851944356}
   continue_button: {fileID: 1835281035}
@@ -54179,33 +54200,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1107135359}
-        m_TargetAssemblyTypeName: Dialog_manager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1107135359}
-        m_TargetAssemblyTypeName: Dialog_manager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1107135359}
-        m_TargetAssemblyTypeName: Dialog_manager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
+      - m_Target: {fileID: 390120075}
+        m_TargetAssemblyTypeName: Dialog_trigger, Assembly-CSharp
+        m_MethodName: NoRobottone
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -57912,6 +57909,7 @@ MonoBehaviour:
   energyText: {fileID: 147203380}
   timerText: {fileID: 1180358035}
   energybar: {fileID: 661665648}
+  checklist: []
 --- !u!114 &1344569822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66803,9 +66801,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 390120075}
-        m_TargetAssemblyTypeName: Dialog_trigger, Assembly-CSharp
-        m_MethodName: checkenough
+      - m_Target: {fileID: 1344569821}
+        m_TargetAssemblyTypeName: Energy, Assembly-CSharp
+        m_MethodName: check
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71185,6 +71183,9 @@ MonoBehaviour:
     sentences:
     - Thanks, I really needed it, keep this as a thank you
   dialogue4:
+    name: 
+    sentences: []
+  dialogue5:
     name: 
     sentences: []
   canvas: {fileID: 1840627075}

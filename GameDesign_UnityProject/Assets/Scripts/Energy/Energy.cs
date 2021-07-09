@@ -13,8 +13,9 @@ public class Energy : MonoBehaviour
     [SerializeField] 
     Slider energybar;
 
-    
-    private Inventory inventory;
+
+    // private Inventory inventory;
+    public List<string> checklist = new List<string>();
 
     private int maxEnergy = 5;
     private int currentEnergy;
@@ -171,32 +172,42 @@ public class Energy : MonoBehaviour
         if (currentEnergy < 2)
         {
 
-            for (int i = 0; i < inventory.slots.Length; i++)
+            /*for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
                 {
                     inventory.isFull[i] = true;
 
-                    inventory.listInventoryItems.Remove("energiaok");
-                    Debug.Log("energiaok");
+                    inventory.listInventoryItems.Remove("energia");
+                    Debug.Log("Noenergia");
                     break;
                 }
-            }
+            }*/
+            // checklist.Remove("energia");
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
+            Debug.Log("NonHaiEnergia");
 
         }
         else
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            /*for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
                 {
                     inventory.isFull[i] = true;
 
-                    inventory.listInventoryItems.Add("energiaok");
-                    Debug.Log("energianook");
+                    inventory.listInventoryItems.Add("energia");
+                    Debug.Log("energiaOK");
                     break;
                 }
-            }
+            }*/
+            //checklist.Add("energia");
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
+            
+            UseEnrgy();
+            UseEnrgy();
+            Debug.Log("HaiEnergia");
+
         }
     }
 }

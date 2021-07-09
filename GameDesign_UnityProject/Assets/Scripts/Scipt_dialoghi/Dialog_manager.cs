@@ -42,6 +42,7 @@ public class Dialog_manager : MonoBehaviour
         {
             EndDialogue();
             return;
+
         }
         string sentence = sentences.Dequeue();
         StopAllCoroutines();

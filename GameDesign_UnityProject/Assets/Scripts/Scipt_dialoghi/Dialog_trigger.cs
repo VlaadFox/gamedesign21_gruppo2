@@ -9,8 +9,9 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue2;
     public Dialogo_padre dialogue3;
     public Dialogo_padre dialogue4;
+    public Dialogo_padre dialogue5;
 
-    
+
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -18,7 +19,10 @@ public class Dialog_trigger : MonoBehaviour
 
     public Animator anim;
 
+    private int b=0;
+
     private Inventory inventory;
+    private Energy energy;
 
     private InventorySlot inventorySlot;
 
@@ -82,6 +86,10 @@ public class Dialog_trigger : MonoBehaviour
     {
         FindObjectOfType<Dialog_manager>().StartDialogue(dialogue4);
     }
+    public void TriggerDialogue5()
+    {
+        FindObjectOfType<Dialog_manager>().StartDialogue(dialogue5);
+    }
 
 
     private void OnTriggerStay(Collider collider)
@@ -92,7 +100,7 @@ public class Dialog_trigger : MonoBehaviour
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
                 hasUSB = inventory.listInventoryItems.Contains("USB");
                 hasenter = inventory.listInventoryItems.Contains("entrato");
-                hasenough = inventory.listInventoryItems.Contains("energiaok");
+               
 
 
 
@@ -220,20 +228,28 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "Robottone")
                 {
-                
+               
                     if (Input.GetKeyDown(KeyCode.R))
                         {
+                    
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
                             continue_button.SetActive(true);
+                            canvasBottoni.SetActive(false);
+
+
                 }
-                   if (Input.GetKeyDown(KeyCode.C))
+                   if (Input.GetMouseButtonDown(0))
                     {
-                       Nextdisplay();
-                    canvasBottoni.SetActive(true);
-                       continue_button.SetActive(false);
-                    
+                       
+                        TriggerDialogue5();
+                        canvasBottoni.SetActive(true);
+                        continue_button.SetActive(false);
+                        Debug.Log("nextdisplay");
+                   
+                   
+
                 }
                    
                 }
@@ -359,21 +375,24 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
 
-    public void checkenough()
+   /* public void checkenough()
     {
         FindObjectOfType<Energy>().check();
+        hasenough = energy.checklist.Contains("energia");
         if (hasenough)
         {
             Nextdisplay(); Nextdisplay();
             FindObjectOfType<Energy>().UseEnrgy();
             FindObjectOfType<Energy>().UseEnrgy();
+            Debug.Log("haiEnergia");
         }
         if (!hasenough)
         {
-            Nextdisplay(); 
+            Nextdisplay();
+            Debug.Log("NonHaiEnergia");
         }
     }
-   
+   */
 
     public GameObject imgUIInventarioUSB;
     
@@ -469,12 +488,15 @@ public class Dialog_trigger : MonoBehaviour
             if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
             {
                 inventory.isFull[i] = true;
-                
-                inventory.listInventoryItems.Add("entrato");
+                 inventory.listInventoryItems.Add("entrato");
                 Debug.Log("sonoentrato");
                 break;
             }
         }
+    }
+    public void NoRobottone()
+    {
+        TriggerDialogue4();
     }
 }
 
