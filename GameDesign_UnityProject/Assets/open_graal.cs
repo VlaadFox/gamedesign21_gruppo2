@@ -26,18 +26,13 @@ public class open_graal : MonoBehaviour
     }
     private void OnTriggerStay(Collider collider)
     {
-        dofirst = inventory.listInventoryItems.Contains("primo");
-        dosecond = inventory.listInventoryItems.Contains("secondo");
-        if(dofirst && dosecond)
+        if (collider.gameObject.tag == "Player")
         {
-            FindObjectOfType<LevelLoader>().LoadNextLevelMole();
-            if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Interactions"))
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
             {
-                if (dofirst && dosecond)
-                {
-                    FindObjectOfType<LevelLoader>().LoadNextLevelMole();
-                }
+                FindObjectOfType<LevelLoader>().LoadNextLevelMole();
             }
         }
     }
 }
+

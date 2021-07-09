@@ -63,7 +63,7 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
-        antagonist = GameObject.FindGameObjectWithTag("bad");
+       
 
 
     }

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Sotterraneo.unity
     guid: e746e7f574845403c82b6ee96011eec5
   - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: 83ba139375e315c4b9ef549897461449
+  - enabled: 1
     path: Assets/Scenes/Sotterraneo_mole.unity
     guid: be2b1135cdee53e4fa01484726843f90
   m_configObjects: {}

@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playvideo : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collider)
     {
 
-        if (collider.gameObject.tag == "player")
-        {
-            FindObjectOfType<LevelLoader>().LoadNextLevelvideo();
-        }
+        SceneManager.LoadScene("Video");
     }
 }
