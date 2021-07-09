@@ -9,7 +9,7 @@ public class playvideo : MonoBehaviour
 
         if (collider.gameObject.tag == "player")
         {
-            
+            FindObjectOfType<LevelLoader>().LoadNextLevelvideo();
         }
     }
 }
