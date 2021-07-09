@@ -52,6 +52,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public GameObject playerController;
     public GameObject antagonist;
+    public GameObject antagonista;
 
 
 
@@ -533,7 +534,7 @@ public class Dialog_trigger : MonoBehaviour
             {
                 canvas.SetActive(true);
                 TriggerDialogue();
-                StartCoroutine(time());
+                
             }
         }
     }
@@ -544,13 +545,28 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "Policerobot_piccolo")
             {
 
-               
+
                 canvas.SetActive(false);
+            }
+
+            if (gameObject.name == "antagonista")
+            {
+
+                canvas.SetActive(false);
+                
+
+                transistion.SetTrigger("start");
+                transistion.SetTrigger("end");
+                StartCoroutine(antag());
             }
         }
     }
 
-
+    public IEnumerator antag()
+    {
+        yield return new WaitForSeconds(1f);
+        antagonista.SetActive(false);
+    }
 
     public void DropItem()
     {
