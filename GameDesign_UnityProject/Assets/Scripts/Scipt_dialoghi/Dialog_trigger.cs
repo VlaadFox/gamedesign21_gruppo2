@@ -34,6 +34,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasenter = false;
     private bool hasmoney = false;
     private bool hasWrench = false;
+    private bool haslight = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -105,7 +106,7 @@ public class Dialog_trigger : MonoBehaviour
                 hasenter = inventory.listInventoryItems.Contains("entrato");
                 hasmoney = inventory.listInventoryItems.Contains("money");
                 hasWrench= inventory.listInventoryItems.Contains("Wrench");
-
+                haslight= inventory.listInventoryItems.Contains("luce");
 
 
 
@@ -222,17 +223,42 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-            if(gameObject.name == "RobotLucee")
+            if (gameObject.name == "RobotLucee")
+            {
+                if (!haslight)
                 {
                     if (Input.GetKeyDown(KeyCode.R))
-                        {
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue();
-                        }
+                    {
+                        playerController.GetComponent<CharacterController>().enabled = false;
+                        Time.timeScale = 0f;
 
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                        Cursor.lockState = CursorLockMode.None;
+                        canvasBottoni.SetActive(true);
+
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
+
+
+                    }
+                }else if (haslight)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+
+                    }
                 }
-
+            }
 
 
 

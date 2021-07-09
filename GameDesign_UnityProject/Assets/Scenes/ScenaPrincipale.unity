@@ -41880,10 +41880,13 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - 'ciao bello '
+    - hello, i am an experienced mechanic i see your center light is not working
+      for a little energy i will fix it in a minute. Do you want me to fix it?
   dialogue2:
     name: 
-    sentences: []
+    sentences:
+    - all fixed, Click the "B" key to use it, now you will have no difficulty in
+      dark places
   dialogue3:
     name: 
     sentences: []
