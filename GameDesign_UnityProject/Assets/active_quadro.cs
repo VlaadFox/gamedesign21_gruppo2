@@ -6,6 +6,7 @@ public class active_quadro : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject light;
+    
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
@@ -28,7 +29,16 @@ public class active_quadro : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 light.SetActive(true);
+                StartCoroutine(load());
             }
         }
     }
+
+    public IEnumerator load()
+    {
+        yield return new WaitForSeconds(1f);
+        FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
+    }
+    
+
 }
