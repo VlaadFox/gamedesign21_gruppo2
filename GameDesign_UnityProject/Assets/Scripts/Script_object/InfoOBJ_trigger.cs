@@ -35,6 +35,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        slot1Inventario = GameObject.FindGameObjectWithTag("Slot1");
         playerController = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -227,18 +228,19 @@ public class InfoOBJ_trigger : MonoBehaviour
 
     public void DropItem()
     {
-        foreach (Transform child in slot1Inventario.transform)
+        foreach (Transform child in inventory.slots[0].transform)
         {
+            
             GameObject.Destroy(child.gameObject);
             inventory.isFull[0] = false;
         }
         inventory.listInventoryItems.Remove(item: "ToretCoin");
         for (int i = 0; i < inventory.slots.Length; i++)
         {
-            if (inventory.isFull[i] == false)
+            if (inventory.isFull[0] == false)
             {
-                inventory.isFull[i] = true;
-                Instantiate(imgUIInventarioLattinaOlio, inventory.slots[i].transform, false);
+                inventory.isFull[0] = true;
+                Instantiate(imgUIInventarioLattinaOlio, inventory.slots[0].transform, false);
                 inventory.listInventoryItems.Add("LattinaOlio");
                 Debug.Log("Ho ricevuto la lattina d'olio");
                 break;
@@ -247,7 +249,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     }
     public void DropCoin()
     {
-        foreach (Transform child in slot1Inventario.transform)
+        foreach (Transform child in inventory.slots[0].transform)
         {
             GameObject.Destroy(child.gameObject);
             inventory.isFull[0] = false;
@@ -258,7 +260,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
     public void DropItemRED()
     {
-        foreach (Transform child in slot1Inventario.transform)
+        foreach (Transform child in inventory.slots[0].transform)
         {
             GameObject.Destroy(child.gameObject);
             inventory.isFull[0] = false;

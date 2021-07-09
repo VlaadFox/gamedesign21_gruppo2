@@ -13,7 +13,7 @@ public class Active_dialog : MonoBehaviour
 
     private void Start()
     {
-
+        continue_button= GameObject.FindGameObjectWithTag("Continue");
         anim.SetBool("pauseBool", true);
     }
     private void OnTriggerEnter(Collider collider)
