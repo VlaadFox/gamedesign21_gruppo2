@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52a2b2e672549d4fa0f6484a41e595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastExitName: Sotteraneo
+  lastExitName: Sotteraneo_mole
 --- !u!136 &781224119
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -558,7 +558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781224117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.96, y: 1.41, z: 0.13}
+  m_LocalPosition: {x: -14.87, y: 1.41, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

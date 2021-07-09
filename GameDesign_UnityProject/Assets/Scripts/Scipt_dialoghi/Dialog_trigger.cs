@@ -277,7 +277,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
                 }
-                   if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
+                   if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
