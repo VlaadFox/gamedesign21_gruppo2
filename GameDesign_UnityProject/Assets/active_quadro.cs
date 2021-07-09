@@ -22,27 +22,24 @@ public class active_quadro : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerStay(Collider other)
     {
-        if (collider.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
 
-                FindObjectOfType<Energy>().checkSotterraeo();
-                
-            }
+            
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
+            
+
         }
     }
 
-    public IEnumerator load()
-    {
-        yield return new WaitForSeconds(1f);
-        FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
-    }
-    public void scene()
-    {
-        StartCoroutine(load());
-    }
+    /* public IEnumerator load()
+     {
+         yield return new WaitForSeconds(1f);
+         FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
+     }*/
+
 
 }

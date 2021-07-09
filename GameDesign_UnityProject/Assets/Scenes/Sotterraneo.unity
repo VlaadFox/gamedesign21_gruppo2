@@ -15,16 +15,16 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogColor: {r: 0.028301895, g: 0.024964407, b: 0.024964407, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.05
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientGroundColor: {r: 0.6509434, g: 0.6028391, b: 0.5066305, a: 1}
   m_AmbientIntensity: 0.36
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.2756764, g: 0.35518408, b: 0.5566038, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
   m_HaloStrength: 0.529
@@ -184,24 +184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1945366d3b05d4b229966df44793c016, type: 3}
---- !u!1 &150617008 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6774429984558757351, guid: 315e11f12bf5f44f19214c29822a7e74, type: 3}
-  m_PrefabInstance: {fileID: 2544772597054301973}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &150617010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150617008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd9ca2565109044dbf1cddf46c6fe7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
 --- !u!1 &481322490
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +496,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 781224117}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -526,7 +508,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781224117}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -933,7 +915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1029632314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,8 +2101,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 270.15662, y: 207.21439, z: 585.2434}
-  m_Center: {x: -78.635056, y: -0.061313763, z: 217.47064}
+  m_Size: {x: 270.15662, y: 395.69876, z: 527.51526}
+  m_Center: {x: -78.635056, y: -94.30348, z: 188.60632}
 --- !u!114 &2544772597054301976
 MonoBehaviour:
   m_ObjectHideFlags: 0

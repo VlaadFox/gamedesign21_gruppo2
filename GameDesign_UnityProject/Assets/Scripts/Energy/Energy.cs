@@ -191,28 +191,5 @@ public class Energy : MonoBehaviour
 
         }
     }
-    public void checkSotterraeo()
-    {
-        if (currentEnergy < 4)
-        {
-
-
-            
-            Debug.Log("NonHaiEnergia");
-
-        }
-        else
-        {
-
-            FindObjectOfType<active_quadro>().scene();
-            FindObjectOfType<active_quadro>().light.SetActive(true);
-            UseEnrgy();
-            UseEnrgy();
-            UseEnrgy();
-            UseEnrgy();
-
-            Debug.Log("HaiEnergia");
-
-        }
-    }
+    
 }
