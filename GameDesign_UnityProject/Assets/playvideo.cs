@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class playvideo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider collider)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collider.gameObject.tag == "player")
+        {
+            
+        }
     }
 }
