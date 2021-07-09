@@ -5,7 +5,13 @@ using UnityEngine;
 public class active_robot : MonoBehaviour
 {
     public GameObject canvas;
+    private Inventory inventory;
 
+
+    private void Start()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
@@ -30,12 +36,21 @@ public class active_robot : MonoBehaviour
         {
             FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
             StartCoroutine(despawn());
+            Getenter();
+            
         }
     }
     public IEnumerator despawn()
     {
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
+
+    }
+    public void Getenter()
+    {
+
+        inventory.listInventoryItems.Add("entrato");
+        Debug.Log("sonoentrato");
 
     }
 }
