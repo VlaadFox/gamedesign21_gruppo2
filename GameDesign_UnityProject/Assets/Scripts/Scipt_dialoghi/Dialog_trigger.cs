@@ -319,7 +319,7 @@ public class Dialog_trigger : MonoBehaviour
                             // ora posso selezionare in oggetto
                            // EventSystem.current.SetSelectedGameObject(yesFirstButton);
                         }
-                        if (Input.GetKeyDown(KeyCode.C))
+                        if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
                         {
                             playerController.GetComponent<CharacterController>().enabled = false;
                             Time.timeScale = 0f;
