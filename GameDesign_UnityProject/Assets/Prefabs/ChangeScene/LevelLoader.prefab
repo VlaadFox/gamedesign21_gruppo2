@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8892728598921140054}
-  - component: {fileID: 21877982510907363}
+  - component: {fileID: 7612313740316409275}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -152,7 +152,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &21877982510907363
+--- !u!114 &7612313740316409275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12787,7 +12787,6 @@ GameObject:
   - component: {fileID: 306914458}
   - component: {fileID: 306914457}
   - component: {fileID: 306914456}
-  - component: {fileID: 306914459}
   m_Layer: 5
   m_Name: Dialogo_canvas
   m_TagString: Untagged
@@ -12884,18 +12883,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &306914459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306914454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &307397633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35559,7 +35546,6 @@ GameObject:
   - component: {fileID: 851944357}
   - component: {fileID: 851944359}
   - component: {fileID: 851944358}
-  - component: {fileID: 851944360}
   m_Layer: 5
   m_Name: Clicca R
   m_TagString: Untagged
@@ -35626,18 +35612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851944356}
   m_CullTransparentMesh: 1
---- !u!114 &851944360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851944356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &852068241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52205,6 +52179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227930616}
+  - component: {fileID: 1227930617}
   m_Layer: 0
   m_Name: Dialoghi
   m_TagString: Untagged
@@ -52230,6 +52205,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1227930617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227930615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1230920010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96302,7 +96289,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 21877982510907363, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
 --- !u!4 &6034861261948889950 stripped
 Transform:
@@ -98679,7 +98667,7 @@ GameObject:
   - component: {fileID: 8616007837305493627}
   - component: {fileID: 8616007837305493624}
   - component: {fileID: 8616007837305493625}
-  - component: {fileID: 8616007837305493630}
+  - component: {fileID: 8616007837305493626}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -98725,6 +98713,18 @@ MonoBehaviour:
   _fpsCameraT: {fileID: 4135481277617185067}
   _debugRay: 1
   _interactionDistance: 10
+--- !u!114 &8616007837305493626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616007837305493623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c401ce47c7e83f14e920ce6ffe2fac2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8616007837305493627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98875,18 +98875,6 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.69, z: 0}
---- !u!114 &8616007837305493630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616007837305493623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c401ce47c7e83f14e920ce6ffe2fac2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8659815843871559776
 Transform:
   m_ObjectHideFlags: 0
