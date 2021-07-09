@@ -71,7 +71,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 {
                     // da mettere messaggio "Lattina d'olio: 1 moneta."
                    
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) ||Input.GetButtonDown("Interactions"))
                     {
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
@@ -84,7 +84,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                     // da mettere messaggio "Vuoi acquistare una lattina d'olio?"
                     Debug.Log("Vuoi acquistare una lattina d'olio?");
                     Debug.Log("Sì");
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
@@ -111,7 +111,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
                 else
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
@@ -133,7 +133,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 {
                     // da mettere messaggio "Lattina d'olio: 1 moneta."
 
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
@@ -146,7 +146,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                     // da mettere messaggio "Vuoi acquistare una lattina d'olio?"
                     Debug.Log("Vuoi acquistare una lattina di energai?");
                     Debug.Log("Sì");
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
@@ -173,7 +173,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
                 else
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
@@ -184,7 +184,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if(gameObject.name == "CabinaTel")
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
@@ -196,7 +196,7 @@ public class InfoOBJ_trigger : MonoBehaviour
             {
                 if (hasCoin)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
@@ -214,7 +214,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
                 if (!hasCoin)
                 {
-                    if (Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
