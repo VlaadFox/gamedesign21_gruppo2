@@ -28,8 +28,9 @@ public class active_quadro : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                light.SetActive(true);
-                StartCoroutine(load());
+
+                FindObjectOfType<Energy>().checkSotterraeo();
+                
             }
         }
     }
@@ -39,6 +40,9 @@ public class active_quadro : MonoBehaviour
         yield return new WaitForSeconds(1f);
         FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
     }
-    
+    public void scene()
+    {
+        StartCoroutine(load());
+    }
 
 }

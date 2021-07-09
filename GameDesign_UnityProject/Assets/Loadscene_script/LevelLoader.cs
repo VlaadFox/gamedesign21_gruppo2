@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextLevelSott()
     {
-        StartCoroutine(LoadLevel("Sottoraneo"));
+        StartCoroutine(LoadLevel("Sotterraneo"));
     }
     IEnumerator LoadLevel(string name)
     {

@@ -174,41 +174,43 @@ public class Energy : MonoBehaviour
         if (currentEnergy < 2)
         {
 
-            /*for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
-                {
-                    inventory.isFull[i] = true;
-
-                    inventory.listInventoryItems.Remove("energia");
-                    Debug.Log("Noenergia");
-                    break;
-                }
-            }*/
-            // checklist.Remove("energia");
+            
             FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
             Debug.Log("NonHaiEnergia");
 
         }
         else
         {
-            /*for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
-                {
-                    inventory.isFull[i] = true;
-
-                    inventory.listInventoryItems.Add("energia");
-                    Debug.Log("energiaOK");
-                    break;
-                }
-            }*/
-            //checklist.Add("energia");
+            
             FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
             
             UseEnrgy();
             UseEnrgy();
             
+            Debug.Log("HaiEnergia");
+
+        }
+    }
+    public void checkSotterraeo()
+    {
+        if (currentEnergy < 4)
+        {
+
+
+            
+            Debug.Log("NonHaiEnergia");
+
+        }
+        else
+        {
+
+            FindObjectOfType<active_quadro>().scene();
+            FindObjectOfType<active_quadro>().light.SetActive(true);
+            UseEnrgy();
+            UseEnrgy();
+            UseEnrgy();
+            UseEnrgy();
+
             Debug.Log("HaiEnergia");
 
         }
