@@ -93,7 +93,7 @@ namespace StarterAssets
 		private bool _hasAnimator;
 
 		public GameObject me;
-		public bool canScale = false;
+		public bool canScale = true;
 		public bool canJump = true;
 
 		private void Awake()
@@ -125,7 +125,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			Scale();
+			//Scale();
 		}
 
 		private void LateUpdate()
@@ -321,7 +321,7 @@ namespace StarterAssets
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
 
-		private void Scale()
+		public void Scale()
 		{
 			if (canScale)
 			{
