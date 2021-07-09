@@ -33,7 +33,7 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject == null)
             CheckInteraction();
 
-        if ((_grabbedObject != null && Input.GetMouseButtonUp(0)) || _grabbedObject != null && Input.GetButtonUp("Grab"))
+        if ((_grabbedObject != null && Input.GetMouseButtonUp(0))|| _grabbedObject != null && Input.GetButtonUp("Grab"))
             Drop();
 
         if (_grabbedObject != null && Input.GetMouseButtonDown(1))
