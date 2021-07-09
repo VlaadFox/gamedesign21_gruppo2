@@ -30,6 +30,10 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadLevel("_StartMenu"));
     }
+    public void LoadNextLevelvideo()
+    {
+        StartCoroutine(LoadLevel("Video"));
+    }
     IEnumerator LoadLevel(string name)
     {
         transistion.SetTrigger("start");
