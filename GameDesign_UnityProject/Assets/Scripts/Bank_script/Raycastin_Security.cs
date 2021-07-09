@@ -68,7 +68,10 @@ public class Raycastin_Security : MonoBehaviour
                     // fadeIn();
                     //StartCoroutine(pausa(2f));
                     //transistion.SetTrigger("dead");
-                   // transistion.SetTrigger("restabilize");
+                    // transistion.SetTrigger("restabilize");
+                    transistion.SetTrigger("start");
+                    transistion.SetTrigger("end");
+
 
                     playeref.transform.position = pos;
                    
@@ -92,7 +95,8 @@ public class Raycastin_Security : MonoBehaviour
         {
             canSeePlayer = false;
             
-           // fadeOut();
+
+            // fadeOut();
         }
             
     }

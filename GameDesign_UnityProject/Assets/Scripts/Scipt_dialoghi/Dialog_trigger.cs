@@ -11,7 +11,9 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue4;
     public Dialogo_padre dialogue5;
 
+    public Animator transistion;
 
+    public GameObject ladro;
 
     public GameObject canvas;
     public GameObject canvasDel;
@@ -30,7 +32,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasCan = false; // per controllare lattina
     private bool hasUSB = false;
     private bool hasenter = false;
-    private bool hasenough = false;
+    private bool hasmoney = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -100,7 +102,8 @@ public class Dialog_trigger : MonoBehaviour
                 hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
                 hasUSB = inventory.listInventoryItems.Contains("USB");
                 hasenter = inventory.listInventoryItems.Contains("entrato");
-               
+                hasmoney = inventory.listInventoryItems.Contains("money");
+
 
 
 
@@ -305,6 +308,21 @@ public class Dialog_trigger : MonoBehaviour
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
+                    }
+                }
+                if (hasmoney)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue3();
+                        transistion.SetTrigger("start");
+                        this.gameObject.SetActive(false);
+                        transistion.SetTrigger("end");
+
                     }
                 }
             }
