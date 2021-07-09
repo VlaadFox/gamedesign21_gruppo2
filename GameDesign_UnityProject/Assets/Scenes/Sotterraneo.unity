@@ -819,6 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a315d2be6e2d7d4aa4fba8bf129f7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1029632313}
 --- !u!1 &1029632313
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1205997812
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1547,7 +1548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1682413332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1559,8 +1560,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4987097, y: 1, z: 1}
-  m_Center: {x: -1.2493548, y: 0, z: 0}
+  m_Size: {x: 4.2664065, y: 1, z: 1}
+  m_Center: {x: -1.6332033, y: 0, z: 0}
 --- !u!65 &1682413333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2089,8 +2090,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 270.15662, y: 395.69876, z: 527.51526}
-  m_Center: {x: -78.635056, y: -94.30348, z: 188.60632}
+  m_Size: {x: 291.33157, y: 395.69876, z: 322.9089}
+  m_Center: {x: -7.0371127, y: -94.30348, z: 86.3031}
 --- !u!114 &2544772597054301976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,9 +2101,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2544772597054301974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a315d2be6e2d7d4aa4fba8bf129f7ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a06ca63971e6804ab9053deb891f3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  light: {fileID: 0}
 --- !u!114 &2544772597054301977
 MonoBehaviour:
   m_ObjectHideFlags: 0

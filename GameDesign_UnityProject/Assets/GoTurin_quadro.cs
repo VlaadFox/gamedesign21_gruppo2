@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoToTurin : MonoBehaviour
+public class GoTurin_quadro : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject light;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -20,29 +21,25 @@ public class GoToTurin : MonoBehaviour
             canvas.SetActive(false);
         }
     }
-
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
-    }
-    */
-
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            
-                if (Input.GetKeyDown(KeyCode.R)|| Input.GetButtonDown("Interactions"))
-                {
-                    FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
-                    Debug.Log("gototorino");
-                }
+
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+            {
+                light.SetActive(true);
+                StartCoroutine(delayLoad());
+                Debug.Log("gototorino");
+            }
 
             Debug.Log("sononelcollider");
 
         }
     }
-
-    
+    public IEnumerator delayLoad()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
+    }
 }
