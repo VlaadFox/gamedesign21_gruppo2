@@ -4021,6 +4021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: audio_startMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4370149409120008715, guid: 1336f4324a2592942a2b6a6fc02fef98, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 56f95be18a595a44f9cc14026bccae33, type: 2}
     - target: {fileID: 8809379434572391142, guid: 1336f4324a2592942a2b6a6fc02fef98, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4126,5 +4130,9 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7515073474768982355, guid: 45ecf1f39e03634468a9ac84b9f9cc53, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 56f95be18a595a44f9cc14026bccae33, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ecf1f39e03634468a9ac84b9f9cc53, type: 3}
