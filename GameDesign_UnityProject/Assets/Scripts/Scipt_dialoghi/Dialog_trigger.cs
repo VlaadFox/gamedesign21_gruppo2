@@ -33,6 +33,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasUSB = false;
     private bool hasenter = false;
     private bool hasmoney = false;
+    private bool hasWrench = false;
 
     public GameObject imgUIInventarioMoneta;
 
@@ -103,7 +104,7 @@ public class Dialog_trigger : MonoBehaviour
                 hasUSB = inventory.listInventoryItems.Contains("USB");
                 hasenter = inventory.listInventoryItems.Contains("entrato");
                 hasmoney = inventory.listInventoryItems.Contains("money");
-
+                hasWrench= inventory.listInventoryItems.Contains("Wrench");
 
 
 
@@ -189,17 +190,25 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue3();
                             DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                             GetCollezionabile();
-                            inventory.listInventoryItems.Remove(item: "LattinaOlio");
-                            continue_button.SetActive(true);
+                            
+     
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                         }
-                    if (Input.GetKeyDown(KeyCode.C))
+                    if (hasWrench)
                     {
-                        Nextdisplay();
-                        continue_button.SetActive(false);
-                        GetCollezionabile();
+
+                        if (Input.GetKeyDown(KeyCode.R))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue4();
+
+                        }
                     }
+                        
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
@@ -400,24 +409,7 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
 
-   /* public void checkenough()
-    {
-        FindObjectOfType<Energy>().check();
-        hasenough = energy.checklist.Contains("energia");
-        if (hasenough)
-        {
-            Nextdisplay(); Nextdisplay();
-            FindObjectOfType<Energy>().UseEnrgy();
-            FindObjectOfType<Energy>().UseEnrgy();
-            Debug.Log("haiEnergia");
-        }
-        if (!hasenough)
-        {
-            Nextdisplay();
-            Debug.Log("NonHaiEnergia");
-        }
-    }
-   */
+ 
 
     public GameObject imgUIInventarioUSB;
     
