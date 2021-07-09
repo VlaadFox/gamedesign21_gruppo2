@@ -517,7 +517,7 @@ public class Dialog_trigger : MonoBehaviour
 
     public void DropItem()
     {
-        foreach (Transform child in slot1Inventario.transform)
+        foreach (Transform child in inventory.slots[0].transform)
         {
             GameObject.Destroy(child.gameObject);
             inventory.isFull[0] = false;
@@ -526,17 +526,17 @@ public class Dialog_trigger : MonoBehaviour
 
     public void Getcoin()
     {
-        for (int i = 0; i < inventory.slots.Length; i++)
+        /*for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[0] == false) // controllo di avere spazio nell'inventario
-            {
+            {*/
                 inventory.isFull[0] = true;
                 Instantiate(imgUIInventarioMoneta, inventory.slots[0].transform, false);
                 inventory.listInventoryItems.Add("ToretCoin");
                 Debug.Log("Ho ricevuto la moneta");
-                break;
-            }
-        }
+                //break;
+            /*}
+        }*/
     }
     public void Getenter()
     {

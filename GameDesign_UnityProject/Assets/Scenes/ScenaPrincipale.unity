@@ -46906,7 +46906,7 @@ MonoBehaviour:
   canvas: {fileID: 851944356}
   dialogCanvas: {fileID: 1840627075}
   bottoni: {fileID: 859245271}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1835281035}
   anim: {fileID: 1141537188}
 --- !u!65 &1141537187
 BoxCollider:
