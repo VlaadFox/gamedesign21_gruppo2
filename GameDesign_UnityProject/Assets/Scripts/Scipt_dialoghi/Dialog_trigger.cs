@@ -36,19 +36,22 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasmoney = false;
     private bool hasWrench = false;
     private bool haslight = false;
+    private bool firstime = false;
 
     public GameObject imgUIInventarioMoneta;
 
     public GameObject slot1Inventario;
 
-    
 
+    public GameObject camera;
+    
     public GameObject canvasBottoni;
 
 
     public GameObject yesFirstButton;
 
     public GameObject playerController;
+    public GameObject antagonist;
 
 
 
@@ -59,8 +62,20 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        antagonist = GameObject.FindGameObjectWithTag("bad");
+
 
     }
+    public IEnumerator time()
+    {
+        yield return new WaitForSeconds(1f);
+        transistion.SetTrigger("start");
+        transistion.SetTrigger("end");
+        canvas.SetActive(false);
+
+        antagonist.SetActive(false);
+    }
+
 
     /*private void Update()
     {
@@ -98,6 +113,10 @@ public class Dialog_trigger : MonoBehaviour
     }
 
 
+    
+
+
+
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player") 
@@ -114,8 +133,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-
-
+            
             if (gameObject.name == "robotLavori") // stai parlando col robot
                 {
                     if(!hasCan) // entra nel ciclo in cui NON ha ancora la lattina d'olio
@@ -507,6 +525,15 @@ public class Dialog_trigger : MonoBehaviour
 
                 TriggerDialogue();
                 canvas.SetActive(true);
+            }
+        }
+        if (collider.gameObject.tag == "Player")
+        {
+            if (gameObject.name == "antagonista")
+            {
+                canvas.SetActive(true);
+                TriggerDialogue();
+                StartCoroutine(time());
             }
         }
     }
