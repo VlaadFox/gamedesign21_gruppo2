@@ -17,12 +17,12 @@ public class StartMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
-    public AudioSource soundToPlay;
+    public AudioSource soundButtonClick;
 
 
     private void playAudioClick()
     {
-        soundToPlay.Play();
+        soundButtonClick.Play();
     }
 
     // Start is called before the first frame update
