@@ -406,7 +406,6 @@ RectTransform:
   m_LocalScale: {x: 0.6711883, y: 0.6711883, z: 0.6711883}
   m_Children:
   - {fileID: 1563381442}
-  - {fileID: 1687229643}
   - {fileID: 954829943}
   m_Father: {fileID: 1282218585}
   m_RootOrder: 1
@@ -598,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &812669989
 Transform:
   m_ObjectHideFlags: 0
@@ -647,11 +646,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 560450817}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.97, y: -109.76}
+  m_AnchoredPosition: {x: -7.97, y: -131.01}
   m_SizeDelta: {x: 1228.951, y: 301.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954829944
@@ -687,7 +686,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: NewTextggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+  m_Text: It is not safe procedure without light
 --- !u!222 &954829945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1542,6 +1541,7 @@ GameObject:
   - component: {fileID: 1682413334}
   - component: {fileID: 1682413333}
   - component: {fileID: 1682413332}
+  - component: {fileID: 1682413337}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1638,85 +1638,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1687229642
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1687229643}
-  - component: {fileID: 1687229645}
-  - component: {fileID: 1687229644}
-  m_Layer: 5
-  m_Name: Name
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1687229643
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687229642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -152}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 560450817}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -499.7, y: 54.5}
-  m_SizeDelta: {x: 244.22, y: 63.262}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1687229644
+--- !u!114 &1682413337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687229642}
+  m_GameObject: {fileID: 1682413331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e6fb3399758b24fb96af854de4d511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 83418d510e198434ab3d7edbd35647cf, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 77
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'nome:'
---- !u!222 &1687229645
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687229642}
-  m_CullTransparentMesh: 1
+  canvas: {fileID: 560450816}
 --- !u!1 &1800186981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,8 +2038,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a06ca63971e6804ab9053deb891f3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  light: {fileID: 0}
+  canvas: {fileID: 1029632313}
+  light1: {fileID: 1559013954}
+  light2: {fileID: 1800186981}
+  light3: {fileID: 1926166439}
+  light4: {fileID: 1926166439}
 --- !u!114 &2544772597054301977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2133,7 +2070,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2544772597054301978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2428844420fba384fa50c7e3e518303e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fcbcd462aaa5624a86dcf98cac0f655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1029632313}
