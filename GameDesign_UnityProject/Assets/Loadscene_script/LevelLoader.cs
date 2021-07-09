@@ -26,6 +26,10 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadLevel("Sotterraneo_mole"));
     }
+    public void LoadNextLevelMenu()
+    {
+        StartCoroutine(LoadLevel("_StartMenu"));
+    }
     IEnumerator LoadLevel(string name)
     {
         transistion.SetTrigger("start");
