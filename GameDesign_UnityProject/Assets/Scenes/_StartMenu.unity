@@ -3291,7 +3291,7 @@ MonoBehaviour:
   canvasOptions: {fileID: 916779427}
   optionsFirstButton: {fileID: 1309744929}
   audioMixer: {fileID: 24100000, guid: 56f95be18a595a44f9cc14026bccae33, type: 2}
-  soundToPlay: {fileID: 889999928}
+  soundButtonClick: {fileID: 889999928}
 --- !u!114 &1706170267
 MonoBehaviour:
   m_ObjectHideFlags: 0
