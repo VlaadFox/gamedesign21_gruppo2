@@ -20,7 +20,7 @@ public class InventoryShowUI : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Input.GetKeyDown(KeyCode.I) || Input.GetButtonDown("Inventario"))
         {
             if (GameIsPaused)
             {
