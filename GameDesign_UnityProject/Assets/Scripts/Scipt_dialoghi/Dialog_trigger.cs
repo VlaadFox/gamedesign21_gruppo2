@@ -282,15 +282,20 @@ public class Dialog_trigger : MonoBehaviour
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
+
+                    anim.SetBool("talkBool", true);
+                    anim.SetBool("pauseBool", false);
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(true);
                     TriggerDialogue5();
-                        canvasBottoni.SetActive(true);
-                        continue_button.SetActive(false);
-                        Debug.Log("nextdisplay");
-                        Cursor.lockState = CursorLockMode.None;
+                    Cursor.lockState = CursorLockMode.None;
+                    canvasBottoni.SetActive(true);
+
                     // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                     EventSystem.current.SetSelectedGameObject(null);
                     // ora posso selezionare in oggetto
                     EventSystem.current.SetSelectedGameObject(yesFirstButton);
+
 
 
 
@@ -363,69 +368,77 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotRotto")
             {
-                if (j == 0)
+                if (!hasenter)
                 {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    if (j == 0)
                     {
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue();
-                        continue_button.SetActive(true); Debug.Log("1");
-                    }
-                    if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
-                    {
-                        Nextdisplay();
-                        continue_button.SetActive(false); Debug.Log("1.2");
-                        j++;
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                            continue_button.SetActive(true); Debug.Log("1");
+                        }
+                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
+                        {
+                            Nextdisplay();
+                            continue_button.SetActive(false); Debug.Log("1.2");
+                            StartCoroutine(delay()); continue_button.SetActive(true);
+                        }
+
                     }
 
-                }
+                    if (j == 1)
+                    {
+                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit") || Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue2();
+                            continue_button.SetActive(false);
+                            Debug.Log("2");
 
-                if (j == 1)
-                {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                    {
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue2();
-                        continue_button.SetActive(true); Debug.Log("2");
-                        
-                    }
-                }
-                
-                if(hasenter)
-                {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                    {
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue3();
-                        continue_button.SetActive(true); Debug.Log("3");
-                    }
-                    if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
-                    {
-                        Nextdisplay();
-                        continue_button.SetActive(false); Debug.Log("4");
-                        j++;
+                        }
                     }
                 }
 
-                if (j == 2)
+                if (hasenter)
                 {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    if (j == 0)
                     {
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue4(); Debug.Log("4");
-                    }   
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue3();
+                            continue_button.SetActive(true); Debug.Log("3");
+                        }
+                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
+                        {
+                            Nextdisplay();
+                            continue_button.SetActive(false); Debug.Log("4");
+                            StartCoroutine(delay());
+                        }
+                    }
+
+
+                    if (j == 1)
+                    {
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue4(); Debug.Log("4");
+                        }
+                    }
                 }
             }
                 
@@ -540,16 +553,10 @@ public class Dialog_trigger : MonoBehaviour
     }
     public void Getenter()
     {
-        for (int i = 0; i < inventory.slots.Length; i++)
-        {
-            if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
-            {
-                inventory.isFull[i] = true;
+        
                  inventory.listInventoryItems.Add("entrato");
                 Debug.Log("sonoentrato");
-                break;
-            }
-        }
+                
     }
     public void NoRobottone()
     {
@@ -579,6 +586,12 @@ public class Dialog_trigger : MonoBehaviour
         transistion.SetTrigger("end");
         StartCoroutine(aggiustalight());
     }
+    public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(2f);
+        j++;
+    }
 }
+
 
 // ancora da mettere imgLattinaOlio dopo averla creata e piazzata in scena (nascosta da qualche parte)

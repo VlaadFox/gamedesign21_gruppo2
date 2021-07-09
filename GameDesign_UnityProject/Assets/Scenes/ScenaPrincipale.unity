@@ -1206,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1710, y: 870.34}
+  m_AnchoredPosition: {x: 5.200012, y: 2}
   m_SizeDelta: {x: 210, y: 210}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &16823332
@@ -28224,7 +28224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 759, y: 259}
+  m_AnchoredPosition: {x: 718.4, y: 471.4}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661665648
@@ -49175,7 +49175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.2
+      value: 15.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49183,7 +49183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.11
+      value: -20.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49363,8 +49363,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 17.337261, y: 12.5277, z: 18.489754}
-  m_Center: {x: -1.7815651, y: 5.76385, z: -1.0035379}
+  m_Size: {x: 28.497555, y: 12.527699, z: 28.664957}
+  m_Center: {x: -5.0169168, y: 5.763851, z: 4.084066}
 --- !u!95 &1183396151 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d8dc71bbe9e05284282d2fe0761c5b9b, type: 3}
@@ -53057,8 +53057,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.333357, y: 4.5013523, z: 2.9491909}
-  m_Center: {x: 0.16858277, y: 1.7506764, z: 0.97459567}
+  m_Size: {x: 6.7093844, y: 4.5013523, z: 4.701309}
+  m_Center: {x: -0.1298032, y: 1.7506764, z: 1.8506553}
 --- !u!64 &1240099629
 MeshCollider:
   m_ObjectHideFlags: 0
