@@ -471,17 +471,12 @@ public class Dialog_trigger : MonoBehaviour
     }
     public void Getlight()
     {
-        for (int i = 0; i < inventory.slots.Length; i++)
-        {
-            if (inventory.isFull[6] == false) // controllo di avere spazio nell'inventario
-            {
-                inventory.isFull[6] = true;
-                Instantiate(imgUIInventarioUSB, inventory.slots[6].transform, false);
+        
+               
+                
                 inventory.listInventoryItems.Add("luce");
                 Debug.Log("Ho ricevuto la luce");
-                break;
-            }
-        }
+                
     }
 
 
