@@ -5,7 +5,7 @@ using UnityEngine;
 public class active_quadro : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject light;
+    public GameObject luce;
     
     private void OnTriggerEnter(Collider collider)
     {
@@ -13,7 +13,7 @@ public class active_quadro : MonoBehaviour
         {
             canvas.SetActive(true);
 
-
+            FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
         }
     }
 
@@ -22,18 +22,18 @@ public class active_quadro : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
+   /* private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
 
-            
-            FindObjectOfType<Energy>().UseEnrgy();
-            FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
+            luce.SetActive(true);
+           // FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
             
 
         }
-    }
+    }*/
 
     /* public IEnumerator load()
      {
