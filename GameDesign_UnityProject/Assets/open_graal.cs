@@ -31,6 +31,13 @@ public class open_graal : MonoBehaviour
         if(dofirst && dosecond)
         {
             FindObjectOfType<LevelLoader>().LoadNextLevelMole();
+            if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Interactions"))
+            {
+                if (dofirst && dosecond)
+                {
+                    FindObjectOfType<LevelLoader>().LoadNextLevelMole();
+                }
+            }
         }
     }
 }

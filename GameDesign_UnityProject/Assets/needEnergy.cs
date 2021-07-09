@@ -24,7 +24,7 @@ public class needEnergy : MonoBehaviour
     {
         if (gameObject.name == "Garage")
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Interactions"))
             {
 
 
@@ -40,7 +40,7 @@ public class needEnergy : MonoBehaviour
         }
         if (gameObject.name == "Chiosco")
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Interactions"))
             {
 
 
