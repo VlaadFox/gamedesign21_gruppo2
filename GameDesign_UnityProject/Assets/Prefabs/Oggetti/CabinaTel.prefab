@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7862409316567503181}
   - component: {fileID: 7680426136804129766}
   - component: {fileID: 7680426136804129761}
+  - component: {fileID: 5771545517549329553}
   m_Layer: 0
   m_Name: CabinaTel
   m_TagString: Untagged
@@ -90,3 +91,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5771545517549329553
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680426136804129760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3511104668562482483, guid: 0f6638bae95ec43c7a451ee3f825df21, type: 3}

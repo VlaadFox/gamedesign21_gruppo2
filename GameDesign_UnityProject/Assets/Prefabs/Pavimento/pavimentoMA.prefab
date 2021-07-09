@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6826612119589924318}
   - component: {fileID: 7571435086210900603}
   - component: {fileID: 5690249000856802993}
+  - component: {fileID: 3348467064270581566}
   m_Layer: 0
   m_Name: pavimentoMA
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3348467064270581566
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194471632815847268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8738508162113594822, guid: 50aaac1d3b2154394b187048c1dc3406, type: 3}

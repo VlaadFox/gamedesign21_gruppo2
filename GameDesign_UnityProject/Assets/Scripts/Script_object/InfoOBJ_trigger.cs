@@ -18,6 +18,8 @@ public class InfoOBJ_trigger : MonoBehaviour
     private bool hasCoin = false;
     private bool hasCan = false;
 
+    public GameObject tombino;
+
 
     public GameObject imgUIInventarioLattinaOlio;
     public GameObject imgUIInventarioLattinaOlio_RED;
@@ -187,6 +189,37 @@ public class InfoOBJ_trigger : MonoBehaviour
                     TriggerDialogue();
                 }
             }
+
+            if(gameObject.name == "CabinaTel_funzionante")
+            {
+                if (hasCoin)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        playerController.GetComponent<CharacterController>().enabled = false;
+                        Time.timeScale = 0f;
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                        Cursor.lockState = CursorLockMode.None;
+                        canvasBottoni.SetActive(true);
+
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                    }
+                }
+                if (!hasCoin)
+                {
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                    }
+                }
+            }
         }
     }
 
@@ -211,6 +244,16 @@ public class InfoOBJ_trigger : MonoBehaviour
             }
         }
     }
+    public void DropCoin()
+    {
+        foreach (Transform child in slot1Inventario.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+            inventory.isFull[0] = false;
+        }
+        inventory.listInventoryItems.Remove(item: "ToretCoin");
+        
+    }
 
     public void DropItemRED()
     {
@@ -233,13 +276,8 @@ public class InfoOBJ_trigger : MonoBehaviour
         }
     }
 
-    /*hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
-                if(hasCoin)
-                {
-                    // quì hai la moneta, da mettere messaggio che dice che la cabina è rotta e di cercarne un'altra funzionante.
-                }
-                else
-{
-    // quì NON hai la moneta, da mettere messaggio che dice "per utilizzare la cabina inserisci una moneta."
-}*/
+    public void Hellopen()
+    {
+        tombino.GetComponent<SphereCollider>().enabled = true;
+    }
 }
