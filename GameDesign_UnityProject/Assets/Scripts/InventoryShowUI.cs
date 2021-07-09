@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InventoryShowUI : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class InventoryShowUI : MonoBehaviour
     public GameObject canvasMenuPausa;
     public GameObject canvasMiniMap;
     public GameObject emptyTexts;
+    public GameObject firstButtonInventory;
 
     void Start()
     {
@@ -61,5 +63,10 @@ public class InventoryShowUI : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerController.GetComponent<CharacterController>().enabled = false;
+
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(firstButtonInventory);
     }
 }
