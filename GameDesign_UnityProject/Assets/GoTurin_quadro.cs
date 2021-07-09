@@ -5,7 +5,10 @@ using UnityEngine;
 public class GoTurin_quadro : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject light;
+    public GameObject light1;
+    public GameObject light2;
+    public GameObject light3;
+    public GameObject light4;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -28,7 +31,10 @@ public class GoTurin_quadro : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
             {
-                light.SetActive(true);
+                light1.SetActive(true);
+                light2.SetActive(true);
+                light3.SetActive(true);
+                light4.SetActive(true);
                 StartCoroutine(delayLoad());
                 Debug.Log("gototorino");
             }
