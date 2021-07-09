@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -283,8 +284,9 @@ public class Dialog_trigger : MonoBehaviour
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
 
-                    anim.SetBool("talkBool", true);
-                    anim.SetBool("pauseBool", false);
+                    //anim.SetBool("talkBool", true);
+                    //anim.SetBool("pauseBool", false);
+                    Debug.Log("entrato");
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
                     TriggerDialogue5();
@@ -590,6 +592,11 @@ public class Dialog_trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         j++;
+    }
+
+    public void Scale()
+    {
+        playerController.GetComponent<ThirdPersonController>().Scale();
     }
 }
 

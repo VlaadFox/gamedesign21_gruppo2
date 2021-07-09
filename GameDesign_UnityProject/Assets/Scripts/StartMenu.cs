@@ -17,8 +17,13 @@ public class StartMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
+    public AudioSource soundToPlay;
 
 
+    private void playAudioClick()
+    {
+        soundToPlay.Play();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -40,17 +45,20 @@ public class StartMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        playAudioClick();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene("ScenaPrincipale");
     }
 
     public void QuitGame()
     {
+        playAudioClick();
         Application.Quit();
     }
 
     public void fromStartToOptions()
     {
+        playAudioClick();
         canvasStart.SetActive(false);
         canvasOptions.SetActive(true);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
@@ -61,6 +69,7 @@ public class StartMenu : MonoBehaviour
 
     public void fromOptionsToStart()
     {
+        playAudioClick();
         canvasStart.SetActive(true);
         canvasOptions.SetActive(false);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
