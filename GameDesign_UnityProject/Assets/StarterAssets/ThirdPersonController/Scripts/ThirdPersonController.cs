@@ -92,9 +92,12 @@ namespace StarterAssets
 
 		private bool _hasAnimator;
 
+
+		public GameObject luce;
 		public GameObject me;
 		public bool canScale = true;
 		public bool canJump = true;
+		public bool light = false;
 
 		private void Awake()
 		{
@@ -125,7 +128,10 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			//Scale();
+            //Scale();
+            
+			Light();
+           
 		}
 
 		private void LateUpdate()
@@ -338,6 +344,27 @@ namespace StarterAssets
 				//}
 			}
 		}
+
+		public void Light()
+        {
+            if (light)
+            {
+				if (Input.GetButtonDown(""))
+				{
+					luce.SetActive(true);
+				}
+				if (Input.GetButtonUp(""))
+				{
+					luce.SetActive(false);
+				}
+			}
+        }
+
+		public void lightrue()
+        {
+			light = true;
+        }
+	
 		public IEnumerator resetScale()
 		{
 			yield return new WaitForSeconds(15f);

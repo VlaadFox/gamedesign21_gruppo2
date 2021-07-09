@@ -22,7 +22,7 @@ public class StartMenu : MonoBehaviour
 
     private void playAudioClick()
     {
-        soundButtonClick.Play();
+        //soundButtonClick.Play();
     }
 
     // Start is called before the first frame update

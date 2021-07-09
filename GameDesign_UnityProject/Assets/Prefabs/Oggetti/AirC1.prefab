@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4972022620854017679}
   - component: {fileID: 8264096169374437674}
   - component: {fileID: 6146007111821829600}
+  - component: {fileID: 6938927865591375593}
   m_Layer: 0
   m_Name: AirC1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6938927865591375593
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641880685989168181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7065897916174546266, guid: ecc839496645f4388b0f6f5a44655634, type: 3}
