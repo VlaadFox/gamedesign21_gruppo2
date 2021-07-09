@@ -232,8 +232,7 @@ public class Dialog_trigger : MonoBehaviour
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
 
-                        anim.SetBool("talkBool", true);
-                        anim.SetBool("pauseBool", false);
+                        
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
@@ -454,6 +453,20 @@ public class Dialog_trigger : MonoBehaviour
             }
         }
     }
+    public void Getlight()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[6] == false) // controllo di avere spazio nell'inventario
+            {
+                inventory.isFull[6] = true;
+                Instantiate(imgUIInventarioUSB, inventory.slots[6].transform, false);
+                inventory.listInventoryItems.Add("luce");
+                Debug.Log("Ho ricevuto la luce");
+                break;
+            }
+        }
+    }
 
 
     public GameObject imgUIInventarioWrench;
@@ -553,6 +566,17 @@ public class Dialog_trigger : MonoBehaviour
         transistion.SetTrigger("start");
         transistion.SetTrigger("end");
         canvas.SetActive(false);
+    }
+    public IEnumerator aggiustalight()
+    {
+        yield return new WaitForSeconds(2f);
+        TriggerDialogue2();
+    }
+    public void fade()
+    {
+        transistion.SetTrigger("start");
+        transistion.SetTrigger("end");
+        StartCoroutine(aggiustalight());
     }
 }
 
