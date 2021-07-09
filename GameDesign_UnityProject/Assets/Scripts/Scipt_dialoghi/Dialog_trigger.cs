@@ -56,6 +56,7 @@ public class Dialog_trigger : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
 
     }
@@ -527,10 +528,10 @@ public class Dialog_trigger : MonoBehaviour
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
-            if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
+            if (inventory.isFull[0] == false) // controllo di avere spazio nell'inventario
             {
-                inventory.isFull[i] = true;
-                Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
+                inventory.isFull[0] = true;
+                Instantiate(imgUIInventarioMoneta, inventory.slots[0].transform, false);
                 inventory.listInventoryItems.Add("ToretCoin");
                 Debug.Log("Ho ricevuto la moneta");
                 break;

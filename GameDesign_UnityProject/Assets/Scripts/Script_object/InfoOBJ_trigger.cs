@@ -35,6 +35,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        playerController = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void TriggerDialogue()
