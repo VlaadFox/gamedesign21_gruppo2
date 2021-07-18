@@ -21,6 +21,8 @@ public class Energy : MonoBehaviour
 
     public GameObject canvas;
 
+    private Inventory inventory;
+
     public GameObject Chiosco;
     public GameObject Garage;
 
@@ -36,7 +38,8 @@ public class Energy : MonoBehaviour
 
     private void Start()
     {
-        
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
         if (!PlayerPrefs.HasKey("currentEnergy"))
         {
             PlayerPrefs.SetInt("currentEnergy", 5);
@@ -233,7 +236,8 @@ public class Energy : MonoBehaviour
         {
 
             UseEnrgy4();
-            Chiosco.GetComponent<needEnergy>().enabled = false;
+            secondo();
+            
 
             Debug.Log("HaiEnergiaend");
         }
@@ -252,6 +256,20 @@ public class Energy : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         endcanvas.SetActive(false);
+
+    }
+    public void primo()
+    {
+
+        inventory.listInventoryItems.Add("primo");
+        Debug.Log("primo fatto");
+
+    }
+    public void secondo()
+    {
+
+        inventory.listInventoryItems.Add("secondo");
+        Debug.Log("secondo fatto");
 
     }
 }

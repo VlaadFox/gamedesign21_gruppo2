@@ -219,15 +219,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
             }
 
-            if(gameObject.name == "Chiosco"|| gameObject.name == "Garage")
-            {
-                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                {
-                    FindObjectOfType<Energy>().checkFinal();
-                    canvasDel.SetActive(false);
-                   
-                }
-            }
+            
         }
     }
 
