@@ -40288,7 +40288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.56, y: -14.1}
+  m_AnchoredPosition: {x: 12.48, y: -14.1}
   m_SizeDelta: {x: 536.571, y: 56.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894917673
@@ -62113,6 +62113,9 @@ MonoBehaviour:
   timerText: {fileID: 1180358035}
   energybar: {fileID: 661665648}
   checklist: []
+  canvas: {fileID: 532047463}
+  Chiosco: {fileID: 8482341173780871768}
+  Garage: {fileID: 0}
   endcanvas: {fileID: 1957938135}
 --- !u!114 &1344569822
 MonoBehaviour:
@@ -97738,6 +97741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 89389783}
+  canvasdel: {fileID: 532047463}
 --- !u!65 &1954470709900074612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97751,6 +97755,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.703254, y: 1, z: 13.835842}
   m_Center: {x: 0.06291781, y: 0, z: 3.9010897}
+--- !u!114 &1954470709900074614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954470709900074610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4e7e203cdd08c4daddccac051fb508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - You don't have enough energy to activate the structure wait 5 minutes or find
+      another way to recharge it
+  dialogue2:
+    name: 
+    sentences: []
+  dialogue3:
+    name: 
+    sentences: []
+  canvas: {fileID: 532047463}
+  canvasDel: {fileID: 89389783}
+  tombino: {fileID: 0}
+  imgUIInventarioLattinaOlio: {fileID: 2218409374771733995, guid: 0c2d69c3be812bc428aa955df7e9f764, type: 3}
+  imgUIInventarioLattinaOlio_RED: {fileID: 2218409374771733995, guid: 1cc10eacb78462c4ca9a639b08888050, type: 3}
+  slot1Inventario: {fileID: 1955174301}
+  canvasBottoni: {fileID: 1073891931}
+  yesFirstButton: {fileID: 187135704}
+  playerController: {fileID: 8616007837305493623}
 --- !u!114 &1977742292591096455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102823,6 +102859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 89389783}
+  canvasdel: {fileID: 532047463}
 --- !u!135 &8482341173780871770
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -102834,8 +102871,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 182.27809
-  m_Center: {x: -0.000018600836, y: 128.31306, z: -42.891296}
+  m_Radius: 115.10441
+  m_Center: {x: -0.000018600838, y: 100.36437, z: -42.891293}
 --- !u!114 &8482341173780871771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102859,8 +102896,8 @@ MonoBehaviour:
   dialogue3:
     name: 
     sentences: []
-  canvas: {fileID: 532047463}
-  canvasDel: {fileID: 89389783}
+  canvas: {fileID: 0}
+  canvasDel: {fileID: 532047463}
   tombino: {fileID: 0}
   imgUIInventarioLattinaOlio: {fileID: 2218409374771733995, guid: 0c2d69c3be812bc428aa955df7e9f764, type: 3}
   imgUIInventarioLattinaOlio_RED: {fileID: 2218409374771733995, guid: 1cc10eacb78462c4ca9a639b08888050, type: 3}

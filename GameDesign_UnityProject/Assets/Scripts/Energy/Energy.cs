@@ -19,9 +19,14 @@ public class Energy : MonoBehaviour
     // private Inventory inventory;
     public List<string> checklist = new List<string>();
 
+    public GameObject canvas;
+
+    public GameObject Chiosco;
+    public GameObject Garage;
+
     private int maxEnergy = 5;
     private int currentEnergy;
-    private int restoreDuration = 1;
+    private int restoreDuration = 10;
     private DateTime nextEnergyTime;
     private DateTime lastEnergyTime;
     private bool isRestoring = false;
@@ -74,8 +79,34 @@ public class Energy : MonoBehaviour
         {
             Debug.Log("insufficient Energy!!");
             endcanvas.SetActive(true);
-            //StartCoroutine(endenergy());
+            StartCoroutine(endenergy());
            
+        }
+    }
+    public void UseEnrgy4()
+    {
+        if (currentEnergy >= 1)
+        {
+            
+            currentEnergy = -1;
+            UpdateEnergy();
+
+            if (isRestoring == false)
+            {
+                if (currentEnergy + 1 == maxEnergy)
+                {
+                    nextEnergyTime = addDuration(DateTime.Now, restoreDuration);
+                }
+                StartCoroutine(RestoreEnergy());
+
+            }
+        }
+        else 
+        {
+            Debug.Log("insufficient Energy!!");
+            endcanvas.SetActive(true);
+            StartCoroutine(endenergy());
+
         }
     }
 
@@ -126,8 +157,8 @@ public class Energy : MonoBehaviour
     
     private DateTime addDuration(DateTime datetime, int duration)
     {
-        return datetime.AddMinutes(duration);
-        //return datetime.AddSeconds(duration);
+       //return datetime.AddMinutes(duration);
+        return datetime.AddSeconds(duration);
     }
 
     private void UpdateEnergy()
@@ -198,23 +229,21 @@ public class Energy : MonoBehaviour
     }
     public void checkFinal()
     {
-        if (currentEnergy < 5)
+        if (currentEnergy == 5)
         {
 
-            FindObjectOfType<Dialog_trigger>().TriggerDialogue();
-            Debug.Log("NonHaiEnergiaend");
+            UseEnrgy4();
+            Chiosco.GetComponent<needEnergy>().enabled = false;
 
-        }
-        else
-        {
-
-            UseEnrgy();
-            UseEnrgy();
-            UseEnrgy();
-            UseEnrgy();
-            UseEnrgy();
-            
             Debug.Log("HaiEnergiaend");
+        }
+        else if (currentEnergy >= 0 && currentEnergy < 5)
+        {
+
+            FindObjectOfType<InfoOBJ_trigger>().TriggerDialogue();
+            Debug.Log("NonHaiEnergiaend");
+            canvas.SetActive(true);
+            
 
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class needEnergy : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject canvasdel;
     private Inventory inventory;
 
 
@@ -51,6 +52,7 @@ public class needEnergy : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         canvas.SetActive(false);
+        canvasdel.SetActive(false);
     }
     public void primo()
     {

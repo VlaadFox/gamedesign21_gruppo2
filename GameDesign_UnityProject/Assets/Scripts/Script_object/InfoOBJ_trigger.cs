@@ -12,6 +12,9 @@ public class InfoOBJ_trigger : MonoBehaviour
     public GameObject canvas;
     public GameObject canvasDel;
 
+    
+
+
 
     private Inventory inventory;
 
@@ -222,7 +225,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 {
                     FindObjectOfType<Energy>().checkFinal();
                     canvasDel.SetActive(false);
-                    canvas.SetActive(true);
+                   
                 }
             }
         }
