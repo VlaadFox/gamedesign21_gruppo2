@@ -26,6 +26,8 @@ public class Energy : MonoBehaviour
     private DateTime lastEnergyTime;
     private bool isRestoring = false;
 
+    public GameObject endcanvas;
+
 
     private void Start()
     {
@@ -71,6 +73,9 @@ public class Energy : MonoBehaviour
         else
         {
             Debug.Log("insufficient Energy!!");
+            endcanvas.SetActive(true);
+            //StartCoroutine(endenergy());
+           
         }
     }
 
@@ -191,5 +196,33 @@ public class Energy : MonoBehaviour
 
         }
     }
-    
+    public void checkFinal()
+    {
+        if (currentEnergy < 5)
+        {
+
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue();
+            Debug.Log("NonHaiEnergiaend");
+
+        }
+        else
+        {
+
+            UseEnrgy();
+            UseEnrgy();
+            UseEnrgy();
+            UseEnrgy();
+            UseEnrgy();
+            
+            Debug.Log("HaiEnergiaend");
+
+        }
+    }
+
+    public IEnumerator endenergy()
+    {
+        yield return new WaitForSeconds(3f);
+        endcanvas.SetActive(false);
+
+    }
 }

@@ -120,13 +120,6 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
             }
 
-
-            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
-            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
-            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
-            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
-            // DA MODIFICARE DIALOGO RELATIVO A CAN ROSSA
-            // usare dropitemRED
             if (gameObject.name == "OilVending_seconda") // stai interagendo con la macchinetta nella seconda piazza (can rossa)
             {
                 if (!hasCan && !hasCoin)
@@ -220,6 +213,16 @@ public class InfoOBJ_trigger : MonoBehaviour
                         canvas.SetActive(true);
                         TriggerDialogue2();
                     }
+                }
+            }
+
+            if(gameObject.name == "Chiosco"|| gameObject.name == "Garage")
+            {
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                {
+                    FindObjectOfType<Energy>().checkFinal();
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(true);
                 }
             }
         }
