@@ -32,7 +32,7 @@ public class Active_dialog : MonoBehaviour
             canvas.SetActive(false);
             dialogCanvas.SetActive(false);
             bottoni.SetActive(false);
-            continue_button.SetActive(false);
+           // continue_button.SetActive(false);
 
             anim.SetBool("talkBool", false);
 
