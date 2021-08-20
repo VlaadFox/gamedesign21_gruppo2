@@ -293,8 +293,8 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue();
-                            continue_button.SetActive(true);
-                            canvasBottoni.SetActive(false);
+                    continue_button.SetActive(true);
+                    canvasBottoni.SetActive(false);
 
 
                 }
@@ -302,7 +302,7 @@ public class Dialog_trigger : MonoBehaviour
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
-
+                    continue_button.SetActive(false);
                     //anim.SetBool("talkBool", true);
                     //anim.SetBool("pauseBool", false);
                     Debug.Log("entrato");
