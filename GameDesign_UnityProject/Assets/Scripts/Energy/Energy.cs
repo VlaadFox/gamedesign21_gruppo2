@@ -237,7 +237,6 @@ public class Energy : MonoBehaviour
 
             UseEnrgy4();
             secondo();
-            
 
             Debug.Log("HaiEnergiaend");
         }
