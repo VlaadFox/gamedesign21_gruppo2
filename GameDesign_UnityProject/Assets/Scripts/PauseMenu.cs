@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         canvasPausa.SetActive(true);
         canvasOptions.SetActive(false);
+        canvasComandi.SetActive(false);
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
@@ -97,6 +98,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject canvasOptions;
     public GameObject optionsFirstButton;
     public AudioMixer audioMixer;
+    public GameObject canvasComandi;
+    public GameObject backFirstButton;
+    public GameObject commandsFirstButton;
 
 
 
@@ -107,6 +111,7 @@ public class PauseMenu : MonoBehaviour
         playAudioClick();
         canvasPausa.SetActive(false);
         canvasOptions.SetActive(true);
+        canvasComandi.SetActive(false);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
         EventSystem.current.SetSelectedGameObject(null);
         // ora posso selezionare in oggetto
@@ -118,10 +123,33 @@ public class PauseMenu : MonoBehaviour
         playAudioClick();
         canvasPausa.SetActive(true);
         canvasOptions.SetActive(false);
+        canvasComandi.SetActive(false);
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
         EventSystem.current.SetSelectedGameObject(null);
         // ora posso selezionare in oggetto
         EventSystem.current.SetSelectedGameObject(pauseFirstButton); 
+    }
+
+    public void fromOptionsToCommands()
+    {
+        playAudioClick();
+        canvasOptions.SetActive(false);
+        canvasComandi.SetActive(true);
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(backFirstButton); // back button
+    }
+
+    public void fromCommandsToOptions()
+    {
+        playAudioClick();
+        canvasOptions.SetActive(true);
+        canvasComandi.SetActive(false);
+        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+        EventSystem.current.SetSelectedGameObject(null);
+        // ora posso selezionare in oggetto
+        EventSystem.current.SetSelectedGameObject(commandsFirstButton); 
     }
 
     public void SetVolume(float volume)
