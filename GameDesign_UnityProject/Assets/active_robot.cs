@@ -5,6 +5,8 @@ using UnityEngine;
 public class active_robot : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject delete;
+    public GameObject delete2;
     private Inventory inventory;
 
 
@@ -37,7 +39,9 @@ public class active_robot : MonoBehaviour
             FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
             StartCoroutine(despawn());
             Getenter();
-            
+            delete.SetActive(false);
+            delete2.SetActive(false);
+
         }
     }
     public IEnumerator despawn()
