@@ -73,7 +73,7 @@ public class FPSInteractionManager : MonoBehaviour
         //If NOTHING is detected set all to null
         else
         {
-            canva.SetActive(false);
+           // canva.SetActive(false);
             _pointingGrabbable = null;
         }
     }
