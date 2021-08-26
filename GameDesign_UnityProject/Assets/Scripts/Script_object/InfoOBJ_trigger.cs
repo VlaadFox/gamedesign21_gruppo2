@@ -22,6 +22,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     private bool hasCan = false;
 
     public GameObject tombino;
+    
 
 
     public GameObject imgUIInventarioLattinaOlio;
@@ -61,6 +62,7 @@ public class InfoOBJ_trigger : MonoBehaviour
         {
             hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
             hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
+            
             Debug.Log("entro collider");
 
 
@@ -219,7 +221,20 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
             }
 
-            
+            /*if (gameObject.name == "Chiosco")
+            {
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                {
+                    if (!FindObjectOfType<Energy>().checkFinal())
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                    }
+                }
+            }*/
+
+
         }
     }
 

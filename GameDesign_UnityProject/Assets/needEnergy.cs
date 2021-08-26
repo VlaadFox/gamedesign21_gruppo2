@@ -8,6 +8,7 @@ public class needEnergy : MonoBehaviour
     public GameObject structure;
     public GameObject canvasdel;
     private Inventory inventory;
+    
 
     private bool Ch = false;
     private bool Ga = false;
@@ -66,11 +67,15 @@ public class needEnergy : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
-                    if (!Ch) 
-                    { 
+                    if (!Ch)
+                    {
 
                         FindObjectOfType<Energy>().checkFinal();
-                        // secondo();
+
+                       
+                            
+                        
+                       
                     }
 
 
@@ -78,6 +83,8 @@ public class needEnergy : MonoBehaviour
             }
         }
     }
+
+    
 
     private void OnTriggerExit(Collider collider)
     {

@@ -13,13 +13,17 @@ public class Energy : MonoBehaviour
     [SerializeField] 
     Slider energybar;
 
-    
 
+    public GameObject CameraChiosco;
+    public GameObject luceChiosco;
+    public GameObject raggioChiosco;
+    public GameObject raggioChioscodef;
 
     // private Inventory inventory;
     public List<string> checklist = new List<string>();
 
     public GameObject canvas;
+    public GameObject canvasdel;
 
     private Inventory inventory;
 
@@ -230,27 +234,50 @@ public class Energy : MonoBehaviour
 
         }
     }
-    public void checkFinal()
+    public bool checkFinal()
     {
         if (currentEnergy == 5)
         {
 
             UseEnrgy4();
             secondo();
+            canvas.SetActive(false);
+            canvasdel.SetActive(false);
+            // secondo();
+            CameraChiosco.SetActive(true);
+            luceChiosco.SetActive(true);
+            raggioChiosco.SetActive(true);
+            StartCoroutine(finisccutChiosco());
+
+            Debug.Log("cutscene");
 
             Debug.Log("HaiEnergiaend");
+            return true;
         }
         else if (currentEnergy >= 0 && currentEnergy < 5)
         {
 
-            FindObjectOfType<InfoOBJ_trigger>().TriggerDialogue();
+            
             Debug.Log("NonHaiEnergiaend");
             canvas.SetActive(true);
-            
 
+            return false;
+        }
+        else
+        {
+            return false;
         }
     }
 
+    IEnumerator finisccutChiosco()
+    {
+        yield return new WaitForSeconds(4);
+        CameraChiosco.SetActive(false);
+        luceChiosco.SetActive(false);
+        raggioChiosco.SetActive(false);
+        raggioChioscodef.SetActive(true);
+
+    }
     public IEnumerator endenergy()
     {
         yield return new WaitForSeconds(3f);
