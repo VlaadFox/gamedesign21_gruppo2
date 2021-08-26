@@ -86,6 +86,7 @@ public class needEnergy : MonoBehaviour
             if (Ch)
             {
                 structure.SetActive(false);
+                canvas.SetActive(false);
             }
             if (!Ch)
             {
