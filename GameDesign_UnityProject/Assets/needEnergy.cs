@@ -39,6 +39,20 @@ public class needEnergy : MonoBehaviour
                 }
 
             }
+            if (gameObject.name == "Garage")
+            {
+                if (Ga)
+                {
+                    structure.SetActive(true);
+                    Debug.Log("sbloccata");
+                }
+                if (Ga)
+                {
+                    canvas.SetActive(true);
+                    Debug.Log("bloccata");
+                }
+
+            }
         }
 
 
@@ -56,10 +70,11 @@ public class needEnergy : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
 
-
-                    FindObjectOfType<Energy>().checkFinal();
-                   // primo();
-
+                    if (!Ga)
+                    {
+                        FindObjectOfType<Energy>().checkFinal2();
+                        // primo();
+                    }
 
                 }
             }
@@ -102,6 +117,22 @@ public class needEnergy : MonoBehaviour
             }
 
         }
+        if (gameObject.name == "Garage")
+        {
+            if (Ga)
+            {
+                structure.SetActive(false);
+                canvas.SetActive(false);
+            }
+            if (!Ga)
+            {
+                canvas.SetActive(false);
+                canvasdel.SetActive(false);
+            }
+
+        }
     }
-    
 }
+
+    
+

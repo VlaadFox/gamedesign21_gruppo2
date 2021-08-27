@@ -16,6 +16,7 @@ public class Energy : MonoBehaviour
 
     public GameObject CameraChiosco;
     public GameObject luceChiosco;
+    public GameObject luceraggio;
     public GameObject raggioChiosco;
     public GameObject raggioChioscodef;
 
@@ -246,6 +247,7 @@ public class Energy : MonoBehaviour
             // secondo();
             CameraChiosco.SetActive(true);
             luceChiosco.SetActive(true);
+            
             raggioChiosco.SetActive(true);
             StartCoroutine(finisccutChiosco());
 
@@ -268,10 +270,46 @@ public class Energy : MonoBehaviour
             return false;
         }
     }
+    public bool checkFinal2()
+    {
+        if (currentEnergy == 5)
+        {
+
+            UseEnrgy4();
+            primo();
+            canvas.SetActive(false);
+            canvasdel.SetActive(false);
+            // secondo();
+            CameraChiosco.SetActive(true);
+            luceChiosco.SetActive(true);
+
+            raggioChiosco.SetActive(true);
+            StartCoroutine(finisccutChiosco());
+
+            Debug.Log("cutscene");
+
+            Debug.Log("HaiEnergiaend");
+            return true;
+        }
+        else if (currentEnergy >= 0 && currentEnergy < 5)
+        {
+
+
+            Debug.Log("NonHaiEnergiaend");
+            canvas.SetActive(true);
+
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     IEnumerator finisccutChiosco()
     {
         yield return new WaitForSeconds(4);
+        luceraggio.SetActive(true);
         CameraChiosco.SetActive(false);
         luceChiosco.SetActive(false);
         raggioChiosco.SetActive(false);
