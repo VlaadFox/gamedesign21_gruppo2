@@ -5,7 +5,8 @@ using UnityEngine;
 public class open_graal : MonoBehaviour
 {
     public GameObject canvas;
-    private bool dofirst;
+    public GameObject canvas2;
+
     private bool dosecond;
     private Inventory inventory;
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class open_graal : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         canvas.SetActive(false);
+        canvas2.SetActive(false);
     }
     private void OnTriggerStay(Collider collider)
     {
@@ -30,7 +32,15 @@ public class open_graal : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
             {
-                FindObjectOfType<LevelLoader>().LoadNextLevelMole();
+                dosecond = inventory.listInventoryItems.Contains("primo");
+                if (dosecond)
+                {
+                    FindObjectOfType<LevelLoader>().LoadNextLevelMole();
+                }
+                if (!dosecond)
+                {
+                    canvas2.SetActive(true);
+                }
             }
         }
     }

@@ -8,6 +8,8 @@ public class needEnergy : MonoBehaviour
     public GameObject structure;
     public GameObject canvasdel;
     private Inventory inventory;
+
+    public GameObject Ordinestrutture;
     
 
     private bool Ch = false;
@@ -49,10 +51,16 @@ public class needEnergy : MonoBehaviour
                 }
                 if (!Ga)
                 {
+                    Ch = inventory.listInventoryItems.Contains("secondo");
                     canvas.SetActive(true);
                     Debug.Log("bloccata");
+                    if (!Ch)
+                    {
+                        Ordinestrutture.SetActive(true);
+                        Debug.Log("faiprimailchiosco");
+                    }
                 }
-
+               
             }
         }
 
@@ -129,6 +137,11 @@ public class needEnergy : MonoBehaviour
             {
                 canvas.SetActive(false);
                 canvasdel.SetActive(false);
+            }
+            if (!Ch)
+            {
+                Ordinestrutture.SetActive(false);
+                Debug.Log("faiprimailchiosco");
             }
 
         }

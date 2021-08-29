@@ -322,25 +322,39 @@ public class Energy : MonoBehaviour
         raggioChiosco.SetActive(false);
         raggioChioscodef.SetActive(true);
 
-        luceraggio2.SetActive(true);
-        CameraGa.SetActive(false);
-       
-        raggioGa.SetActive(false);
-        raggioGadef.SetActive(true);
+        
 
     }
+
+    public GameObject cameratombino;
+    public GameObject lighttombino;
+    public GameObject lighttombinodef;
     IEnumerator finisccutGarage()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
        
 
         luceraggio2.SetActive(true);
         CameraGa.SetActive(false);
-
         raggioGa.SetActive(false);
         raggioGadef.SetActive(true);
+        cameratombino.SetActive(true);
+        lighttombino.SetActive(true);
+        StartCoroutine(finisccutGarage2());
 
     }
+    IEnumerator finisccutGarage2()
+    {
+        yield return new WaitForSeconds(4);
+
+
+        
+        cameratombino.SetActive(false);
+        lighttombino.SetActive(false);
+        lighttombinodef.SetActive(true);
+
+    }
+
     public IEnumerator endenergy()
     {
         yield return new WaitForSeconds(3f);
