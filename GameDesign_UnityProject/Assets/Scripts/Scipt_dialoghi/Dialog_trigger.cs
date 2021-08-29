@@ -350,11 +350,14 @@ public class Dialog_trigger : MonoBehaviour
                         {
                             playerController.GetComponent<CharacterController>().enabled = false;
                             Time.timeScale = 0f;
-                             Nextdisplay();
-                            Cursor.lockState = CursorLockMode.None;
-                            canvasBottoni.SetActive(true);
+
+                            TriggerDialogue2();
+                            
+                            
                             continue_button.SetActive(false);
-                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        canvasBottoni.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                             EventSystem.current.SetSelectedGameObject(null);
                             // ora posso selezionare in oggetto
                             EventSystem.current.SetSelectedGameObject(yesFirstButton);
@@ -368,7 +371,7 @@ public class Dialog_trigger : MonoBehaviour
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue2();
+                        TriggerDialogue3();
                     }
                 }
                 if (hasmoney)
@@ -379,7 +382,7 @@ public class Dialog_trigger : MonoBehaviour
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue3();
+                        TriggerDialogue4();
                         StartCoroutine(finishdialogue());
                         StartCoroutine(DestroyLadro());
 
