@@ -41,12 +41,13 @@ public class needEnergy : MonoBehaviour
             }
             if (gameObject.name == "Garage")
             {
+                Debug.Log("IN_Garage");
                 if (Ga)
                 {
                     structure.SetActive(true);
                     Debug.Log("sbloccata");
                 }
-                if (Ga)
+                if (!Ga)
                 {
                     canvas.SetActive(true);
                     Debug.Log("bloccata");

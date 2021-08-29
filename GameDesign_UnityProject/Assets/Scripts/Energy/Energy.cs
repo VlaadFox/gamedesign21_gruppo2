@@ -20,6 +20,13 @@ public class Energy : MonoBehaviour
     public GameObject raggioChiosco;
     public GameObject raggioChioscodef;
 
+    public GameObject CameraGa;
+  
+    public GameObject luceraggio2;
+    public GameObject raggioGa;
+    public GameObject raggioGadef;
+
+
     // private Inventory inventory;
     public List<string> checklist = new List<string>();
 
@@ -280,11 +287,11 @@ public class Energy : MonoBehaviour
             canvas.SetActive(false);
             canvasdel.SetActive(false);
             // secondo();
-            CameraChiosco.SetActive(true);
-            luceChiosco.SetActive(true);
+            CameraGa.SetActive(true);
+            
 
-            raggioChiosco.SetActive(true);
-            StartCoroutine(finisccutChiosco());
+            raggioGa.SetActive(true);
+            StartCoroutine(finisccutGarage());
 
             Debug.Log("cutscene");
 
@@ -314,6 +321,24 @@ public class Energy : MonoBehaviour
         luceChiosco.SetActive(false);
         raggioChiosco.SetActive(false);
         raggioChioscodef.SetActive(true);
+
+        luceraggio2.SetActive(true);
+        CameraGa.SetActive(false);
+       
+        raggioGa.SetActive(false);
+        raggioGadef.SetActive(true);
+
+    }
+    IEnumerator finisccutGarage()
+    {
+        yield return new WaitForSeconds(4);
+       
+
+        luceraggio2.SetActive(true);
+        CameraGa.SetActive(false);
+
+        raggioGa.SetActive(false);
+        raggioGadef.SetActive(true);
 
     }
     public IEnumerator endenergy()

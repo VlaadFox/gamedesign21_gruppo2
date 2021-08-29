@@ -212,8 +212,8 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue3();
                             DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                             GetCollezionabile();
-                            
-     
+                            FindObjectOfType<Feedbakinventory>().WrenchFeed();
+
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                         }
