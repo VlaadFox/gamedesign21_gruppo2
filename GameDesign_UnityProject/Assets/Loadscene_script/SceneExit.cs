@@ -9,5 +9,7 @@ public class SceneExit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerPrefs.SetString("LastExitName", exitName);
+
+        
     }
 }

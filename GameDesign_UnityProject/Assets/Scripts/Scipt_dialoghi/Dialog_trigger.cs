@@ -572,6 +572,7 @@ public class Dialog_trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         antagonista.SetActive(false);
+       // Destroy(antagonista);
     }
 
     public void DropItem()
