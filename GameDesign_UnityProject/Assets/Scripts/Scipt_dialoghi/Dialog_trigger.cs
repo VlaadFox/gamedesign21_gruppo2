@@ -22,12 +22,12 @@ public class Dialog_trigger : MonoBehaviour
 
     public Animator anim;
 
-    private int b=0;
+   // private int b=0;
 
     private Inventory inventory;
-    private Energy energy;
+    //private Energy energy;
 
-    private InventorySlot inventorySlot;
+   // private InventorySlot inventorySlot;
 
     private bool hasCoin = false; // per controllare moneta
     private bool hasCan = false; // per controllare lattina
@@ -36,7 +36,7 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasmoney = false;
     private bool hasWrench = false;
     private bool haslight = false;
-    private bool firstime = false;
+    //private bool firstime = false;
 
     public GameObject imgUIInventarioMoneta;
 

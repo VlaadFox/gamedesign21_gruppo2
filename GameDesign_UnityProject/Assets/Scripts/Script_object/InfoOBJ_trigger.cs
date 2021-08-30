@@ -20,6 +20,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
     private bool hasCoin = false;
     private bool hasCan = false;
+    
 
     public GameObject tombino;
     
@@ -204,6 +205,8 @@ public class InfoOBJ_trigger : MonoBehaviour
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
 
+                        //aprire la il tombino
+                        inventory.listInventoryItems.Add("Tombino");
                         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
                         EventSystem.current.SetSelectedGameObject(null);
                         // ora posso selezionare in oggetto
