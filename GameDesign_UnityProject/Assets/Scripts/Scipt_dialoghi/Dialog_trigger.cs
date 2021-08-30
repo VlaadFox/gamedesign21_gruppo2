@@ -287,18 +287,18 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "Robottone")
                 {
                
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                 /*   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                     
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
-                            TriggerDialogue();
+                            TriggerDialogue5();
                     continue_button.SetActive(true);
                     canvasBottoni.SetActive(false);
 
 
-                }
-                   if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
+                }*/
+                   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
                     Time.timeScale = 0f;
@@ -308,7 +308,7 @@ public class Dialog_trigger : MonoBehaviour
                     Debug.Log("entrato");
                     canvasDel.SetActive(false);
                     canvas.SetActive(true);
-                    TriggerDialogue5();
+                    TriggerDialogue();
                     Cursor.lockState = CursorLockMode.None;
                     canvasBottoni.SetActive(true);
 
@@ -331,7 +331,7 @@ public class Dialog_trigger : MonoBehaviour
                 if (!hasUSB)
                 {
                    
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        /*if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             //playerController.GetComponent<CharacterController>().enabled = false;
                             //Time.timeScale = 0f;
@@ -345,16 +345,20 @@ public class Dialog_trigger : MonoBehaviour
                             //EventSystem.current.SetSelectedGameObject(null);
                             // ora posso selezionare in oggetto
                            // EventSystem.current.SetSelectedGameObject(yesFirstButton);
-                        }
-                        if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
+                        }*/
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             playerController.GetComponent<CharacterController>().enabled = false;
                             Time.timeScale = 0f;
 
                             TriggerDialogue2();
-                            
-                            
-                            continue_button.SetActive(false);
+
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+
+                        continue_button.SetActive(false);
                         canvasBottoni.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
