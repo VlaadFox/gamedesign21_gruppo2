@@ -253,10 +253,9 @@ public class Dialog_trigger : MonoBehaviour
                         playerController.GetComponent<CharacterController>().enabled = false;
                         Time.timeScale = 0f;
 
-                        
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue2();
+                        TriggerDialogue();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
 
@@ -274,7 +273,7 @@ public class Dialog_trigger : MonoBehaviour
                         
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue2();
+                        TriggerDialogue3();
 
                     }
                 }
@@ -624,8 +623,8 @@ public class Dialog_trigger : MonoBehaviour
     }
     public IEnumerator aggiustalight()
     {
-        yield return new WaitForSeconds(2f);
-        TriggerDialogue2();
+        yield return new WaitForSeconds(1f);
+        TriggerDialogue3();
     }
     public void fade()
     {
