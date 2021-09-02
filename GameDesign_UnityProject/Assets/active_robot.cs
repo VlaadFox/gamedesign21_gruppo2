@@ -34,7 +34,7 @@ public class active_robot : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
         {
             FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
             StartCoroutine(despawn());
