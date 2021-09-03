@@ -97,7 +97,7 @@ namespace StarterAssets
 		public GameObject me;
 		public bool canScale = true;
 		public bool canJump = true;
-		public bool light = true;
+		public bool lightOn = true;
 
 		private void Awake()
 		{
@@ -347,7 +347,7 @@ namespace StarterAssets
 		
 		public void Light()
         {
-            if (light)
+            if (lightOn)
             {
 				if (Input.GetButtonDown("Light"))
 				{
@@ -362,7 +362,7 @@ namespace StarterAssets
 
 		public void lightrue()
         {
-			light = true;
+			lightOn = true;
         }
 	
 		public IEnumerator resetScale()
@@ -382,7 +382,7 @@ namespace StarterAssets
 
 		public bool retLight()
         {
-			return light;
+			return lightOn;
         }
 	}
 }

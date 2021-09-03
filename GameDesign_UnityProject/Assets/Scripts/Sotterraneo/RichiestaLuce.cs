@@ -17,14 +17,15 @@ public class RichiestaLuce : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if ((other.gameObject.tag == "Player") && !other.GetComponent<ThirdPersonController>().retLight())
         {
-            playerController = other.gameObject;
+            //playerController = other.gameObject;
 
-            if(playerController.GetComponent<ThirdPersonController>().retLight())
+            //if (playerController.GetComponent<ThirdPersonController>().retLight()) { 
 
             uIObject.SetActive(true);
             StartCoroutine("Wait");
+            //}
         }
     }
     IEnumerator Wait()
