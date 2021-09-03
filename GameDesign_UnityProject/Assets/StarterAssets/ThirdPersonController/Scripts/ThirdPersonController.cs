@@ -380,5 +380,9 @@ namespace StarterAssets
 			canScale = true;
         }
 
+		public bool retLight()
+        {
+			return light;
+        }
 	}
 }
