@@ -81,7 +81,8 @@ public class needEnergy : MonoBehaviour
 
                     if (!Ga)
                     {
-                        FindObjectOfType<Energy>().checkFinal2();
+                        //FindObjectOfType<Energy>().checkFinal2();
+                        FindObjectOfType<energy2>().checkFinal2();
                         // primo();
                     }
 
@@ -94,12 +95,12 @@ public class needEnergy : MonoBehaviour
                     if (!Ch)
                     {
 
-                        FindObjectOfType<Energy>().checkFinal();
+                       // FindObjectOfType<Energy>().checkFinal();
+                        FindObjectOfType<energy2>().checkFinal();
 
-                       
-                            
-                        
-                       
+
+
+
                     }
 
 
