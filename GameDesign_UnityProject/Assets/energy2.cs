@@ -61,7 +61,7 @@ public class energy2 : MonoBehaviour
     }
     private void Update()
     {
-        
+        currentEnergy = PlayerPrefs.GetInt("currentEnergy");
     }
 
     
