@@ -234,9 +234,11 @@ public class Energy : MonoBehaviour
         {
             
             FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
-            
+            FindObjectOfType<Dialog_trigger>().Scale();
+
             UseEnrgy();
             UseEnrgy();
+
             
             Debug.Log("HaiEnergia");
 
