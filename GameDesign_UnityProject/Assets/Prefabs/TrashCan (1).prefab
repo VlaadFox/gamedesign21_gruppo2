@@ -171,6 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833420469952224181}
+  - component: {fileID: 3981512436673479194}
   m_Layer: 0
   m_Name: TrashCan (1)
   m_TagString: Untagged
@@ -199,6 +200,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180.874, z: 0}
+--- !u!65 &3981512436673479194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313448658252775695}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7218461, y: 1.7349837, z: 0.7450811}
+  m_Center: {x: -0.00654757, y: 0.36748528, z: 0.23143052}
 --- !u!1 &2425942411155616774
 GameObject:
   m_ObjectHideFlags: 0
