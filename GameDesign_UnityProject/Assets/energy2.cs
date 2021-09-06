@@ -6,7 +6,7 @@ using System;
 
 public class energy2 : MonoBehaviour
 {
-   
+
 
 
     public GameObject CameraChiosco;
@@ -51,12 +51,12 @@ public class energy2 : MonoBehaviour
         {
             PlayerPrefs.SetInt("currentEnergy", 5);
             Load();
-            
+
         }
         else
         {
             Load();
-           
+
         }
     }
     private void Update()
@@ -64,50 +64,34 @@ public class energy2 : MonoBehaviour
         currentEnergy = PlayerPrefs.GetInt("currentEnergy");
     }
 
-    
 
 
-  
 
-  
-  
+
+
+
+
 
 
     private void Load()
     {
         currentEnergy = PlayerPrefs.GetInt("currentEnergy");
-        
+
     }
-   
-    public void check()
-    {
-        if (currentEnergy < 2)
-        {
 
 
-            FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
-            Debug.Log("NonHaiEnergia");
-
-        }
-        else
-        {
-
-            FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
-
-            FindObjectOfType<Energy>().UseEnrgy();
-            FindObjectOfType<Energy>().UseEnrgy();
-            //UseEnrgy();
-            //UseEnrgy();
-
-            Debug.Log("HaiEnergia");
-
-        }
-    }
     public bool checkFinal()
     {
         if (currentEnergy == 5)
         {
-            FindObjectOfType<Energy>().UseEnrgy4();
+            //FindObjectOfType<Energy>().UseEnrgy4();
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+
+
             //UseEnrgy4();
             secondo();
             canvas.SetActive(false);
@@ -138,12 +122,14 @@ public class energy2 : MonoBehaviour
             return false;
         }
     }
+
+
     public bool checkFinal2()
     {
         if (currentEnergy == 5)
         {
             FindObjectOfType<Energy>().UseEnrgy4();
-           // UseEnrgy4();
+            // UseEnrgy4();
             primo();
             canvas.SetActive(false);
             canvasdel.SetActive(false);
@@ -235,5 +221,31 @@ public class energy2 : MonoBehaviour
         inventory.listInventoryItems.Add("secondo");
         Debug.Log("secondo fatto");
 
+    }
+
+
+    public void check()
+    {
+        if (currentEnergy < 2)
+        {
+
+
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
+            Debug.Log("NonHaiEnergia");
+
+        }
+        else
+        {
+
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
+            FindObjectOfType<Dialog_trigger>().Scale();
+
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+
+
+            Debug.Log("HaiEnergia");
+
+        }
     }
 }

@@ -40,7 +40,7 @@ public class Energy : MonoBehaviour
 
     private int maxEnergy = 5;
     private int currentEnergy;
-    private int restoreDuration = 10;
+    private int restoreDuration = 1;
     private DateTime nextEnergyTime;
     private DateTime lastEnergyTime;
     private bool isRestoring = false;
@@ -50,6 +50,7 @@ public class Energy : MonoBehaviour
 
     private void Start()
     {
+        
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
         if (!PlayerPrefs.HasKey("currentEnergy"))
@@ -68,7 +69,7 @@ public class Energy : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            UseEnrgy();
+            currentEnergy = 5;
             
         }
     }
@@ -172,8 +173,8 @@ public class Energy : MonoBehaviour
     
     private DateTime addDuration(DateTime datetime, int duration)
     {
-       //return datetime.AddMinutes(duration);
-        return datetime.AddSeconds(duration);
+       return datetime.AddMinutes(duration);
+       //return datetime.AddSeconds(duration);
     }
 
     private void UpdateEnergy()
