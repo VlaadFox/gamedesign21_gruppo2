@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
 public class Dialog_trigger : MonoBehaviour
 {
@@ -54,6 +56,19 @@ public class Dialog_trigger : MonoBehaviour
     public GameObject antagonist;
     public GameObject antagonista;
 
+    /*public TextMeshProUGUI txtMissioneDog;
+    public TextMeshProUGUI txtMissioneOil;*/
+    public Color colorText;
+
+    public GameObject textMissioneDog_red;
+    public GameObject textMissioneDog_green;
+    public GameObject textMissioneOil_red;
+    public GameObject textMissioneOil_green;
+    public GameObject textMissioneUsb_red;
+    public GameObject textMissioneUsb_green;
+    public GameObject textMissioneMole_red;
+    public GameObject textMissioneMole_green;
+
 
 
     private int j ;
@@ -63,8 +78,9 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
-       
 
+        /*txtMissioneDog = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        txtMissioneOil = transform.GetChild(1).GetComponent<TextMeshProUGUI>();*/
 
     }
     public IEnumerator time()
@@ -74,17 +90,15 @@ public class Dialog_trigger : MonoBehaviour
         transistion.SetTrigger("end");
         canvas.SetActive(false);
 
+    
         antagonist.SetActive(false);
     }
 
 
-    /*private void Update()
+    private void Update()
     {
-        if (slot1Inventario.transform.childCount <= 0)
-        {
-            inventory.isFull[i] = false;
-        }
-    }*/
+
+    }
 
     public void Nextdisplay()
     {
@@ -214,6 +228,9 @@ public class Dialog_trigger : MonoBehaviour
                             GetCollezionabile();
                             FindObjectOfType<Feedbakinventory>().WrenchFeed();
 
+                            //txtMissioneOil.color = Color.green;
+                            textMissioneOil_red.SetActive(false);
+                            textMissioneOil_green.SetActive(true);
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                         }
@@ -439,6 +456,12 @@ public class Dialog_trigger : MonoBehaviour
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            //txtMissioneDog.color = Color.green;
+
+                            textMissioneDog_red.SetActive(false);
+                            textMissioneDog_green.SetActive(true);
+                            
+
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);

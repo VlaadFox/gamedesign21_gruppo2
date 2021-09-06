@@ -7,6 +7,9 @@ TagManager:
   - CinemachineTarget
   - Slot1
   - Continue
+  - txtMissioneDog
+  - txtMissioneOil
+  - emptyMissionsTexts
   layers:
   - Default
   - TransparentFX
