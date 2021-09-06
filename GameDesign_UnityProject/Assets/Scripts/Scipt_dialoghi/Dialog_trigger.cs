@@ -60,14 +60,7 @@ public class Dialog_trigger : MonoBehaviour
     public TextMeshProUGUI txtMissioneOil;*/
     public Color colorText;
 
-    public GameObject textMissioneDog_red;
-    public GameObject textMissioneDog_green;
-    public GameObject textMissioneOil_red;
-    public GameObject textMissioneOil_green;
-    public GameObject textMissioneUsb_red;
-    public GameObject textMissioneUsb_green;
-    public GameObject textMissioneMole_red;
-    public GameObject textMissioneMole_green;
+    
 
 
 
@@ -78,9 +71,6 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
-
-        /*txtMissioneDog = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        txtMissioneOil = transform.GetChild(1).GetComponent<TextMeshProUGUI>();*/
 
     }
     public IEnumerator time()
@@ -228,9 +218,6 @@ public class Dialog_trigger : MonoBehaviour
                             GetCollezionabile();
                             FindObjectOfType<Feedbakinventory>().WrenchFeed();
 
-                            //txtMissioneOil.color = Color.green;
-                            textMissioneOil_red.SetActive(false);
-                            textMissioneOil_green.SetActive(true);
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                         }
@@ -455,12 +442,7 @@ public class Dialog_trigger : MonoBehaviour
                     if (j == 0)
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {
-                            //txtMissioneDog.color = Color.green;
-
-                            textMissioneDog_red.SetActive(false);
-                            textMissioneDog_green.SetActive(true);
-                            
+                        {   
 
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);

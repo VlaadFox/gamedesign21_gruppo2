@@ -15,9 +15,25 @@ public class InventoryShowUI : MonoBehaviour
     public GameObject emptyTexts;
     public GameObject firstButtonInventory;
 
+    private Inventory inventory;
+    private bool hasWrench = false;
+    private bool hasEnter = false;
+    private bool hasUSB = false;
+
+
+    public GameObject textMissioneDog_red;
+    public GameObject textMissioneDog_green;
+    public GameObject textMissioneOil_red;
+    public GameObject textMissioneOil_green;
+    public GameObject textMissioneUsb_red;
+    public GameObject textMissioneUsb_green;
+    public GameObject textMissioneMole_red;
+    public GameObject textMissioneMole_green;
+
     void Start()
     {
         inventoryMenuUI.SetActive(false);
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     void Update()
@@ -63,6 +79,24 @@ public class InventoryShowUI : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerController.GetComponent<CharacterController>().enabled = false;
+
+        if(hasWrench = inventory.listInventoryItems.Contains("Wrench"))
+        {
+            textMissioneOil_green.SetActive(true);
+            textMissioneOil_red.SetActive(false);
+        }
+
+        if(hasEnter = inventory.listInventoryItems.Contains("entrato"))
+        {
+            textMissioneDog_green.SetActive(true);
+            textMissioneDog_red.SetActive(false);
+        }
+
+        if(hasUSB = inventory.listInventoryItems.Contains("money"))
+        {
+            textMissioneUsb_green.SetActive(true);
+            textMissioneUsb_red.SetActive(false);
+        }
 
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
         EventSystem.current.SetSelectedGameObject(null);

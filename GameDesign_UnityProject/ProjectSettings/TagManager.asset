@@ -10,6 +10,8 @@ TagManager:
   - txtMissioneDog
   - txtMissioneOil
   - emptyMissionsTexts
+  - textMissioneDog_green
+  - txtMissioneOil_green
   layers:
   - Default
   - TransparentFX
