@@ -8,16 +8,13 @@ public class active_warning : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "player")
-        {
+        
             canvas.SetActive(true);
-        }
+      
     }
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.tag == "player")
-        {
-            canvas.SetActive(false);
-        }
+           canvas.SetActive(false);
+       
     }
 }

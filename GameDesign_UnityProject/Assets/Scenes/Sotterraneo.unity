@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &781224118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,10 +934,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.53886485
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.066175595}
 --- !u!23 &988503465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1348,7 +1348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1243011532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,7 +2473,7 @@ BoxCollider:
   m_GameObject: {fileID: 2544772597054301974}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 291.33157, y: 474.05234, z: 218.75145}
   m_Center: {x: -7.0371127, y: -133.48026, z: 34.22437}

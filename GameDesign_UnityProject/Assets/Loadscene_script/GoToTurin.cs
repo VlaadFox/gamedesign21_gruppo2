@@ -8,17 +8,16 @@ public class GoToTurin : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "player")
-        {
-            canvas.SetActive(true);
-        }
+        
+        
+           canvas.SetActive(true);
+        
     }
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.tag == "player")
-        {
+        
             canvas.SetActive(false);
-        }
+       
     }
 
 
@@ -30,8 +29,7 @@ public class GoToTurin : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
+       
             
                 if (Input.GetKeyDown(KeyCode.R)|| Input.GetButtonDown("Interactions"))
                 {
@@ -41,7 +39,7 @@ public class GoToTurin : MonoBehaviour
 
             Debug.Log("sononelcollider");
 
-        }
+        
     }
 
     
