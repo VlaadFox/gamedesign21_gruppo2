@@ -72,7 +72,7 @@ public class Raycastin_Security : MonoBehaviour
                     transistion.SetTrigger("start");
                     transistion.SetTrigger("end");
 
-
+                    playeref.SetActive(false);
                     StartCoroutine(despawn());
                    
 
@@ -115,6 +115,7 @@ public class Raycastin_Security : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         playeref.transform.position = pos;
+        playeref.SetActive(true);
 
     }
 }

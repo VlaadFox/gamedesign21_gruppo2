@@ -248,4 +248,28 @@ public class energy2 : MonoBehaviour
 
         }
     }
+    public void checklight()
+    {
+        if (currentEnergy < 2)
+        {
+
+
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
+            Debug.Log("NonHaiEnergia");
+
+        }
+        else
+        {
+
+            FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
+
+
+            FindObjectOfType<Energy>().UseEnrgy();
+            FindObjectOfType<Energy>().UseEnrgy();
+
+
+            Debug.Log("HaiEnergia");
+
+        }
+    }
 }

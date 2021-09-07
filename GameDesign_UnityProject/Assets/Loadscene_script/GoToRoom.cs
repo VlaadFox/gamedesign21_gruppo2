@@ -6,19 +6,20 @@ public class GoToRoom : MonoBehaviour
 {
     public GameObject DOG;
     public GameObject canvas_a;
-
+    private Inventory inventory;
+    private bool hasEnter = false;
     private void OnTriggerEnter(Collider other)
     {
         canvas_a.SetActive(true);
-        
-        
+       // DOG.SetActive(true);
+
     }
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
         {
             
-            DOG.SetActive(true);
+            
             FindObjectOfType<Energy>().UseEnrgy();
             FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
            // FindObjectOfType<Dialog_trigger>().Getenter();
@@ -30,6 +31,17 @@ public class GoToRoom : MonoBehaviour
     {
         canvas_a.SetActive(false);
     }
-    
+    private void Update()
+    {
+        if(hasEnter = inventory.listInventoryItems.Contains("entrato"))
+        {
+            DOG.SetActive(true);
+        }
+    }
+    private void Start()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
 }
 
