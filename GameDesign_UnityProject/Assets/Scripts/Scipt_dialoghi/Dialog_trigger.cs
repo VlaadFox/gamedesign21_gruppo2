@@ -329,20 +329,10 @@ public class Dialog_trigger : MonoBehaviour
                 }
                    
                 }
-            if (gameObject.name == "Antagonista2")
+            if (gameObject.name == "antagonista2")
             {
 
-                /*   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                       {
-
-                           canvasDel.SetActive(false);
-                           canvas.SetActive(true);
-                           TriggerDialogue5();
-                   continue_button.SetActive(true);
-                   canvasBottoni.SetActive(false);
-
-
-               }*/
+                
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
                     if (Ch)

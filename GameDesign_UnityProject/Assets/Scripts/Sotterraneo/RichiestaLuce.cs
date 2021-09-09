@@ -6,35 +6,21 @@ using UnityEngine.EventSystems;
 
 public class RichiestaLuce : MonoBehaviour
 {
-    public GameObject uIObject, scritta;
-    public GameObject playerController;
-    void Start()
-    {
-        uIObject.SetActive(false);
-
-      
-
-    }
+    public GameObject muro;
+    public GameObject Canvas;
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.gameObject.tag == "Player") && !other.GetComponent<ThirdPersonController>().retLight())
+        if (other.GetComponent<ThirdPersonController>().retLight())
         {
-            //playerController = other.gameObject;
+            //PUOI PASSARE
 
             //if (playerController.GetComponent<ThirdPersonController>().retLight()) { 
+            Canvas.SetActive(false);
+            muro.SetActive(false);
 
-            uIObject.SetActive(true);
-            StartCoroutine("Wait");
-            //}
         }
     }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2);
-        uIObject.SetActive(false);
-        // Destroy(uIObject);
-        // Destroy(gameObject);
-    }
+   
    
 
 }

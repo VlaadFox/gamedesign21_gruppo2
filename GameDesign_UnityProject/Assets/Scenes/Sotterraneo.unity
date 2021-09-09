@@ -296,7 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 21.015, z: 12.926}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481322490
 GameObject:
@@ -945,6 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f023fd2544359454785b9230f3ba2f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: _StartMenu
 --- !u!114 &1029632315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,9 +1037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38997d411348dd641b6c6b0efdeed0b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIObject: {fileID: 0}
-  scritta: {fileID: 0}
-  playerController: {fileID: 0}
+  muro: {fileID: 444626230}
+  Canvas: {fileID: 1682413331}
 --- !u!65 &1173430842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2046,7 +2046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892728598921140054, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8892728598921140054, guid: 34bd5e7b7ce85b1499ccb7f1cd338ecd, type: 3}
       propertyPath: m_LocalPosition.x
