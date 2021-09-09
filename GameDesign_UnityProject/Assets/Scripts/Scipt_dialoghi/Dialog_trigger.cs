@@ -38,6 +38,8 @@ public class Dialog_trigger : MonoBehaviour
     private bool hasmoney = false;
     private bool hasWrench = false;
     private bool haslight = false;
+    private bool Ch = false;
+    private bool Ga = false;
     //private bool firstime = false;
 
     public GameObject imgUIInventarioMoneta;
@@ -133,12 +135,13 @@ public class Dialog_trigger : MonoBehaviour
                 hasmoney = inventory.listInventoryItems.Contains("money");
                 hasWrench= inventory.listInventoryItems.Contains("Wrench");
                 haslight= inventory.listInventoryItems.Contains("luce");
+            Ch = inventory.listInventoryItems.Contains("secondo");
+            Ga = inventory.listInventoryItems.Contains("primo");
 
 
 
 
 
-            
             if (gameObject.name == "robotLavori") // stai parlando col robot
                 {
                     if(!hasCan) // entra nel ciclo in cui NON ha ancora la lattina d'olio
@@ -326,6 +329,48 @@ public class Dialog_trigger : MonoBehaviour
                 }
                    
                 }
+            if (gameObject.name == "Antagonista2")
+            {
+
+                /*   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                       {
+
+                           canvasDel.SetActive(false);
+                           canvas.SetActive(true);
+                           TriggerDialogue5();
+                   continue_button.SetActive(true);
+                   canvasBottoni.SetActive(false);
+
+
+               }*/
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                {
+                    if (Ch)
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue2();
+                    }
+                    if (Ga)
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue3();
+                    }
+                    if (!Ch)
+                    {
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                    }
+                    
+                   
+
+
+
+                }
+
+            }
 
 
 

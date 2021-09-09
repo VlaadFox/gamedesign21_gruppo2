@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Prova : MonoBehaviour
 {
     private static Prova _instance;
 
     public static Prova Instance { get { return _instance; } }
-
+    public string scene = "_StartMenu";
 
     private void Awake()
     {
@@ -20,6 +20,16 @@ public class Prova : MonoBehaviour
         else
         {
             _instance = this;
+        }
+    }
+
+    private void Update()
+    {
+
+        if (SceneManager.GetActiveScene().name == scene)
+        {
+            Debug.Log("restart");
+            Destroy(this.gameObject);
         }
     }
 }
