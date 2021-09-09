@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     public Text timerText;
     public bool timerIsRunning = false;
 
+    public GameObject canvasendgame;
+
     //[SerializeField] private GameObject npc;
 
     private void Start()
@@ -36,7 +38,8 @@ public class Timer : MonoBehaviour
                 timeValue = 0;
                 //timeValue += 90;
                 timerIsRunning = false;
-                EndGame();
+                canvasendgame.SetActive(true);
+               StartCoroutine( EndGame());
             }
         }
 
@@ -61,9 +64,10 @@ public class Timer : MonoBehaviour
     {
         npc.SetActive(true);
     }*/
-
-    void EndGame()
+    
+    public IEnumerator EndGame()
     {
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("_StartMenu"); 
     }
 }

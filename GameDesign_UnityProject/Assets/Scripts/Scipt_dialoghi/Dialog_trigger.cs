@@ -40,6 +40,8 @@ public class Dialog_trigger : MonoBehaviour
     private bool haslight = false;
     private bool Ch = false;
     private bool Ga = false;
+    private bool notalk = false;
+    private bool tombino = false;
     //private bool firstime = false;
 
     public GameObject imgUIInventarioMoneta;
@@ -135,8 +137,9 @@ public class Dialog_trigger : MonoBehaviour
                 hasmoney = inventory.listInventoryItems.Contains("money");
                 hasWrench= inventory.listInventoryItems.Contains("Wrench");
                 haslight= inventory.listInventoryItems.Contains("luce");
-            Ch = inventory.listInventoryItems.Contains("secondo");
-            Ga = inventory.listInventoryItems.Contains("primo");
+                Ch = inventory.listInventoryItems.Contains("secondo");
+                Ga = inventory.listInventoryItems.Contains("primo");
+            tombino = inventory.listInventoryItems.Contains("Tombino");
 
 
 
@@ -144,7 +147,7 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
                 {
-                    if(!hasCan) // entra nel ciclo in cui NON ha ancora la lattina d'olio
+                    if(!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                     {
                         if (hasCoin)
                         {
@@ -237,7 +240,21 @@ public class Dialog_trigger : MonoBehaviour
 
                         }
                     }
-                        
+
+                    if (tombino)
+                    {
+
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue2();
+
+                        }
+                    }
+
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
@@ -245,6 +262,7 @@ public class Dialog_trigger : MonoBehaviour
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                         // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                     }
+
                 }
 
 
@@ -505,7 +523,19 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue4(); Debug.Log("4");
+                            notalk = inventory.listInventoryItems.Contains("notalk");
                         }
+                    }
+                }
+                if (notalk)
+                {
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    {
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue4(); 
                     }
                 }
             }

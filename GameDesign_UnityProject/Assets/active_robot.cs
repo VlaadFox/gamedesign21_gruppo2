@@ -59,6 +59,7 @@ public class active_robot : MonoBehaviour
     {
 
         inventory.listInventoryItems.Add("entrato");
+        inventory.listInventoryItems.Add("notalk");
         Debug.Log("sonoentrato");
 
     }
