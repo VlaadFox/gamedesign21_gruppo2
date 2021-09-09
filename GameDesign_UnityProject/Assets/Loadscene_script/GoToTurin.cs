@@ -4,28 +4,12 @@ using UnityEngine;
 
 public class GoToTurin : MonoBehaviour
 {
-    public GameObject canvas;
+    
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        
-        
-           canvas.SetActive(true);
-        
-    }
-    private void OnTriggerExit(Collider collider)
-    {
-        
-            canvas.SetActive(false);
-       
-    }
+    
 
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
-    }
-    */
+   
 
     private void OnTriggerStay(Collider collider)
     {

@@ -5,14 +5,22 @@ using UnityEngine;
 public class active_robot : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject delete;
-    public GameObject delete2;
+    
     private Inventory inventory;
-
-
+    
+    private bool hasenter;
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
+    private void Update()
+    {
+        hasenter = inventory.listInventoryItems.Contains("entrato");
+        if (hasenter)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -39,14 +47,11 @@ public class active_robot : MonoBehaviour
             FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
             StartCoroutine(despawn());
             Getenter();
-            delete.SetActive(false);
-            delete2.SetActive(false);
-
         }
     }
     public IEnumerator despawn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.2f);
         this.gameObject.SetActive(false);
 
     }

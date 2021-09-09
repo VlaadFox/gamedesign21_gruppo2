@@ -8,10 +8,16 @@ public class Feedbakinventory : MonoBehaviour
     public GameObject WrenchCanvas;
     public GameObject CanCanvas;
     public GameObject UsbCanvas;
+    public GameObject Toys;
 
     public void CoinFeed()
     {
         coinCanvas.SetActive(true);
+        StartCoroutine(endenergy());
+    }
+    public void ToysFeed()
+    {
+        Toys.SetActive(true);
         StartCoroutine(endenergy());
     }
     public void WrenchFeed()
@@ -31,12 +37,12 @@ public class Feedbakinventory : MonoBehaviour
     }
     public IEnumerator endenergy()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         coinCanvas.SetActive(false);
         WrenchCanvas.SetActive(false);
         CanCanvas.SetActive(false);
         UsbCanvas.SetActive(false);
-
+        Toys.SetActive(false);
     }
     
 }

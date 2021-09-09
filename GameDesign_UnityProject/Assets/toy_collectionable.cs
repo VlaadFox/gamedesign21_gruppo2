@@ -8,6 +8,8 @@ public class toy_collectionable : MonoBehaviour
     public GameObject imgUIInventarioGameboy;
     public GameObject canvas;
     public GameObject toy;
+    private bool toys;
+    
 
 
 
@@ -15,13 +17,23 @@ public class toy_collectionable : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
+    private void Update()
+    {
+        toys = inventory.listInventoryItems.Contains("Gameboy");
+        if (toys)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
     private void OnTriggerStay(Collider collider)
     {
         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
         {
-
+            Destroy(this);
               Destroy(toy);
-            Gettoy();
+              Gettoy();
+            canvas.SetActive(false);
+            FindObjectOfType<Feedbakinventory>().ToysFeed();
         }
     }
     private void OnTriggerEnter(Collider collider)
