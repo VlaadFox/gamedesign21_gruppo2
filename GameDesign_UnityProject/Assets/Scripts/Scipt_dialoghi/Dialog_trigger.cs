@@ -447,18 +447,19 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue();
                             continue_button.SetActive(true); Debug.Log("1");
                         }
-                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
                             Nextdisplay();
                             continue_button.SetActive(false); Debug.Log("1.2");
-                            StartCoroutine(delay()); continue_button.SetActive(true);
+                            StartCoroutine(delay()); 
+                            continue_button.SetActive(true);
                         }
 
                     }
 
                     if (j == 1)
                     {
-                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit") || Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
@@ -486,7 +487,7 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue3();
                             continue_button.SetActive(true); Debug.Log("3");
                         }
-                        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Submit"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
                             Nextdisplay();
                             continue_button.SetActive(false); Debug.Log("4");
