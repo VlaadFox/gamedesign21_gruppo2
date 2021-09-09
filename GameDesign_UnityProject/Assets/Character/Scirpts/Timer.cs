@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,6 +36,7 @@ public class Timer : MonoBehaviour
                 timeValue = 0;
                 //timeValue += 90;
                 timerIsRunning = false;
+                EndGame();
             }
         }
 
@@ -59,4 +61,9 @@ public class Timer : MonoBehaviour
     {
         npc.SetActive(true);
     }*/
+
+    void EndGame()
+    {
+        SceneManager.LoadScene("_StartMenu"); 
+    }
 }
