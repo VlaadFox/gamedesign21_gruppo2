@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 988503464}
   - component: {fileID: 988503463}
   - component: {fileID: 988503468}
+  - component: {fileID: 988503469}
   m_Layer: 0
   m_Name: exti_sotteraneo
   m_TagString: Untagged
@@ -913,7 +914,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a315d2be6e2d7d4aa4fba8bf129f7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1029632313}
+--- !u!114 &988503469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988503462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24611bb3a8dd5e2479ce4bfdcb3d16a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas1: {fileID: 1029632313}
+  canvas2: {fileID: 1029632313}
+  muro: {fileID: 0}
 --- !u!1 &1029632313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,54 +2219,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315e11f12bf5f44f19214c29822a7e74, type: 3}
---- !u!1 &2544772597054301974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7902875485653896651, guid: 315e11f12bf5f44f19214c29822a7e74, type: 3}
-  m_PrefabInstance: {fileID: 2544772597054301973}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2544772597054301975
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544772597054301974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 291.33157, y: 474.05234, z: 218.75145}
-  m_Center: {x: -7.0371127, y: -133.48026, z: 34.22437}
---- !u!114 &2544772597054301976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544772597054301974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a06ca63971e6804ab9053deb891f3ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1029632313}
-  light1: {fileID: 1559013954}
-  light2: {fileID: 1800186981}
-  light3: {fileID: 1926166439}
-  light4: {fileID: 1926166439}
---- !u!114 &2544772597054301977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544772597054301974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380221ca0beb3e54781e34bbead15f6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitName: Turin_sotteraneo
 --- !u!1 &2544772597054301978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7536170541011420703, guid: 315e11f12bf5f44f19214c29822a7e74, type: 3}

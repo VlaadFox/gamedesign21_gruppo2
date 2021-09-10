@@ -8,10 +8,11 @@ public class findgo : MonoBehaviour
     public GameObject canvas2;
     public GameObject muro;
     private Inventory inventory;
-    private bool hasenter;
+    private bool hasenter=false;
     private void Update()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        hasenter = inventory.listInventoryItems.Contains("entrato");
     }
     private void OnTriggerEnter(Collider collider)
     {

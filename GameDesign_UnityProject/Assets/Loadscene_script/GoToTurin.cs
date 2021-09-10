@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GoToTurin : MonoBehaviour
 {
-    
-
-    
 
 
-   
+
+
+
+
 
     private void OnTriggerStay(Collider collider)
     {

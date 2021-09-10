@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DontDestroy : MonoBehaviour
 {
 
-    public string scene = "_StartMenu";
+    public string scene = "Video";
     // Start is called before the first frame update
     void Start()
     {
