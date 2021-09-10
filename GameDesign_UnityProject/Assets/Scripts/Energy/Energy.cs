@@ -67,11 +67,7 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            currentEnergy = 5;
-            
-        }
+        
     }
 
     public void UseEnrgy()

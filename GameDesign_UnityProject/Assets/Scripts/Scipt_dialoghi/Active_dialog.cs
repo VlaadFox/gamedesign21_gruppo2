@@ -7,6 +7,7 @@ public class Active_dialog : MonoBehaviour
 
     public GameObject canvas;
     public GameObject dialogCanvas;
+    
     public GameObject bottoni;
     [SerializeField]
     private GameObject continue_button;
@@ -32,6 +33,7 @@ public class Active_dialog : MonoBehaviour
         {
             canvas.SetActive(false);
             dialogCanvas.SetActive(false);
+           
             bottoni.SetActive(false);
             continue_button.SetActive(false);
 

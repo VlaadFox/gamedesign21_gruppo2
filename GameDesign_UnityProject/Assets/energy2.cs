@@ -15,6 +15,9 @@ public class energy2 : MonoBehaviour
     public GameObject raggioChiosco;
     public GameObject raggioChioscodef;
 
+    public GameObject RObottonesi;
+    public GameObject Robottonenoenergy;
+
     public GameObject CameraGa;
 
     public GameObject luceraggio2;
@@ -228,16 +231,18 @@ public class energy2 : MonoBehaviour
     {
         if (currentEnergy < 2)
         {
-
-
-            FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
+            Robottonenoenergy.SetActive(true);
+            //FindObjectOfType<Dialog_trigger>().TriggerDialogue2();
+            //  FindObjectOfType<Dialog_trigger>().energiaRobottone();
             Debug.Log("NonHaiEnergia");
 
         }
         else
         {
-
-            FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
+            //FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
+            RObottonesi.SetActive(true);
+            FindObjectOfType<Macchinadascrivere>().StartDialogue();
+            // FindObjectOfType<Dialog_trigger>().siRobottone();
             FindObjectOfType<Dialog_trigger>().Scale();
 
             FindObjectOfType<Energy>().UseEnrgy();

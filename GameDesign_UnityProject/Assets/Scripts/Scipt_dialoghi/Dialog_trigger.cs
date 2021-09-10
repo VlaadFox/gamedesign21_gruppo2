@@ -14,6 +14,9 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue4;
     public Dialogo_padre dialogue5;
 
+   // public GameObject Robottonesi;
+    //public GameObject RobottoneEnergia;
+
     public Animator transistion;
 
    // public GameObject ladro;
@@ -42,6 +45,8 @@ public class Dialog_trigger : MonoBehaviour
     private bool Ga = false;
     private bool notalk = false;
     private bool tombino = false;
+    private bool energy = false;
+    private bool noenergy = false;
     //private bool firstime = false;
 
     public GameObject imgUIInventarioMoneta;
@@ -91,7 +96,8 @@ public class Dialog_trigger : MonoBehaviour
 
     private void Update()
     {
-
+        energy = inventory.listInventoryItems.Contains("energy");
+        noenergy = inventory.listInventoryItems.Contains("noenergy");
     }
 
     public void Nextdisplay()
@@ -124,7 +130,7 @@ public class Dialog_trigger : MonoBehaviour
 
     
 
-
+    
 
     private void OnTriggerStay(Collider collider)
     {
@@ -140,6 +146,7 @@ public class Dialog_trigger : MonoBehaviour
                 Ch = inventory.listInventoryItems.Contains("secondo");
                 Ga = inventory.listInventoryItems.Contains("primo");
             tombino = inventory.listInventoryItems.Contains("Tombino");
+           
 
 
 
@@ -311,17 +318,6 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "Robottone")
                 {
                
-                 /*   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {
-                    
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue5();
-                    continue_button.SetActive(true);
-                    canvasBottoni.SetActive(false);
-
-
-                }*/
                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
                     playerController.GetComponent<CharacterController>().enabled = false;
@@ -340,11 +336,8 @@ public class Dialog_trigger : MonoBehaviour
                     EventSystem.current.SetSelectedGameObject(null);
                     // ora posso selezionare in oggetto
                     EventSystem.current.SetSelectedGameObject(yesFirstButton);
-
-
-
-
-                }
+               }
+                   
                    
                 }
             if (gameObject.name == "antagonista2")
@@ -567,9 +560,7 @@ public class Dialog_trigger : MonoBehaviour
     }
     public void Getlight()
     {
-        
-               
-                
+                  
                 inventory.listInventoryItems.Add("luce");
                 Debug.Log("Ho ricevuto la luce");
                 
@@ -681,6 +672,27 @@ public class Dialog_trigger : MonoBehaviour
         TriggerDialogue4();
     }
 
+    public void Robottone()
+    {
+        if (energy) 
+        {
+            TriggerDialogue3();
+        }
+        if (noenergy)
+        {
+            TriggerDialogue2();
+        }
+
+    }
+    /*public void siRobottone()
+    {
+        Robottonesi.SetActive(true);
+    }
+    public void energiaRobottone()
+    {
+        RobottoneEnergia.SetActive(true);
+    }
+    */
     public IEnumerator DestroyLadro()
     {
         yield return new WaitForSeconds(6f);
@@ -713,6 +725,10 @@ public class Dialog_trigger : MonoBehaviour
     public void Scale()
     {
         playerController.GetComponent<ThirdPersonController>().Scale();
+    }
+    public void Light()
+    {
+        playerController.GetComponent<ThirdPersonController>().lightrue();
     }
 }
 

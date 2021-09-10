@@ -8,6 +8,7 @@ public class Dialog_manager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
+    
 
     public GameObject canvas;
     public GameObject cliccaCanvas;
@@ -52,9 +53,13 @@ public class Dialog_manager : MonoBehaviour
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        
+
+        foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            
+
             yield return null;
         }
     }

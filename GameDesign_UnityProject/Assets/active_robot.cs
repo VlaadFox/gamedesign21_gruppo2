@@ -19,7 +19,8 @@ public class active_robot : MonoBehaviour
         hasenter = inventory.listInventoryItems.Contains("entrato");
         if (hasenter)
         {
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
+            StartCoroutine(despawn());
         }
     }
     private void OnTriggerEnter(Collider collider)
