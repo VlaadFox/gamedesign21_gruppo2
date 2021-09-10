@@ -8,9 +8,12 @@ public class InventorySlot : MonoBehaviour
     public int i;
 
     public GameObject emptyTexts;
-    public GameObject txtInfoSfera;
-    public GameObject txtInfoCartello;
     public GameObject txtInfoMoneta;
+    public GameObject txtInfoUSB;
+    public GameObject txtInfoLattinaLavori;
+    public GameObject txtinfoLattinaEnergia;
+    public GameObject txtInfoWrench;
+    public GameObject txtInfoGameboy;
 
     private void Start()
     {
@@ -39,27 +42,66 @@ public class InventorySlot : MonoBehaviour
         {   
             switch (child.GetComponent<Spawn>().item.name)
             {
-                case "spPickUpDrop":
-                    Debug.Log("Questa è una sfera");
-                    emptyTexts.SetActive(true);
-                    txtInfoSfera.SetActive(true);
-                    txtInfoCartello.SetActive(false);
-                    txtInfoMoneta.SetActive(false);
-                    break;
-                case "CartelloV1.2":
-                    Debug.Log("Questo è un cartello");
-                    emptyTexts.SetActive(true);
-                    txtInfoSfera.SetActive(false);
-                    txtInfoCartello.SetActive(true);
-                    txtInfoMoneta.SetActive(false);
-                    break;
                 case "ToretCoin":
-                    Debug.Log("Questa è una moneta");
+                    Debug.Log("moneta");
                     emptyTexts.SetActive(true);
-                    txtInfoSfera.SetActive(false);
-                    txtInfoCartello.SetActive(false);
+                    txtInfoUSB.SetActive(false);
+                    txtinfoLattinaEnergia.SetActive(false);
+                    txtInfoLattinaLavori.SetActive(false);
+                    txtInfoGameboy.SetActive(false);
+                    txtInfoWrench.SetActive(false);
                     txtInfoMoneta.SetActive(true);
                     break;
+                case "itemLattinaOlio":
+                    Debug.Log("lattina olio");
+                    emptyTexts.SetActive(true);
+                    txtInfoUSB.SetActive(false);
+                    txtinfoLattinaEnergia.SetActive(false);
+                    txtInfoLattinaLavori.SetActive(true);
+                    txtInfoGameboy.SetActive(false);
+                    txtInfoWrench.SetActive(false);
+                    txtInfoMoneta.SetActive(false);
+                    break;
+                case "itemLattinaEnergia":
+                    Debug.Log("lattina olio");
+                    emptyTexts.SetActive(true);
+                    txtInfoUSB.SetActive(false);
+                    txtinfoLattinaEnergia.SetActive(true);
+                    txtInfoLattinaLavori.SetActive(false);
+                    txtInfoGameboy.SetActive(false);
+                    txtInfoWrench.SetActive(false);
+                    txtInfoMoneta.SetActive(false);
+                    break;
+                case "itemUsb":
+                    Debug.Log("lattina olio");
+                    emptyTexts.SetActive(true);
+                    txtInfoUSB.SetActive(true);
+                    txtinfoLattinaEnergia.SetActive(false);
+                    txtInfoLattinaLavori.SetActive(false);
+                    txtInfoGameboy.SetActive(false);
+                    txtInfoWrench.SetActive(false);
+                    txtInfoMoneta.SetActive(false);
+                    break;
+                case "itemWrench":
+                    Debug.Log("lattina olio");
+                    emptyTexts.SetActive(true);
+                    txtInfoUSB.SetActive(false);
+                    txtinfoLattinaEnergia.SetActive(false);
+                    txtInfoLattinaLavori.SetActive(false);
+                    txtInfoGameboy.SetActive(false);
+                    txtInfoWrench.SetActive(true);
+                    txtInfoMoneta.SetActive(false);
+                    break;    
+                case "itemGameboy":
+                    Debug.Log("lattina olio");
+                    emptyTexts.SetActive(true);
+                    txtInfoUSB.SetActive(false);
+                    txtinfoLattinaEnergia.SetActive(false);
+                    txtInfoLattinaLavori.SetActive(false);
+                    txtInfoGameboy.SetActive(true);
+                    txtInfoWrench.SetActive(false);
+                    txtInfoMoneta.SetActive(false);
+                    break; 
                 default:
                     Debug.Log("Seleziona un oggetto");
                     break;
