@@ -237,7 +237,7 @@ public class energy2 : MonoBehaviour
             Debug.Log("NonHaiEnergia");
 
         }
-        else
+        if(currentEnergy>=2)
         {
             //FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
             RObottonesi.SetActive(true);

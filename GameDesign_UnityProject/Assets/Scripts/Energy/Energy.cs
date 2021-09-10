@@ -67,7 +67,46 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            if (currentEnergy == 1)
+            {
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+            }
+            if (currentEnergy == 2)
+            {
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+                
+            }
+            if (currentEnergy == 3)
+            {
+                currentEnergy++;
+                currentEnergy++;
+                
+            }
+            if (currentEnergy == 4)
+            {
+                currentEnergy++;
+                
+            }
+            if (currentEnergy == 0)
+            {
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+                currentEnergy++;
+            }
+           
+            
+            UpdateEnergy();
+        }
+
     }
 
     public void UseEnrgy()
@@ -398,4 +437,57 @@ public class Energy : MonoBehaviour
         Debug.Log("secondo fatto");
 
     }
+
+
+
+   /* private IEnumerator RestoreEnergyQuick()
+    {
+        UpdateEnergyTimer();
+        isRestoring = true;
+
+        while (currentEnergy < maxEnergy)
+        {
+            DateTime currentDateTime = DateTime.Now;
+            DateTime nextDateTime = nextEnergyTime;
+            bool isEnergyAdding = false;
+
+            while (currentDateTime > nextDateTime)
+            {
+                if (currentEnergy < maxEnergy)
+                {
+                    isEnergyAdding = true;
+                    currentEnergy++;
+                    UpdateEnergy();
+                    DateTime timeToAdd = lastEnergyTime > nextDateTime ? lastEnergyTime : nextDateTime;
+                    nextDateTime = addDurationQuick(timeToAdd, restoreDuration);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if (isEnergyAdding == true)
+            {
+                lastEnergyTime = DateTime.Now;
+                nextEnergyTime = nextDateTime;
+            }
+
+            UpdateEnergyTimer();
+            UpdateEnergy();
+            Save();
+            yield return null;
+
+
+
+        }
+
+        isRestoring = false;
+
+    }
+
+    private DateTime addDurationQuick(DateTime datetime, int duration)
+    {
+       // return datetime.AddMinutes(duration);
+        return datetime.AddSeconds(duration);
+    }*/
 }
