@@ -5,7 +5,9 @@ using UnityEngine;
 public class GoToBank : MonoBehaviour
 {
     private bool hasUSB = false;
+    private bool hasmoney = false;
     private Inventory inventory;
+    public GameObject Banca;
 
 
     private void Start()
@@ -27,5 +29,12 @@ public class GoToBank : MonoBehaviour
             FindObjectOfType<LevelLoader>().LoadNextLevelBank();
         }
     }
-   
+    private void Update()
+    {
+        hasmoney = inventory.listInventoryItems.Contains("money");
+        if (hasmoney)
+        {
+            Banca.SetActive(true);
+        }
+    }
 }
