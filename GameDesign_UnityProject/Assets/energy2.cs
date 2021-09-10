@@ -226,7 +226,10 @@ public class energy2 : MonoBehaviour
         Debug.Log("secondo fatto");
 
     }
-
+    public void restorequickenergy()
+    {
+        FindObjectOfType<Energy>().QuickRestore();
+    }
 
     public void check()
     {
