@@ -704,6 +704,7 @@ public class Dialog_trigger : MonoBehaviour
         transistion.SetTrigger("start");
         transistion.SetTrigger("end");
         canvas.SetActive(false);
+        canvasDel.SetActive(false);
     }
     public IEnumerator aggiustalight()
     {
