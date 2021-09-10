@@ -45,11 +45,15 @@ public class Energy : MonoBehaviour
     private DateTime lastEnergyTime;
     private bool isRestoring = false;
 
+    private bool StartGame = false;
+
     public GameObject endcanvas;
 
 
     private void Start()
     {
+
+        
         
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
@@ -67,6 +71,16 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
+        StartGame = inventory.listInventoryItems.Contains("start");
+        if (!StartGame)
+        {
+            currentEnergy = 5;
+            PlayerPrefs.SetInt("currentEnergy", 5);
+            Load();
+            UpdateEnergy();
+            inventory.listInventoryItems.Add("start");
+        }
+
         if (Input.GetKeyDown(KeyCode.U))
         {
             if (currentEnergy == 1)
