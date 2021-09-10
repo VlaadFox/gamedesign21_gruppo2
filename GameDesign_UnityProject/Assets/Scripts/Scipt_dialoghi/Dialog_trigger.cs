@@ -220,7 +220,7 @@ public class Dialog_trigger : MonoBehaviour
                     }
                     else // quì hai già comprato la lattina d'olio
                     {
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions")&&!tombino)
                         {
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
@@ -695,12 +695,12 @@ public class Dialog_trigger : MonoBehaviour
     */
     public IEnumerator DestroyLadro()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(5f);
         this.gameObject.SetActive(false);
     }
     public IEnumerator finishdialogue()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         transistion.SetTrigger("start");
         transistion.SetTrigger("end");
         canvas.SetActive(false);

@@ -16,7 +16,7 @@ public class GoToRoom : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.C) || Input.GetButtonDown("Submit"))
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
         {
             
             
