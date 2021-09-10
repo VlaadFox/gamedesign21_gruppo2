@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class DontDestroy : MonoBehaviour
 {
 
-    public string scene = "Video";
+    private string scene = "_StartMenu";
+    private string scene1 = "Video";
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class DontDestroy : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == scene)
+        if(SceneManager.GetActiveScene().name == scene|| SceneManager.GetActiveScene().name == scene1)
         {
             Debug.Log("restart");
             Destroy(this.gameObject);
