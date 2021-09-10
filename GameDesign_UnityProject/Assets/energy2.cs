@@ -241,7 +241,7 @@ public class energy2 : MonoBehaviour
         {
             //FindObjectOfType<Dialog_trigger>().TriggerDialogue3();
             RObottonesi.SetActive(true);
-            FindObjectOfType<Macchinadascrivere>().StartDialogue();
+           
             // FindObjectOfType<Dialog_trigger>().siRobottone();
             FindObjectOfType<Dialog_trigger>().Scale();
 

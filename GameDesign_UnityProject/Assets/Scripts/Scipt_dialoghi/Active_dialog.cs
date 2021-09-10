@@ -7,7 +7,9 @@ public class Active_dialog : MonoBehaviour
 
     public GameObject canvas;
     public GameObject dialogCanvas;
-    
+    public GameObject dialogCanvas1;
+    public GameObject dialogCanvas2;
+
     public GameObject bottoni;
     [SerializeField]
     private GameObject continue_button;
@@ -40,6 +42,9 @@ public class Active_dialog : MonoBehaviour
             anim.SetBool("talkBool", false);
 
             anim.SetBool("pauseBool", true);
+
+            dialogCanvas1.SetActive(false);
+            dialogCanvas2.SetActive(false);
         }
     }
 
