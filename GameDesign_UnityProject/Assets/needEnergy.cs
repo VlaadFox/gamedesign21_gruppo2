@@ -79,7 +79,7 @@ public class needEnergy : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
 
-                    if (!Ga)
+                    if (!Ga && Ch)
                     {
                         //FindObjectOfType<Energy>().checkFinal2();
                         FindObjectOfType<energy2>().checkFinal2();
