@@ -75,24 +75,32 @@ public class Energy : MonoBehaviour
                 currentEnergy++;
                 currentEnergy++;
                 currentEnergy++;
+                PlayerPrefs.SetInt("currentEnergy", 5);
+                Load();
             }
             if (currentEnergy == 2)
             {
                 currentEnergy++;
                 currentEnergy++;
                 currentEnergy++;
-                
+                PlayerPrefs.SetInt("currentEnergy", 5);
+                Load();
+
             }
             if (currentEnergy == 3)
             {
                 currentEnergy++;
                 currentEnergy++;
-                
+                PlayerPrefs.SetInt("currentEnergy", 5);
+                Load();
+
             }
             if (currentEnergy == 4)
             {
                 currentEnergy++;
-                
+                PlayerPrefs.SetInt("currentEnergy", 5);
+                Load();
+
             }
             if (currentEnergy == 0)
             {
@@ -101,6 +109,8 @@ public class Energy : MonoBehaviour
                 currentEnergy++;
                 currentEnergy++;
                 currentEnergy++;
+                PlayerPrefs.SetInt("currentEnergy", 5);
+                Load();
             }
            
             
