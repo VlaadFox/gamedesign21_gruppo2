@@ -16,6 +16,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseFirstButton;
 
     public AudioSource soundButtonClick;
+    public AudioSource canzonePausa;
+    public AudioSource suoniCitta;
+    public AudioSource suoniNatura;
 
     private GameObject mainCamera;
 
@@ -56,6 +59,9 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         playAudioClick();
+        suoniCitta.Play();
+        suoniNatura.Play();
+        canzonePausa.Stop();
         mainCamera.GetComponent<AudioSource>().Play();
         pauseMenuUI.SetActive(false);
         canvasInventoryUI.SetActive(true);
@@ -71,6 +77,9 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         playAudioClick();
+        suoniCitta.Stop();
+        suoniNatura.Stop();
+        canzonePausa.Play();
         mainCamera.GetComponent<AudioSource>().Pause();
         pauseMenuUI.SetActive(true);
         canvasInventoryUI.SetActive(false);

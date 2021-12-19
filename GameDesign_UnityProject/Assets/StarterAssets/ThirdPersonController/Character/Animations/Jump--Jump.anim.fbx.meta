@@ -48,7 +48,7 @@ ModelImporter:
       takeName: JumpStart
       internalID: 0
       firstFrame: 32
-      lastFrame: 47
+      lastFrame: 46
       wrapMode: 0
       orientationOffsetY: 0
       level: 0.2
@@ -75,7 +75,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9867256
+      - time: 1
         functionName: jumpendAudio
         data: 
         objectReferenceParameter: {instanceID: 0}
