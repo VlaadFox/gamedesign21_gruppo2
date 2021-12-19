@@ -111,6 +111,8 @@ namespace StarterAssets
 
 		void footstepAudio()
 		{
+			audioSteps.volume = Random.Range(0.06f, 0.08f);
+			audioSteps.pitch = Random.Range(0.9f, 1f);
 			audioSteps.Play();
 		}
 
