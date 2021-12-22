@@ -8,6 +8,9 @@ public class GoToRoom : MonoBehaviour
     public GameObject canvas_a;
     private Inventory inventory;
     private bool hasEnter = false;
+
+    public AudioSource audioAperturaPorte;
+    private bool triggerAudio = false;
     private void OnTriggerEnter(Collider other)
     {
         canvas_a.SetActive(true);
@@ -18,10 +21,14 @@ public class GoToRoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
         {
+            audioAperturaPorte.Play();
+            triggerAudio = true;
             
-            
-            FindObjectOfType<Energy>().UseEnrgy();
-            FindObjectOfType<LevelLoader>().LoadNextLevelRoom();
+            if (triggerAudio)
+            {
+                FindObjectOfType<Energy>().UseEnrgy();
+                FindObjectOfType<LevelLoader>().LoadNextLevelRoom();   
+            }
            // FindObjectOfType<Dialog_trigger>().Getenter();
 
         }
