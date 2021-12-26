@@ -12,6 +12,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     public GameObject canvas;
     public GameObject canvasDel;
 
+    private AudioSource audioGetCollezionabile;
     
 
 
@@ -42,6 +43,7 @@ public class InfoOBJ_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         slot1Inventario = GameObject.FindGameObjectWithTag("Slot1");
         playerController = GameObject.FindGameObjectWithTag("Player");
+        audioGetCollezionabile = GameObject.FindGameObjectWithTag("emptyAudios").GetComponent<AudioSource>();
     }
 
     public void TriggerDialogue()
@@ -255,6 +257,7 @@ public class InfoOBJ_trigger : MonoBehaviour
         {
             if (inventory.isFull[0] == false)
             {
+                audioGetCollezionabile.Play();
                 inventory.isFull[0] = true;
                 Instantiate(imgUIInventarioLattinaOlio, inventory.slots[0].transform, false);
                 inventory.listInventoryItems.Add("LattinaOlio");
@@ -286,6 +289,7 @@ public class InfoOBJ_trigger : MonoBehaviour
         {
             if (inventory.isFull[i] == false)
             {
+                audioGetCollezionabile.Play();
                 inventory.isFull[i] = true;
                 Instantiate(imgUIInventarioLattinaOlio_RED, inventory.slots[i].transform, false);
                 inventory.listInventoryItems.Add("LattinaOlioRED");

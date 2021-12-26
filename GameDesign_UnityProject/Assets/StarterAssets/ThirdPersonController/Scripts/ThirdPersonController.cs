@@ -107,7 +107,14 @@ namespace StarterAssets
 		public AudioSource audioSteps;
 		public AudioSource jumpStart;
 		public AudioSource jumpEnd;
+		public AudioSource audioEsterno1_1;
+		public AudioSource audioEsterno1_2;
+		public AudioSource audioEsterno2;
 		bool isMoving;
+		private bool piazza1 = true;
+		private bool piazza2 = false;
+		private bool intermedioPiazze = false;
+
 
 		void footstepAudio()
 		{
@@ -125,6 +132,119 @@ namespace StarterAssets
 		{
 			jumpEnd.Play();
 		}
+
+		private void OnTriggerEnter(Collider collider)
+		{
+			if (collider.gameObject.tag == "triggerCambioPiazza1")
+			{
+				if(piazza1) // passo da piazza 1 a intermedio
+				{
+					//audioEsterno1_1.Stop(); // questo continua a suonare
+					audioEsterno1_2.Stop();
+					Debug.Log("da piazza 1 a intermedio");
+					//FadeOut(audioEsterno1_2);
+					audioEsterno2.Stop();
+					piazza1 = false;
+					piazza2 = false;
+					intermedioPiazze = true;
+				}
+				else if(intermedioPiazze) // passo da intermedio a piazza 1
+				{
+					//audioEsterno1_1.Play(); // continua a suonare
+					audioEsterno1_2.Play();
+					//FadeIn(audioEsterno1_2);
+					audioEsterno2.Stop();
+					piazza1 = true;
+					piazza2 = false;
+					intermedioPiazze = true;
+				}
+			}
+			else if (collider.gameObject.tag == "triggerCambioPiazza2")
+			{
+				if(piazza2) // passo da piazza 2 a intermedio
+				{
+					audioEsterno1_1.Play();
+					audioEsterno1_2.Stop();
+					audioEsterno2.Stop();
+					piazza1 = false;
+					piazza2 = false;
+					intermedioPiazze = true;
+				}
+				else if(intermedioPiazze) // passo da intermedio a piazza 2
+				{
+					audioEsterno1_1.Stop();
+					audioEsterno1_2.Stop();
+					audioEsterno2.Play();
+					piazza1 = false;
+					piazza2 = true;
+					intermedioPiazze = false;
+				}
+			}
+		}
+
+		public static IEnumerator FadeOut(AudioSource audioSource)
+		{
+			float startVolume = audioSource.volume;
+			float FadeTime = 2;
+
+			while (audioSource.volume > 0)
+			{
+				audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+	
+				yield return null;
+			}
+	
+			audioSource.Stop();
+			audioSource.volume = startVolume;
+		}
+ 
+		public static IEnumerator FadeIn(AudioSource audioSource)
+		{
+			float startVolume = 0.2f;
+			float FadeTime = 2;
+	
+			audioSource.volume = 0;
+			audioSource.Play();
+	
+			while (audioSource.volume < 1.0f)
+			{
+				audioSource.volume += startVolume * Time.deltaTime / FadeTime;
+	
+				yield return null;
+			}
+	
+			audioSource.volume = 1f;
+		}
+
+		/*public void FadeAudioOut(AudioSource audioSource)
+		{
+			float currentTime = 0f;
+			float duration = 2f;
+			float start = audioSource.volume;
+			Debug.Log(start);
+			while (currentTime < duration)
+			{
+				currentTime += Time.deltaTime;
+				audioSource.volume = Mathf.Lerp(start, 0f, currentTime / duration);
+				//yield return null;
+			}
+			//yield break;
+		}
+
+		public void FadeAudioIn(AudioSource audioSource)
+		{
+			float currentTime = 0f;
+			float duration = 2f;
+			float start = audioSource.volume;
+			Debug.Log(start);
+			while (currentTime < duration)
+			{
+				currentTime += Time.deltaTime;
+				audioSource.volume = Mathf.Lerp(start, 0.5f, currentTime / duration);
+				//yield return null;
+			}
+			//yield break;
+		}*/
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

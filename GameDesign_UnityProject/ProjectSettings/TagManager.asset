@@ -12,6 +12,9 @@ TagManager:
   - emptyMissionsTexts
   - textMissioneDog_green
   - txtMissioneOil_green
+  - triggerCambioPiazza1
+  - triggerCambioPiazza2
+  - emptyAudios
   layers:
   - Default
   - TransparentFX

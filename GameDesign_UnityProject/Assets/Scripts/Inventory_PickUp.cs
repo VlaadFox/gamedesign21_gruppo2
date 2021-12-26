@@ -10,6 +10,8 @@ public class Inventory_PickUp : MonoBehaviour
 
     private bool pickAllowed = false;
 
+    public AudioSource audioPickUp;
+
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -25,6 +27,7 @@ public class Inventory_PickUp : MonoBehaviour
                     if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
                     {
                         // L'item può essere raccolto
+                        audioPickUp.Play();
                         inventory.isFull[i] = true;
                         Instantiate(imgUIInventario, inventory.slots[i].transform, false);
                         inventory.listInventoryItems.Add(gameObject.name);

@@ -69,6 +69,8 @@ public class Dialog_trigger : MonoBehaviour
     public TextMeshProUGUI txtMissioneOil;*/
     public Color colorText;
 
+    private AudioSource audioGetCollezionabile;
+
     
 
 
@@ -80,7 +82,8 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
-
+        audioGetCollezionabile = GameObject.FindGameObjectWithTag("emptyAudios").GetComponent<AudioSource>();
+        
     }
     public IEnumerator time()
     {
@@ -145,7 +148,7 @@ public class Dialog_trigger : MonoBehaviour
                 haslight= inventory.listInventoryItems.Contains("luce");
                 Ch = inventory.listInventoryItems.Contains("secondo");
                 Ga = inventory.listInventoryItems.Contains("primo");
-            tombino = inventory.listInventoryItems.Contains("Tombino");
+                tombino = inventory.listInventoryItems.Contains("Tombino");
            
 
 
@@ -550,6 +553,7 @@ public class Dialog_trigger : MonoBehaviour
         {
             if (inventory.isFull[6] == false) // controllo di avere spazio nell'inventario
             {
+                audioGetCollezionabile.Play();
                 inventory.isFull[6] = true;
                 Instantiate(imgUIInventarioUSB, inventory.slots[6].transform, false);
                 inventory.listInventoryItems.Add("USB");
@@ -568,12 +572,15 @@ public class Dialog_trigger : MonoBehaviour
 
 
     public GameObject imgUIInventarioWrench;
+    //public AudioSource audioGetCollezionabile;
+    
     private void GetCollezionabile()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[7] == false) // controllo di avere spazio nell'inventario
             {
+                audioGetCollezionabile.Play();
                 inventory.isFull[7] = true;
                 Instantiate(imgUIInventarioWrench, inventory.slots[7].transform, false);
                 inventory.listInventoryItems.Add("Wrench");
@@ -652,6 +659,7 @@ public class Dialog_trigger : MonoBehaviour
         {
             if (inventory.isFull[0] == false) // controllo di avere spazio nell'inventario
             {*/
+                audioGetCollezionabile.Play();
                 inventory.isFull[0] = true;
                 Instantiate(imgUIInventarioMoneta, inventory.slots[0].transform, false);
                 inventory.listInventoryItems.Add("ToretCoin");
