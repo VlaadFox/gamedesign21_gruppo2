@@ -43,7 +43,7 @@ public class InfoOBJ_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         slot1Inventario = GameObject.FindGameObjectWithTag("Slot1");
         playerController = GameObject.FindGameObjectWithTag("Player");
-        audioGetCollezionabile = GameObject.FindGameObjectWithTag("emptyAudios").GetComponent<AudioSource>();
+        audioGetCollezionabile = GameObject.FindGameObjectWithTag("audioRobotLavori").GetComponent<AudioSource>();
     }
 
     public void TriggerDialogue()

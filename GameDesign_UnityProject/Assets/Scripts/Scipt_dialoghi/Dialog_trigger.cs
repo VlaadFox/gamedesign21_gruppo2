@@ -82,7 +82,7 @@ public class Dialog_trigger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerController = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
-        audioGetCollezionabile = GameObject.FindGameObjectWithTag("emptyAudios").GetComponent<AudioSource>();
+        audioGetCollezionabile = GameObject.FindGameObjectWithTag("audioRobotLavori").GetComponent<AudioSource>();
         
     }
     public IEnumerator time()

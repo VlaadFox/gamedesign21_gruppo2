@@ -17,6 +17,7 @@ TagManager:
   - emptyAudios
   - audioPortaCane
   - audioPortaBanca
+  - audioRobotLavori
   layers:
   - Default
   - TransparentFX
