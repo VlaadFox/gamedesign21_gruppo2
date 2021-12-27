@@ -9,7 +9,7 @@ public class GoToRoom : MonoBehaviour
     private Inventory inventory;
     private bool hasEnter = false;
 
-    public AudioSource audioAperturaPorte;
+    private AudioSource audioAperturaPorte;
     private bool triggerAudio = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -48,6 +48,7 @@ public class GoToRoom : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        audioAperturaPorte = GameObject.FindGameObjectWithTag("audioPortaCane").GetComponent<AudioSource>();
     }
 
 }
