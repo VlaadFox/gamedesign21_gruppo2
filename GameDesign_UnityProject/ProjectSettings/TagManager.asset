@@ -18,6 +18,8 @@ TagManager:
   - audioPortaCane
   - audioPortaBanca
   - audioRobotLavori
+  - Cameralavori
+  - cameraoil
   layers:
   - Default
   - TransparentFX

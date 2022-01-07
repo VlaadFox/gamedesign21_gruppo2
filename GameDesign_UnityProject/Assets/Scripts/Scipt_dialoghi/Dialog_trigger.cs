@@ -158,8 +158,9 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
             {
-                cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
                 
+                //this.cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
+
                 if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                 {
                     if (hasCoin)
@@ -188,7 +189,7 @@ public class Dialog_trigger : MonoBehaviour
                             cameralavori.SetActive(true);
                             //playerController.GetComponent<CharacterController>().enabled = false;
                             //Time.timeScale = 0f;
-                            playerController.SetActive(false);
+                           // playerController.SetActive(false);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -202,7 +203,8 @@ public class Dialog_trigger : MonoBehaviour
                             // ora posso selezionare in oggetto
                             EventSystem.current.SetSelectedGameObject(yesFirstButton);
                         }
-                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+
+                        if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("Interactions"))
                         {
                             Debug.Log("fine");
                             cameralavori.SetActive(false);
@@ -214,7 +216,6 @@ public class Dialog_trigger : MonoBehaviour
                             canvas.SetActive(false);
 
                         }
-
 
 
                         // "NO"
