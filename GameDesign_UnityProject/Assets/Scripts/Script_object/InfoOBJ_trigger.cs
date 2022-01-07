@@ -75,6 +75,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending") // stai interagendo con la macchinetta dell'olio
             {
+                camera = GameObject.FindGameObjectWithTag("cameraoil");
                 Debug.Log("oliomacchina");
                 if (!hasCan && !hasCoin)
                 {
@@ -97,7 +98,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                     {
                         // playerController.GetComponent<CharacterController>().enabled = false;
                         // Time.timeScale = 0f;
-                        camera= GameObject.FindGameObjectWithTag("cameraoil");
+                        
                         camera.SetActive(true);
                         playerController.SetActive(false);
                         canvasDel.SetActive(false);

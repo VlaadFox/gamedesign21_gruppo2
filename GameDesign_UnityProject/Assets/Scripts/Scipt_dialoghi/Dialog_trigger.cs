@@ -158,6 +158,8 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
             {
+                cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
+                
                 if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                 {
                     if (hasCoin)
