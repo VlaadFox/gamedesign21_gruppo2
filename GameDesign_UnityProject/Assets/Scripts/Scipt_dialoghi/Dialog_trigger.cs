@@ -70,8 +70,9 @@ public class Dialog_trigger : MonoBehaviour
     public Color colorText;
 
     private AudioSource audioGetCollezionabile;
+    public GameObject cameralavori;
 
-    
+
 
 
 
@@ -149,99 +150,98 @@ public class Dialog_trigger : MonoBehaviour
                 Ch = inventory.listInventoryItems.Contains("secondo");
                 Ga = inventory.listInventoryItems.Contains("primo");
                 tombino = inventory.listInventoryItems.Contains("Tombino");
-           
+
 
 
 
 
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
+            {
+                if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                 {
-                    if(!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
+                    if (hasCoin)
                     {
-                        if (hasCoin)
+                        // quì ti ha già dato la moneta, da mettere messaggio che dice "Fai presto perfavore!"
+                        Debug.Log("Hai già la moneta");
+                        Debug.Log("Fai presto perfavore!");
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
-                            // quì ti ha già dato la moneta, da mettere messaggio che dice "Fai presto perfavore!"
-                            Debug.Log("Hai già la moneta");
-                            Debug.Log("Fai presto perfavore!");
-                            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                            {
-                                anim.SetBool("talkBool", true);
-                                anim.SetBool("pauseBool", false);
-                                canvasDel.SetActive(false);
-                                canvas.SetActive(true);
-                                TriggerDialogue2();
-                            }
-                        }
-                        else
-                        {
-
-
-                            // quì ancora NON hai la moneta, ti chiede "Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?"
-                            // quindi da gestire domanda con possibilità di rispondere sì o no
-                            //Debug.Log("Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?");
-                            //Debug.Log("Sì");
-                            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                            {
-                                playerController.GetComponent<CharacterController>().enabled = false;
-                                Time.timeScale = 0f;
-
-                                anim.SetBool("talkBool", true);
-                                anim.SetBool("pauseBool", false);
-                                canvasDel.SetActive(false);
-                                canvas.SetActive(true);
-                                TriggerDialogue();
-                                Cursor.lockState = CursorLockMode.None;
-                                canvasBottoni.SetActive(true);
-
-                                // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
-                                EventSystem.current.SetSelectedGameObject(null);
-                                // ora posso selezionare in oggetto
-                                EventSystem.current.SetSelectedGameObject(yesFirstButton);
-                            }
-
-                            // "SI"
-                            // messaggio ""Ti ringrazio! Eccoti una moneta, cerca una macchinetta dove vendono lattine d'olio." + codice sotto tra graffe
-                            /* public void Getcoin()
-                             {
-                                 for (int i = 0 ; i < inventory.slots.Length; i++)
-                                 {
-                                     if (inventory.isFull[i] == false) // controllo di avere spazio nell'inventario
-                                     {
-                                         inventory.isFull[i] = true;
-                                         Instantiate(imgUIInventarioMoneta, inventory.slots[i].transform, false);
-                                         inventory.listInventoryItems.Add("ToretCoin");
-                                         Debug.Log("Ho ricevuto la moneta");
-                                         break;
-                                     }
-                                 }
-                             }*/
-
-                            // "NO"
-                            // chiudiamo semplicemente il dialogo col robot o gli dice qualcosa?
-                        }
-                    }
-                    else // quì hai già comprato la lattina d'olio
-                    {
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions")&&!tombino)
-                        {
+                            cameralavori.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
-                            TriggerDialogue3();
-                            DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
-                            GetCollezionabile();
-                            FindObjectOfType<Feedbakinventory>().WrenchFeed();
+                            TriggerDialogue2();
+                        }
+                    }
+                    else
+                    {
+                        // quì ancora NON hai la moneta, ti chiede "Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?"
+                        // quindi da gestire domanda con possibilità di rispondere sì o no
+                        //Debug.Log("Ciao, mi servirebbe una lattina d'olio per recuperare energie, ti andrebbe di aiutarmi?");
+
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            cameralavori.SetActive(true);
+                            //playerController.GetComponent<CharacterController>().enabled = false;
+                            //Time.timeScale = 0f;
+                            playerController.SetActive(false);
+                            anim.SetBool("talkBool", true);
+                            anim.SetBool("pauseBool", false);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                            canvasBottoni.SetActive(true);
+
+                            Cursor.lockState = CursorLockMode.None;
+                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                            EventSystem.current.SetSelectedGameObject(null);
+                            // ora posso selezionare in oggetto
+                            EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                        }
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                        {
+                            Debug.Log("fine");
+                            cameralavori.SetActive(false);
+
+                            playerController.SetActive(true);
+                            anim.SetBool("talkBool", false);
+                            anim.SetBool("pauseBool", true);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(false);
+
+                        }
+
+
+
+                        // "NO"
+                        // chiudiamo semplicemente il dialogo col robot o gli dice qualcosa?
+                    }
+                }
+                else // quì hai già comprato la lattina d'olio
+                {
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions") && !tombino)
+                    {
+                        cameralavori.SetActive(true);
+                        anim.SetBool("talkBool", true);
+                        anim.SetBool("pauseBool", false);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue3();
+                        DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
+                        GetCollezionabile();
+                        FindObjectOfType<Feedbakinventory>().WrenchFeed();
 
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
-                        }
+                    }
                     if (hasWrench)
                     {
 
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            cameralavori.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -256,6 +256,7 @@ public class Dialog_trigger : MonoBehaviour
 
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            cameralavori.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -265,56 +266,55 @@ public class Dialog_trigger : MonoBehaviour
                         }
                     }
 
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                        // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
-                    }
-
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
+                    // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                 }
 
 
 
 
 
-            if (gameObject.name == "RobotLucee")
-            {
-                if (!haslight)
+                if (gameObject.name == "RobotLucee")
                 {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    if (!haslight)
                     {
-                        playerController.GetComponent<CharacterController>().enabled = false;
-                        Time.timeScale = 0f;
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
+                            playerController.GetComponent<CharacterController>().enabled = false;
+                            Time.timeScale = 0f;
 
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue();
-                        Cursor.lockState = CursorLockMode.None;
-                        canvasBottoni.SetActive(true);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue();
+                            Cursor.lockState = CursorLockMode.None;
+                            canvasBottoni.SetActive(true);
 
-                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
-                        EventSystem.current.SetSelectedGameObject(null);
-                        // ora posso selezionare in oggetto
-                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                            EventSystem.current.SetSelectedGameObject(null);
+                            // ora posso selezionare in oggetto
+                            EventSystem.current.SetSelectedGameObject(yesFirstButton);
 
 
+                        }
                     }
-                }else if (haslight)
-                {
-                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    else if (haslight)
                     {
-                        
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue3();
+                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        {
 
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(true);
+                            TriggerDialogue3();
+
+                        }
                     }
                 }
+
             }
-
-
 
 
 

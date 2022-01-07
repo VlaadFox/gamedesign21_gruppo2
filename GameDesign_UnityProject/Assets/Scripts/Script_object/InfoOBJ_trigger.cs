@@ -13,6 +13,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     public GameObject canvasDel;
 
     private AudioSource audioGetCollezionabile;
+    public GameObject camera;
     
 
 
@@ -94,8 +95,11 @@ public class InfoOBJ_trigger : MonoBehaviour
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                        playerController.GetComponent<CharacterController>().enabled = false;
-                        Time.timeScale = 0f;
+                        // playerController.GetComponent<CharacterController>().enabled = false;
+                        // Time.timeScale = 0f;
+                        camera= GameObject.FindGameObjectWithTag("cameraoil");
+                        camera.SetActive(true);
+                        playerController.SetActive(false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
@@ -107,12 +111,12 @@ public class InfoOBJ_trigger : MonoBehaviour
                         // ora posso selezionare in oggetto
                         EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
-                    
+
                     // "SI"
-                    
+
                     // qua mi cancella la moneta dall'inventario
-                        
-                    
+
+                    this.GetComponent<AudioSource>().Play();
 
                     // "NO"
                     // chiudi il dialogo
