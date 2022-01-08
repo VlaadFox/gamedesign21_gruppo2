@@ -35,7 +35,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     //stai attento potrebbe non esse un Gameonject
     public GameObject slot1Inventario;
 
-    public GameObject canvasBottoni;
+    public GameObject canvasBottoni, continuebutton;
 
     public GameObject yesFirstButton;
     public GameObject playerController;
@@ -76,6 +76,22 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending") // stai interagendo con la macchinetta dell'olio
             {
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                {
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // Time.timeScale = 0f;
+
+                    cameraoil.SetActive(false);
+
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+                    
+                    canvasBottoni.SetActive(false);
+                    continuebutton.SetActive(false);
+
+
+
+                }
                 //camera = GameObject.FindGameObjectWithTag("cameraoil");
                 Debug.Log("oliomacchina");
                 if (!hasCan && !hasCoin)
