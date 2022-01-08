@@ -292,44 +292,60 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-                if (gameObject.name == "RobotLucee")
-                {
-                    if (!haslight)
-                    {
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {
-                            playerController.GetComponent<ThirdPersonController>().enabled = false;
-                            //Time.timeScale = 0f;
-
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue();
-                            Cursor.lockState = CursorLockMode.None;
-                            canvasBottoni.SetActive(true);
-
-                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
-                            EventSystem.current.SetSelectedGameObject(null);
-                            // ora posso selezionare in oggetto
-                            EventSystem.current.SetSelectedGameObject(yesFirstButton);
-
-
-                        }
-                    }
-                    else if (haslight)
-                    {
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {
-
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue3();
-
-                        }
-                    }
-                }
+               
 
             }
+            if (gameObject.name == "RobotLucee")
+            {
 
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                {
+                    Debug.Log("fine");
+                    cameraluce.SetActive(false);
+                    
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // playerController.SetActive(true);
+                    
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+                    continue_button.SetActive(false);
+
+                }
+                if (!haslight)
+                {
+
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    {
+                        playerController.GetComponent<ThirdPersonController>().enabled = false;
+                        //Time.timeScale = 0f;
+                        cameraluce.SetActive(true);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        TriggerDialogue();
+                        Cursor.lockState = CursorLockMode.None;
+                        canvasBottoni.SetActive(true);
+
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
+
+
+                    }
+                }
+                else if (haslight)
+                {
+                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                    {
+                        cameraluce.SetActive(true);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(true);
+                        continue_button.SetActive(true);
+                        TriggerDialogue3();
+
+                    }
+                }
+            }
 
 
             if (gameObject.name == "Robottone")
@@ -394,28 +410,36 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLadro")
             {
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                {
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                   
+                    cameraladro.SetActive(false);
+
+                   
+
+                    anim.SetBool("talkBool", false);
+                    anim.SetBool("pauseBool", true);
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+
+                    continue_button.SetActive(false);
+                    canvasBottoni.SetActive(false);
+                    Cursor.lockState = CursorLockMode.None;
+                    // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                    EventSystem.current.SetSelectedGameObject(null);
+                    // ora posso selezionare in oggetto
+                    EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                }
                 if (!hasUSB)
                 {
                    
-                        /*if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {
-                            //playerController.GetComponent<CharacterController>().enabled = false;
-                            //Time.timeScale = 0f;
-                            anim.SetBool("talkBool", true);
-                            anim.SetBool("pauseBool", false);
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue();
-                            continue_button.SetActive(true);
-                            // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
-                            //EventSystem.current.SetSelectedGameObject(null);
-                            // ora posso selezionare in oggetto
-                           // EventSystem.current.SetSelectedGameObject(yesFirstButton);
-                        }*/
+                       
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
-                            playerController.GetComponent<CharacterController>().enabled = false;
-                            Time.timeScale = 0f;
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                        //Time.timeScale = 0f;
+                        cameraladro.SetActive(true);
 
                             TriggerDialogue2();
 
@@ -437,6 +461,8 @@ public class Dialog_trigger : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
+                        cameraladro.SetActive(true);
+                        continue_button.SetActive(true);
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
@@ -448,6 +474,8 @@ public class Dialog_trigger : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
+                        cameraladro.SetActive(true);
+                        continue_button.SetActive(true);
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
