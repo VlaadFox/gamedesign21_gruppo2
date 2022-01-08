@@ -70,7 +70,7 @@ public class Dialog_trigger : MonoBehaviour
     public Color colorText;
 
     private AudioSource audioGetCollezionabile;
-    public GameObject cameralavori;
+    public GameObject cameralavori, cameraAnt, cameraluce, camerarobottone, cameraladro,cameravecchio;
 
 
 
@@ -298,8 +298,8 @@ public class Dialog_trigger : MonoBehaviour
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
-                            playerController.GetComponent<CharacterController>().enabled = false;
-                            Time.timeScale = 0f;
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            //Time.timeScale = 0f;
 
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
@@ -457,6 +457,22 @@ public class Dialog_trigger : MonoBehaviour
                         StartCoroutine(DestroyLadro());
 
                     }
+                }
+            }
+
+
+            if (gameObject.name == "antagonista")
+            {
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                {
+                    canvas.SetActive(false);
+                    continue_button.SetActive(false);
+                   
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+
+                    transistion.SetTrigger("start");
+                    transistion.SetTrigger("end");
+                    StartCoroutine(antag());
                 }
             }
 
@@ -622,6 +638,9 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "antagonista")
             {
                 canvas.SetActive(true);
+                cameraAnt.SetActive(true);
+                playerController.GetComponent<ThirdPersonController>().enabled = false;
+                continue_button.SetActive(true);
                 TriggerDialogue();
                 
             }
@@ -638,16 +657,7 @@ public class Dialog_trigger : MonoBehaviour
                 canvas.SetActive(false);
             }
 
-            if (gameObject.name == "antagonista")
-            {
-
-                canvas.SetActive(false);
-                
-
-                transistion.SetTrigger("start");
-                transistion.SetTrigger("end");
-                StartCoroutine(antag());
-            }
+           
         }
     }
 
@@ -655,7 +665,9 @@ public class Dialog_trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         antagonista.SetActive(false);
-       // Destroy(antagonista);
+        cameraAnt.SetActive(false);
+
+        // Destroy(antagonista);
     }
 
     public void DropItem()
