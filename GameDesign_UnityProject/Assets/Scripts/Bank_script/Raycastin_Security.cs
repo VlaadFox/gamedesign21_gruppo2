@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 using UnityEngine.UI;
 
 public class Raycastin_Security : MonoBehaviour
@@ -71,7 +72,7 @@ public class Raycastin_Security : MonoBehaviour
                     // transistion.SetTrigger("restabilize");
                     transistion.SetTrigger("start");
                     transistion.SetTrigger("end");
-
+                    playeref.GetComponent<ThirdPersonController>().enabled = false;
                     playeref.SetActive(false);
                     StartCoroutine(despawn());
                    
@@ -116,6 +117,7 @@ public class Raycastin_Security : MonoBehaviour
         yield return new WaitForSeconds(1f);
         playeref.transform.position = pos;
         playeref.SetActive(true);
+        playeref.GetComponent<ThirdPersonController>().enabled = true;
 
     }
 }
