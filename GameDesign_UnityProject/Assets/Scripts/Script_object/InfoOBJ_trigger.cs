@@ -1,4 +1,5 @@
 using System.Collections;
+using StarterAssets;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -96,11 +97,11 @@ public class InfoOBJ_trigger : MonoBehaviour
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                        // playerController.GetComponent<CharacterController>().enabled = false;
+                         playerController.GetComponent<ThirdPersonController>().enabled = false;
                         // Time.timeScale = 0f;
                         
                         cameraoil.SetActive(true);
-                        playerController.SetActive(false);
+                        
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();

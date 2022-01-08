@@ -158,7 +158,22 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
             {
-                
+
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                {
+                    Debug.Log("fine");
+                    cameralavori.SetActive(false);
+                    playerController.GetComponent<CharacterController>().enabled = true;
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // playerController.SetActive(true);
+                    anim.SetBool("talkBool", false);
+                    anim.SetBool("pauseBool", true);
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+                    continue_button.SetActive(false);
+
+                }
+
                 //this.cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
 
                 if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
@@ -176,6 +191,7 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue2();
+                            continue_button.SetActive(true);
                         }
                     }
                     else
@@ -187,9 +203,11 @@ public class Dialog_trigger : MonoBehaviour
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
                             cameralavori.SetActive(true);
-                            //playerController.GetComponent<CharacterController>().enabled = false;
+                           // playerController.GetComponent<CharacterController>().enabled = false;
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            
                             //Time.timeScale = 0f;
-                           // playerController.SetActive(false);
+                            // playerController.SetActive(false);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -204,18 +222,7 @@ public class Dialog_trigger : MonoBehaviour
                             EventSystem.current.SetSelectedGameObject(yesFirstButton);
                         }
 
-                        if (Input.GetKeyDown(KeyCode.L) || Input.GetButtonDown("Interactions"))
-                        {
-                            Debug.Log("fine");
-                            cameralavori.SetActive(false);
-
-                            playerController.SetActive(true);
-                            anim.SetBool("talkBool", false);
-                            anim.SetBool("pauseBool", true);
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(false);
-
-                        }
+                        
 
 
                         // "NO"
@@ -235,7 +242,7 @@ public class Dialog_trigger : MonoBehaviour
                         DropItem(); // mi droppa il primo elemento nell'inventario qualsiasi esso sia, in questo caso deve essere la lattina d'olio per logica
                         GetCollezionabile();
                         FindObjectOfType<Feedbakinventory>().WrenchFeed();
-
+                        continue_button.SetActive(true);
 
                         Debug.Log("Ce l'hai fatta! Grazie mille, eccoti una ricompensa.");
                     }
@@ -250,8 +257,10 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue4();
+                            continue_button.SetActive(true);
 
                         }
+                        
                     }
 
                     if (tombino)
@@ -265,10 +274,12 @@ public class Dialog_trigger : MonoBehaviour
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue2();
+                            continue_button.SetActive(true);
 
                         }
                     }
 
+                    
                     // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                     // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
                     // aggiungere in questo if il dialogo dove dice che gli ha dato la chiave inglese come collezionabile
