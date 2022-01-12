@@ -134,7 +134,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
                     // qua mi cancella la moneta dall'inventario
 
-                    this.GetComponent<AudioSource>().Play();
+                    //this.GetComponent<AudioSource>().Play();
 
                     // "NO"
                     // chiudi il dialogo
@@ -171,8 +171,8 @@ public class InfoOBJ_trigger : MonoBehaviour
                     Debug.Log("Sì");
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                        playerController.GetComponent<CharacterController>().enabled = false;
-                        Time.timeScale = 0f;
+                        //playerController.GetComponent<CharacterController>().enabled = false;
+                        //Time.timeScale = 0f;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
@@ -221,8 +221,8 @@ public class InfoOBJ_trigger : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                        playerController.GetComponent<CharacterController>().enabled = false;
-                        Time.timeScale = 0f;
+                       // playerController.GetComponent<CharacterController>().enabled = false;
+                       // Time.timeScale = 0f;
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue();

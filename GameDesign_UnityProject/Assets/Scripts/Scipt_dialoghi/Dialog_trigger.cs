@@ -353,8 +353,8 @@ public class Dialog_trigger : MonoBehaviour
                
                    if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                    playerController.GetComponent<CharacterController>().enabled = false;
-                    Time.timeScale = 0f;
+                   // playerController.GetComponent<CharacterController>().enabled = false;
+                    //Time.timeScale = 0f;
                     continue_button.SetActive(false);
                     //anim.SetBool("talkBool", true);
                     //anim.SetBool("pauseBool", false);
