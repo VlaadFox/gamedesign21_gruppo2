@@ -19,14 +19,19 @@ public class InventoryShowUI : MonoBehaviour
     private bool hasWrench = false;
     private bool hasEnter = false;
     private bool hasUSB = false;
+    private bool hasCoin = false;
+    private bool hasmoney = false;
 
 
     public GameObject textMissioneDog_red;
     public GameObject textMissioneDog_green;
+
     public GameObject textMissioneOil_red;
     public GameObject textMissioneOil_green;
+    public GameObject textMissioneOil_dom;
     public GameObject textMissioneUsb_red;
     public GameObject textMissioneUsb_green;
+    public GameObject textMissioneUsb_dom;
     public GameObject textMissioneMole_red;
     public GameObject textMissioneMole_green;
 
@@ -92,11 +97,22 @@ public class InventoryShowUI : MonoBehaviour
             textMissioneDog_red.SetActive(false);
         }
 
-        if(hasUSB = inventory.listInventoryItems.Contains("money"))
+        if(hasmoney = inventory.listInventoryItems.Contains("money"))
         {
             textMissioneUsb_green.SetActive(true);
             textMissioneUsb_red.SetActive(false);
         }
+        if (hasUSB = inventory.listInventoryItems.Contains("USB"))
+        {
+            textMissioneUsb_red.SetActive(true);
+            textMissioneUsb_dom.SetActive(false);
+        }
+        if (hasCoin = inventory.listInventoryItems.Contains("ToretCoin"))
+        {
+            textMissioneOil_red.SetActive(true);
+            textMissioneOil_dom.SetActive(false);
+        }
+       
 
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
         EventSystem.current.SetSelectedGameObject(null);
