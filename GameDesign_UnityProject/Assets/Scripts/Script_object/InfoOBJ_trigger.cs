@@ -173,6 +173,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                     {
                         //playerController.GetComponent<CharacterController>().enabled = false;
                         //Time.timeScale = 0f;
+                        playerController.GetComponent<ThirdPersonController>().enabled = false; //ricordarsi di disattivarlo 
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();

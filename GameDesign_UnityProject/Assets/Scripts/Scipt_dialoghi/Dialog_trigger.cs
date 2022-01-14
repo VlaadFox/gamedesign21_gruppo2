@@ -76,7 +76,7 @@ public class Dialog_trigger : MonoBehaviour
 
 
 
-    private int j ;
+    public int j ;
 
     private void Start()
     {
@@ -350,11 +350,13 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "Robottone")
                 {
-               
-                   if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
-                   // playerController.GetComponent<CharacterController>().enabled = false;
+                    // playerController.GetComponent<CharacterController>().enabled = false;
                     //Time.timeScale = 0f;
+                    playerController.GetComponent<ThirdPersonController>().enabled = false;
+                    camerarobottone.SetActive(true);
                     continue_button.SetActive(false);
                     //anim.SetBool("talkBool", true);
                     //anim.SetBool("pauseBool", false);
@@ -437,8 +439,7 @@ public class Dialog_trigger : MonoBehaviour
                        
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
-                            playerController.GetComponent<ThirdPersonController>().enabled = false;
-                        //Time.timeScale = 0f;
+                        playerController.GetComponent<ThirdPersonController>().enabled = false;
                         cameraladro.SetActive(true);
 
                             TriggerDialogue2();
@@ -512,6 +513,8 @@ public class Dialog_trigger : MonoBehaviour
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -519,10 +522,13 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue();
                             continue_button.SetActive(true); Debug.Log("1");
                         }
-                        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             Nextdisplay();
-                            continue_button.SetActive(false); Debug.Log("1.2");
+                            
+                            Debug.Log("1.2");
                             StartCoroutine(delay()); 
                             continue_button.SetActive(true);
                         }
@@ -531,16 +537,33 @@ public class Dialog_trigger : MonoBehaviour
 
                     if (j == 1)
                     {
-                        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit")|| Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit")|| Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue2();
-                            continue_button.SetActive(false);
+                            continue_button.SetActive(true);
                             Debug.Log("2");
-
+                            StartCoroutine(delay());
+                        }
+                        
+                    }
+                    if (j >= 2)
+                    {
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                        {
+                            playerController.GetComponent<ThirdPersonController>().enabled = true;
+                            cameravecchio.SetActive(false);
+                            anim.SetBool("talkBool", false);
+                            anim.SetBool("pauseBool", true);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(false);
+                            continue_button.SetActive(false);
+                            StartCoroutine(delayneg());
                         }
                     }
                 }
@@ -550,28 +573,49 @@ public class Dialog_trigger : MonoBehaviour
                     if (j == 0)
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                        {   
-
+                        {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
+                            continue_button.SetActive(true);
                             canvasDel.SetActive(false);
                             canvas.SetActive(true);
                             TriggerDialogue3();
                             continue_button.SetActive(true); Debug.Log("3");
                         }
-                        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             Nextdisplay();
-                            continue_button.SetActive(false); Debug.Log("4");
+                            Debug.Log("4");
                             StartCoroutine(delay());
                         }
                     }
-
-
                     if (j == 1)
+                    {
+                        
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                        {
+                            playerController.GetComponent<ThirdPersonController>().enabled = true;
+                            cameravecchio.SetActive(false);
+                            anim.SetBool("talkBool", false);
+                            anim.SetBool("pauseBool", true);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(false);
+                            continue_button.SetActive(false);
+                            StartCoroutine(delay());
+
+                        }
+                    }
+
+                    if (j >= 2)
                     {
                         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                         {
+                            playerController.GetComponent<ThirdPersonController>().enabled = false;
+                            cameravecchio.SetActive(true);
                             anim.SetBool("talkBool", true);
                             anim.SetBool("pauseBool", false);
                             canvasDel.SetActive(false);
@@ -579,17 +623,44 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue4(); Debug.Log("4");
                             notalk = inventory.listInventoryItems.Contains("notalk");
                         }
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                        {
+                            playerController.GetComponent<ThirdPersonController>().enabled = true;
+                            cameravecchio.SetActive(false);
+                            anim.SetBool("talkBool", false);
+                            anim.SetBool("pauseBool", true);
+                            canvasDel.SetActive(false);
+                            canvas.SetActive(false);
+                            continue_button.SetActive(false);
+                           
+                            
+                        }
                     }
                 }
                 if (notalk)
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                     {
+                        playerController.GetComponent<ThirdPersonController>().enabled = false;
+                        cameravecchio.SetActive(true);
                         anim.SetBool("talkBool", true);
                         anim.SetBool("pauseBool", false);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
-                        TriggerDialogue4(); 
+                        TriggerDialogue4();
+                        continue_button.SetActive(true);
+                    }
+                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                    {
+                        playerController.GetComponent<ThirdPersonController>().enabled = true;
+                        cameravecchio.SetActive(false);
+                        anim.SetBool("talkBool", false);
+                        anim.SetBool("pauseBool", true);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(false);
+                        continue_button.SetActive(false);
+
+
                     }
                 }
             }
@@ -600,9 +671,21 @@ public class Dialog_trigger : MonoBehaviour
         }
     }
 
- 
+ public void Yesrobottone() 
+                {
+                    Debug.Log("fine");
+                    camerarobottone.SetActive(false);
 
-    public GameObject imgUIInventarioUSB;
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // playerController.SetActive(true);
+
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+                    continue_button.SetActive(false);
+
+                }
+
+public GameObject imgUIInventarioUSB;
     
     
     public void GetUSB()
@@ -781,8 +864,13 @@ public class Dialog_trigger : MonoBehaviour
     }
     public IEnumerator delay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         j++;
+    }
+    public IEnumerator delayneg()
+    {
+        yield return new WaitForSeconds(1f);
+        j--;
     }
 
     public void Scale()
