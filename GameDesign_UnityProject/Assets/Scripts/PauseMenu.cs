@@ -22,7 +22,8 @@ public class PauseMenu : MonoBehaviour
 
     private GameObject mainCamera;
 
-    
+    public GameObject suonoCane;
+    public AudioSource neon;
 
     private void playAudioClick()
     {
@@ -59,6 +60,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        suonoCane.SetActive(true);
         playAudioClick();
         suoniCitta.Play();
         suoniNatura.Play();
@@ -77,6 +79,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        suonoCane.SetActive(false);
         playAudioClick();
         suoniCitta.Stop();
         suoniNatura.Stop();
