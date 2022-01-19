@@ -159,7 +159,7 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "robotLavori") // stai parlando col robot
             {
 
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     Debug.Log("fine");
                     cameralavori.SetActive(false);
@@ -298,7 +298,7 @@ public class Dialog_trigger : MonoBehaviour
             if (gameObject.name == "RobotLucee")
             {
 
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     Debug.Log("fine");
                     cameraluce.SetActive(false);
@@ -412,7 +412,7 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLadro")
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
                    
@@ -492,7 +492,7 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "antagonista")
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     canvas.SetActive(false);
                     continue_button.SetActive(false);
@@ -596,7 +596,7 @@ public class Dialog_trigger : MonoBehaviour
                     if (j == 1)
                     {
                         
-                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
                             playerController.GetComponent<ThirdPersonController>().enabled = true;
                             cameravecchio.SetActive(false);
@@ -623,7 +623,7 @@ public class Dialog_trigger : MonoBehaviour
                             TriggerDialogue4(); Debug.Log("4");
                             notalk = inventory.listInventoryItems.Contains("notalk");
                         }
-                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
                             playerController.GetComponent<ThirdPersonController>().enabled = true;
                             cameravecchio.SetActive(false);
@@ -650,7 +650,7 @@ public class Dialog_trigger : MonoBehaviour
                         TriggerDialogue4();
                         continue_button.SetActive(true);
                     }
-                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                     {
                         playerController.GetComponent<ThirdPersonController>().enabled = true;
                         cameravecchio.SetActive(false);

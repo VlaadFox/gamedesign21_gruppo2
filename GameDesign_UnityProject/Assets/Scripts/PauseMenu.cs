@@ -1,4 +1,5 @@
 using System.Collections;
+using StarterAssets;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -72,7 +73,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         //AudioListener.pause = false; utile se mettiamo musica/audio
         Cursor.visible = false;
-        //playerController.GetComponent<FirstPersonController>().enabled = true;
+        playerController.GetComponent<ThirdPersonController>().enabled = true;
         playerController.GetComponent<CharacterController>().enabled = true;
         canvas_clicca.SetActive(false);
     }
@@ -87,13 +88,13 @@ public class PauseMenu : MonoBehaviour
         //mainCamera.GetComponent<AudioSource>().Pause();
         pauseMenuUI.SetActive(true);
         canvasInventoryUI.SetActive(false);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         GameIsPaused = true;
         //AudioListener.pause = true; utile se mettiamo musica/audio
-        Cursor.visible = true;
+        //Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        //playerController.GetComponent<FirstPersonController>().enabled = false;
-        playerController.GetComponent<CharacterController>().enabled = false;
+        playerController.GetComponent<ThirdPersonController>().enabled = false;
+        //playerController.GetComponent<CharacterController>().enabled = false;
 
         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
         EventSystem.current.SetSelectedGameObject(null);
