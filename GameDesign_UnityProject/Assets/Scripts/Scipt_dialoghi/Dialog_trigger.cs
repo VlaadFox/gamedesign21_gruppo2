@@ -14,6 +14,10 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue4;
     public Dialogo_padre dialogue5;
 
+    public GameObject StepAudio;
+
+    public GameObject textInter, textmission;
+
    // public GameObject Robottonesi;
     //public GameObject RobottoneEnergia;
 
@@ -521,6 +525,9 @@ public class Dialog_trigger : MonoBehaviour
                             canvas.SetActive(true);
                             TriggerDialogue();
                             continue_button.SetActive(true); Debug.Log("1");
+
+                            textInter.SetActive(false);
+                            textmission.SetActive(true);
                         }
                         if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                         {
@@ -549,6 +556,8 @@ public class Dialog_trigger : MonoBehaviour
                             continue_button.SetActive(true);
                             Debug.Log("2");
                             StartCoroutine(delay());
+
+                            
                         }
                         
                     }
@@ -749,6 +758,8 @@ public GameObject imgUIInventarioUSB;
             if (gameObject.name == "antagonista")
             {
                 canvas.SetActive(true);
+
+                StepAudio.GetComponent<AudioSource>().enabled = false;
                 cameraAnt.SetActive(true);
                 playerController.GetComponent<ThirdPersonController>().enabled = false;
                 continue_button.SetActive(true);
@@ -777,6 +788,7 @@ public GameObject imgUIInventarioUSB;
         yield return new WaitForSeconds(1f);
         antagonista.SetActive(false);
         cameraAnt.SetActive(false);
+        StepAudio.GetComponent<AudioSource>().enabled = true;
 
         // Destroy(antagonista);
     }

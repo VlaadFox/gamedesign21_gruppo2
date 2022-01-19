@@ -267,23 +267,30 @@ public class InfoOBJ_trigger : MonoBehaviour
                 }
             }
 
-            /*if (gameObject.name == "Chiosco")
-            {
-                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
-                {
-                    if (!FindObjectOfType<Energy>().checkFinal())
-                    {
-                        canvasDel.SetActive(false);
-                        canvas.SetActive(true);
-                        TriggerDialogue();
-                    }
-                }
-            }*/
 
 
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (gameObject.name == "Cube_nolight")
+        {
+            canvasDel.SetActive(false);
+            canvas.SetActive(true);
+            TriggerDialogue();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameObject.name == "Cube_nolight")
+        {
+            canvasDel.SetActive(false);
+           canvas.SetActive(false);
+           
+        }
+    }
 
     public void DropItem()
     {

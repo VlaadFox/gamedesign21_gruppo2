@@ -51,6 +51,10 @@ public class GoToBank : MonoBehaviour
                 FindObjectOfType<LevelLoader>().LoadNextLevelBank();
             }
         }
+        if(!hasUSB)
+        {
+            canvas_a.SetActive(false);
+        }
     }
     private void Update()
     {
