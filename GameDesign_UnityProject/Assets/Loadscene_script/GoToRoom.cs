@@ -9,6 +9,8 @@ public class GoToRoom : MonoBehaviour
     private Inventory inventory;
     private bool hasEnter = false;
 
+    public  GameObject AudioCane;
+
     private AudioSource audioAperturaPorte;
     private bool triggerAudio = false;
     private void OnTriggerEnter(Collider other)
@@ -23,6 +25,8 @@ public class GoToRoom : MonoBehaviour
         {
             audioAperturaPorte.Play();
             triggerAudio = true;
+
+            AudioCane.GetComponent<AudioSource>().enabled = false;
             
             if (triggerAudio)
             {

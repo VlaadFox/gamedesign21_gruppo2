@@ -13,6 +13,7 @@ public class Energy : MonoBehaviour
     [SerializeField] 
     Slider energybar;
 
+    public AudioSource energySound;
 
     public GameObject CameraChiosco;
     public GameObject luceChiosco;
@@ -71,6 +72,7 @@ public class Energy : MonoBehaviour
     }
     private void Update()
     {
+        
         StartGame = inventory.listInventoryItems.Contains("start");
         if (!StartGame)
         {
@@ -83,6 +85,7 @@ public class Energy : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U))
         {
+            energySound.Play();
             if (currentEnergy == 1)
             {
                 currentEnergy++;
@@ -137,6 +140,7 @@ public class Energy : MonoBehaviour
     {
         if (currentEnergy >= 1)
         {
+            energySound.Play();
             currentEnergy--;
             UpdateEnergy();
 
@@ -162,7 +166,7 @@ public class Energy : MonoBehaviour
     {
         if (currentEnergy >= 1)
         {
-            
+            energySound.Play();
             currentEnergy = -1;
             UpdateEnergy();
 

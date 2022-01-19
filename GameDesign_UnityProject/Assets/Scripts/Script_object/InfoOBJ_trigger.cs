@@ -76,7 +76,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending") // stai interagendo con la macchinetta dell'olio
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Interactions"))
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
                     // Time.timeScale = 0f;
@@ -152,7 +152,22 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending_seconda") // stai interagendo con la macchinetta nella seconda piazza (can rossa)
             {
-                if (!hasCan && !hasCoin)
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                {
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // Time.timeScale = 0f;
+
+                    cameraoil.SetActive(false);
+
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+
+                    canvasBottoni.SetActive(false);
+                    continuebutton.SetActive(false);
+
+
+
+                    if (!hasCan && !hasCoin)
                 {
                     // da mettere messaggio "Lattina d'olio: 1 moneta."
 
@@ -215,8 +230,17 @@ public class InfoOBJ_trigger : MonoBehaviour
                     TriggerDialogue();
                 }
             }
+            if (gameObject.name == "wanted")
+            {
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                {
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(true);
+                    TriggerDialogue();
+                }
+            }
 
-            if(gameObject.name == "CabinaTel_funzionante")
+            if (gameObject.name == "CabinaTel_funzionante")
             {
                 if (hasCoin)
                 {
