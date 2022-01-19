@@ -277,7 +277,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
         if (gameObject.name == "Cube_nolight")
         {
-            canvasDel.SetActive(false);
+            
             canvas.SetActive(true);
             TriggerDialogue();
         }
@@ -286,7 +286,7 @@ public class InfoOBJ_trigger : MonoBehaviour
     {
         if (gameObject.name == "Cube_nolight")
         {
-            canvasDel.SetActive(false);
+            
            canvas.SetActive(false);
            
         }
