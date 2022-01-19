@@ -130,14 +130,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                         EventSystem.current.SetSelectedGameObject(yesFirstButton);
                     }
 
-                    // "SI"
-
-                    // qua mi cancella la moneta dall'inventario
-
-                    //this.GetComponent<AudioSource>().Play();
-
-                    // "NO"
-                    // chiudi il dialogo
+                    
                 }
                 else
                 {
@@ -152,7 +145,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending_seconda") // stai interagendo con la macchinetta nella seconda piazza (can rossa)
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                if(Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
                     // Time.timeScale = 0f;
@@ -165,9 +158,8 @@ public class InfoOBJ_trigger : MonoBehaviour
                     canvasBottoni.SetActive(false);
                     continuebutton.SetActive(false);
 
-
-
-                    if (!hasCan && !hasCoin)
+                }
+                if (!hasCan && !hasCoin)
                 {
                     // da mettere messaggio "Lattina d'olio: 1 moneta."
 
@@ -189,6 +181,8 @@ public class InfoOBJ_trigger : MonoBehaviour
                         //playerController.GetComponent<CharacterController>().enabled = false;
                         //Time.timeScale = 0f;
                         playerController.GetComponent<ThirdPersonController>().enabled = false; //ricordarsi di disattivarlo 
+
+                        cameraoil.SetActive(true);
                         canvasDel.SetActive(false);
                         canvas.SetActive(true);
                         TriggerDialogue2();
