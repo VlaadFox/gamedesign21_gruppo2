@@ -470,14 +470,11 @@ namespace StarterAssets
         {
             if (lightOn)
             {
-				if (Input.GetButtonDown("Light") || Input.GetKeyDown(KeyCode.L))
-				{
+				
 					luce.SetActive(true);
-				}
-				if (Input.GetButtonUp("Light") )
-				{
-					luce.SetActive(false);
-				}
+				
+					
+				
 			}
         }
 

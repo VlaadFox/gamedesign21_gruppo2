@@ -220,6 +220,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
                     canvasDel.SetActive(false);
+                    
                     canvas.SetActive(true);
                     TriggerDialogue();
                 }
@@ -236,6 +237,23 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "CabinaTel_funzionante")
             {
+
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                {
+                    playerController.GetComponent<ThirdPersonController>().enabled = true;
+                    // Time.timeScale = 0f;
+
+                    cameraoil.SetActive(false);
+
+                    canvasDel.SetActive(false);
+                    canvas.SetActive(false);
+
+                    canvasBottoni.SetActive(false);
+                    continuebutton.SetActive(false);
+
+
+
+                }
                 if (hasCoin)
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
@@ -247,7 +265,7 @@ public class InfoOBJ_trigger : MonoBehaviour
                         TriggerDialogue();
                         Cursor.lockState = CursorLockMode.None;
                         canvasBottoni.SetActive(true);
-
+                        cameraoil.SetActive(true);
                         //aprire la il tombino
                         inventory.listInventoryItems.Add("Tombino");
                         // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto

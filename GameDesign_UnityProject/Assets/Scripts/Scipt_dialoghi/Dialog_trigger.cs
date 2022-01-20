@@ -14,6 +14,8 @@ public class Dialog_trigger : MonoBehaviour
     public Dialogo_padre dialogue4;
     public Dialogo_padre dialogue5;
 
+    public GameObject icon;
+
     public GameObject StepAudio;
 
     public GameObject textInter, textmission;
@@ -502,7 +504,7 @@ public class Dialog_trigger : MonoBehaviour
                     continue_button.SetActive(false);
                    
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
-
+                    icon.SetActive(false);
                     transistion.SetTrigger("start");
                     transistion.SetTrigger("end");
                     StartCoroutine(antag());

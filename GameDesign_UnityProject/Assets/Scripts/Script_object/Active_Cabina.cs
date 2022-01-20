@@ -9,6 +9,8 @@ public class Active_Cabina : MonoBehaviour
     [SerializeField]
     public GameObject BrokenCanvas;
 
+    public GameObject Continubutton;
+
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -23,6 +25,7 @@ public class Active_Cabina : MonoBehaviour
         {
             canvas.SetActive(false);
             BrokenCanvas.SetActive(false);
+            Continubutton.SetActive(false);
         }
     }
 }
