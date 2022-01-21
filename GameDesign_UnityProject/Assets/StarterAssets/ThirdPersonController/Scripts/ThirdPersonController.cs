@@ -140,7 +140,7 @@ namespace StarterAssets
 				if(piazza1) // passo da piazza 1 a intermedio
 				{
 					//audioEsterno1_1.Stop(); // questo continua a suonare
-					audioEsterno1_2.Stop();
+					//audioEsterno1_2.Play();
 					Debug.Log("da piazza 1 a intermedio");
 					//FadeOut(audioEsterno1_2);
 					audioEsterno2.Stop();
@@ -151,7 +151,7 @@ namespace StarterAssets
 				else if(intermedioPiazze) // passo da intermedio a piazza 1
 				{
 					//audioEsterno1_1.Play(); // continua a suonare
-					audioEsterno1_2.Play();
+					//audioEsterno1_2.Play();
 					//FadeIn(audioEsterno1_2);
 					audioEsterno2.Stop();
 					piazza1 = true;
@@ -163,8 +163,8 @@ namespace StarterAssets
 			{
 				if(piazza2) // passo da piazza 2 a intermedio
 				{
-					audioEsterno1_1.Play();
-					audioEsterno1_2.Stop();
+					audioEsterno1_1.Stop();
+					audioEsterno1_2.Play();
 					audioEsterno2.Stop();
 					piazza1 = false;
 					piazza2 = false;

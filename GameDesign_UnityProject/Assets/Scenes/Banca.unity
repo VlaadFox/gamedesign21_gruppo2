@@ -1541,6 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89889f98bdac354686aba770a9ddc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audiobanca: {fileID: 1921261542}
   canvas: {fileID: 671778845}
 --- !u!65 &908575540
 BoxCollider:

@@ -7,6 +7,8 @@ public class GotoTurin_cavueat : MonoBehaviour
     private bool hasmoney = false;
     private Inventory inventory;
 
+    public GameObject audiobanca;
+
     public GameObject canvas;
 
     private void Start()
@@ -28,18 +30,18 @@ public class GotoTurin_cavueat : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
+        
             hasmoney = inventory.listInventoryItems.Contains("money");
             if (hasmoney) 
             {
                 if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
                 {
+                audiobanca.GetComponent<AudioSource>().Stop() ;
                     FindObjectOfType<LevelLoader>().LoadNextLevelTurin();
                 }
             }
            
-        }
+        
     }
     public void GetMoney()
     {

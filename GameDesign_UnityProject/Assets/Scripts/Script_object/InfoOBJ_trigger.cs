@@ -63,8 +63,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
+        
             hasCoin = inventory.listInventoryItems.Contains("ToretCoin");
             hasCan = inventory.listInventoryItems.Contains("LattinaOlio");
             
@@ -287,7 +286,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
 
 
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
