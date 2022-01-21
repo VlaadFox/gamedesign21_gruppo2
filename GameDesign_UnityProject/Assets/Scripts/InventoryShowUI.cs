@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 using UnityEngine.EventSystems;
 
 public class InventoryShowUI : MonoBehaviour
@@ -71,6 +72,7 @@ public class InventoryShowUI : MonoBehaviour
         //AudioListener.pause = false; utile se mettiamo musica/audio
         Cursor.visible = false;
         playerController.GetComponent<CharacterController>().enabled = true;
+        playerController.GetComponent<ThirdPersonController>().enabled = true;
     }
 
     void Pause()
@@ -78,7 +80,9 @@ public class InventoryShowUI : MonoBehaviour
         inventoryMenuUI.SetActive(true);
         canvasMenuPausa.SetActive(false);
         canvasMiniMap.SetActive(false);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
+
+        playerController.GetComponent<ThirdPersonController>().enabled = false;
         GameIsPaused = true;
         //AudioListener.pause = true; utile se mettiamo musica/audio
         Cursor.visible = true;
