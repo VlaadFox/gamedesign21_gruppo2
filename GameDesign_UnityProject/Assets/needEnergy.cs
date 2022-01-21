@@ -25,8 +25,7 @@ public class needEnergy : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
+        
             if (gameObject.name == "Chiosco")
             {
                 if (Ch)
@@ -52,8 +51,12 @@ public class needEnergy : MonoBehaviour
                 if (!Ga)
                 {
                     Ch = inventory.listInventoryItems.Contains("secondo");
-                    canvas.SetActive(true);
-                    Debug.Log("bloccata");
+
+                    if (Ch)
+                    {
+                        canvas.SetActive(true);
+                        Debug.Log("bloccata");
+                    }
                     if (!Ch)
                     {
                         Ordinestrutture.SetActive(true);
@@ -62,7 +65,7 @@ public class needEnergy : MonoBehaviour
                 }
                
             }
-        }
+        
 
 
     }
