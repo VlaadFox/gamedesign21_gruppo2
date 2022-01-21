@@ -77,6 +77,8 @@ public class InfoOBJ_trigger : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
+                if (!canvasBottoni.active)
+                {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
                     // Time.timeScale = 0f;
 
@@ -84,10 +86,10 @@ public class InfoOBJ_trigger : MonoBehaviour
 
                     canvasDel.SetActive(false);
                     canvas.SetActive(false);
-                    
+
                     canvasBottoni.SetActive(false);
                     continuebutton.SetActive(false);
-
+                }
 
 
                 }
@@ -144,7 +146,9 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "OilVending_seconda") // stai interagendo con la macchinetta nella seconda piazza (can rossa)
             {
-                if(Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+            if (!canvasBottoni.active)
+            { 
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
                     // Time.timeScale = 0f;
@@ -156,7 +160,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
                     canvasBottoni.SetActive(false);
                     continuebutton.SetActive(false);
-
+            }
                 }
                 if (!hasCan && !hasCoin)
                 {
@@ -236,7 +240,8 @@ public class InfoOBJ_trigger : MonoBehaviour
 
             if (gameObject.name == "CabinaTel_funzionante")
             {
-
+            if (!canvasBottoni.active)
+            {
                 if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
                 {
                     playerController.GetComponent<ThirdPersonController>().enabled = true;
@@ -253,6 +258,7 @@ public class InfoOBJ_trigger : MonoBehaviour
 
 
                 }
+            }
                 if (hasCoin)
                 {
                     if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))

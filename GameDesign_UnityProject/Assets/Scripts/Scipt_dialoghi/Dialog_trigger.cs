@@ -164,22 +164,24 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLavori") // stai parlando col robot
             {
-
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                if (!canvasBottoni.active)
                 {
-                    Debug.Log("fine");
-                    cameralavori.SetActive(false);
-                    playerController.GetComponent<CharacterController>().enabled = true;
-                    playerController.GetComponent<ThirdPersonController>().enabled = true;
-                    // playerController.SetActive(true);
-                    anim.SetBool("talkBool", false);
-                    anim.SetBool("pauseBool", true);
-                    canvasDel.SetActive(false);
-                    canvas.SetActive(false);
-                    continue_button.SetActive(false);
 
+                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                    {
+                        Debug.Log("fine");
+                        cameralavori.SetActive(false);
+                        playerController.GetComponent<CharacterController>().enabled = true;
+                        playerController.GetComponent<ThirdPersonController>().enabled = true;
+                        // playerController.SetActive(true);
+                        anim.SetBool("talkBool", false);
+                        anim.SetBool("pauseBool", true);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(false);
+                        continue_button.SetActive(false);
+
+                    }
                 }
-
                 //this.cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
 
                 if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
@@ -303,19 +305,22 @@ public class Dialog_trigger : MonoBehaviour
             }
             if (gameObject.name == "RobotLucee")
             {
-
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                if (!canvasBottoni.active)
                 {
-                    Debug.Log("fine");
-                    cameraluce.SetActive(false);
-                    
-                    playerController.GetComponent<ThirdPersonController>().enabled = true;
-                    // playerController.SetActive(true);
-                    
-                    canvasDel.SetActive(false);
-                    canvas.SetActive(false);
-                    continue_button.SetActive(false);
 
+                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                    {
+                        Debug.Log("fine");
+                        cameraluce.SetActive(false);
+
+                        playerController.GetComponent<ThirdPersonController>().enabled = true;
+                        // playerController.SetActive(true);
+
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(false);
+                        continue_button.SetActive(false);
+
+                    }
                 }
                 if (!haslight)
                 {
@@ -418,26 +423,29 @@ public class Dialog_trigger : MonoBehaviour
 
             if (gameObject.name == "robotLadro")
             {
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                if (!canvasBottoni.active)
                 {
-                    playerController.GetComponent<ThirdPersonController>().enabled = true;
-                   
-                    cameraladro.SetActive(false);
+                    if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Submit"))
+                    {
+                        playerController.GetComponent<ThirdPersonController>().enabled = true;
 
-                   
+                        cameraladro.SetActive(false);
 
-                    anim.SetBool("talkBool", false);
-                    anim.SetBool("pauseBool", true);
-                    canvasDel.SetActive(false);
-                    canvas.SetActive(false);
 
-                    continue_button.SetActive(false);
-                    canvasBottoni.SetActive(false);
-                    Cursor.lockState = CursorLockMode.None;
-                    // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
-                    EventSystem.current.SetSelectedGameObject(null);
-                    // ora posso selezionare in oggetto
-                    EventSystem.current.SetSelectedGameObject(yesFirstButton);
+
+                        anim.SetBool("talkBool", false);
+                        anim.SetBool("pauseBool", true);
+                        canvasDel.SetActive(false);
+                        canvas.SetActive(false);
+
+                        continue_button.SetActive(false);
+                        canvasBottoni.SetActive(false);
+                        Cursor.lockState = CursorLockMode.None;
+                        // tolgo preventivamente qualsiasi selezione rimasta su qualche oggetto
+                        EventSystem.current.SetSelectedGameObject(null);
+                        // ora posso selezionare in oggetto
+                        EventSystem.current.SetSelectedGameObject(yesFirstButton);
+                    }
                 }
                 if (!hasUSB)
                 {
