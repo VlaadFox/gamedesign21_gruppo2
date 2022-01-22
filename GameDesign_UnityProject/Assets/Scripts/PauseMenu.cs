@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject suonoCane;
     public AudioSource neon;
-    public GameObject canvasdialoghi, canvasogetti;
+    
 
     private void playAudioClick()
     {
@@ -53,12 +53,11 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                if (!canvasdialoghi.active)
+                if (playerController.GetComponent<ThirdPersonController>().isActiveAndEnabled)
                 {
-                    if (!canvasogetti.active)
-                    {
-                        Pause();
-                    }
+
+                    Pause();
+
                 }
             }
         }

@@ -36,7 +36,7 @@ public class InventoryShowUI : MonoBehaviour
     public GameObject textMissioneMole_red;
     public GameObject textMissioneMole_green;
 
-    public GameObject canvasdialoghi, canvasogetti;
+   
 
     void Start()
     {
@@ -55,12 +55,11 @@ public class InventoryShowUI : MonoBehaviour
             }
             else
             {
-                if (!canvasdialoghi.active )
+                if (playerController.GetComponent<ThirdPersonController>().isActiveAndEnabled)
                 {
-                    if (!canvasogetti.active)
-                    {
+                    
                         Pause();
-                    }
+                   
                 }
             }
         }
