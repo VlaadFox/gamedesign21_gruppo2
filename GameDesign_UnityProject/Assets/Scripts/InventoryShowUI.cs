@@ -36,6 +36,8 @@ public class InventoryShowUI : MonoBehaviour
     public GameObject textMissioneMole_red;
     public GameObject textMissioneMole_green;
 
+    public GameObject canvasdialoghi, canvasogetti;
+
     void Start()
     {
         inventoryMenuUI.SetActive(false);
@@ -48,11 +50,15 @@ public class InventoryShowUI : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                
                 Resume();
             }
             else
             {
-                Pause();
+                if (!canvasdialoghi.active)
+                {
+                    Pause();
+                }
             }
         }
         /*if (GameIsPaused && Input.GetKeyDown(KeyCode.Escape))

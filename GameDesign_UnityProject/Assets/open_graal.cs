@@ -17,7 +17,11 @@ public class open_graal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        canvas.SetActive(true);
+        dosecond = inventory.listInventoryItems.Contains("primo");
+        if (dosecond)
+        {
+            canvas.SetActive(true);
+        }
 
 
     }
@@ -28,8 +32,7 @@ public class open_graal : MonoBehaviour
     }
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
+        
             if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
             {
                 dosecond = inventory.listInventoryItems.Contains("primo");
@@ -42,7 +45,7 @@ public class open_graal : MonoBehaviour
                     canvas2.SetActive(true);
                 }
             }
-        }
+        
     }
 }
 
