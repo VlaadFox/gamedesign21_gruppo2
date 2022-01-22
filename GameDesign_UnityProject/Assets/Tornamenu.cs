@@ -13,7 +13,7 @@ public class Tornamenu : MonoBehaviour
 
     public IEnumerator Menu()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(37f);
         SceneManager.LoadScene("_StartMenu");
 
     }
