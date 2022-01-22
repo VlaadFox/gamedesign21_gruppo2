@@ -41,7 +41,8 @@ public class Dialog_trigger : MonoBehaviour
    // private InventorySlot inventorySlot;
 
     private bool hasCoin = false; // per controllare moneta
-    private bool hasCan = false; // per controllare lattina
+    private bool hasCan = false;
+    private bool hasCanRed = false;// per controllare lattina
     private bool hasUSB = false;
     private bool hasenter = false;
     private bool hasmoney = false;
@@ -156,6 +157,7 @@ public class Dialog_trigger : MonoBehaviour
                 Ch = inventory.listInventoryItems.Contains("secondo");
                 Ga = inventory.listInventoryItems.Contains("primo");
                 tombino = inventory.listInventoryItems.Contains("Tombino");
+            hasCanRed= inventory.listInventoryItems.Contains("LattinaOlioRED");
 
 
 
@@ -184,7 +186,7 @@ public class Dialog_trigger : MonoBehaviour
                 }
                 //this.cameralavori = GameObject.FindGameObjectWithTag("Cameralavori");
 
-                if (!hasCan && !tombino) // entra nel ciclo in cui NON ha ancora la lattina d'olio
+                if (!hasCan && !tombino && !hasCanRed) // entra nel ciclo in cui NON ha ancora la lattina d'olio
                 {
                     if (hasCoin)
                     {
@@ -271,19 +273,21 @@ public class Dialog_trigger : MonoBehaviour
                         
                     }
 
-                    if (tombino)
+                    if (tombino )
                     {
-
-                        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                        if (hasCanRed)
                         {
-                            cameralavori.SetActive(true);
-                            anim.SetBool("talkBool", true);
-                            anim.SetBool("pauseBool", false);
-                            canvasDel.SetActive(false);
-                            canvas.SetActive(true);
-                            TriggerDialogue2();
-                            continue_button.SetActive(true);
+                            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Interactions"))
+                            {
+                                cameralavori.SetActive(true);
+                                anim.SetBool("talkBool", true);
+                                anim.SetBool("pauseBool", false);
+                                canvasDel.SetActive(false);
+                                canvas.SetActive(true);
+                                TriggerDialogue2();
+                                continue_button.SetActive(true);
 
+                            }
                         }
                     }
 
