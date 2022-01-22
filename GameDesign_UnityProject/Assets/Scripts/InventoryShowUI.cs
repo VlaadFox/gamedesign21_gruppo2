@@ -55,9 +55,12 @@ public class InventoryShowUI : MonoBehaviour
             }
             else
             {
-                if (!canvasdialoghi.active)
+                if (!canvasdialoghi.active )
                 {
-                    Pause();
+                    if (!canvasogetti.active)
+                    {
+                        Pause();
+                    }
                 }
             }
         }

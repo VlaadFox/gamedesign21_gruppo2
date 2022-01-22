@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject suonoCane;
     public AudioSource neon;
+    public GameObject canvasdialoghi, canvasogetti;
 
     private void playAudioClick()
     {
@@ -52,7 +53,13 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                Pause();
+                if (!canvasdialoghi.active)
+                {
+                    if (!canvasogetti.active)
+                    {
+                        Pause();
+                    }
+                }
             }
         }
     }
